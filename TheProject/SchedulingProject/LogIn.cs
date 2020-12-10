@@ -17,6 +17,7 @@ namespace SchedulingProject
         {
             InitializeComponent();
             randomcolor = new Random();
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -55,8 +56,36 @@ namespace SchedulingProject
 
         private void changeColor()
         {
-            Color randomColor = Color.FromArgb(randomcolor.Next(256), randomcolor.Next(256), randomcolor.Next(256));
+            Color randomColor = Color.FromArgb(randomcolor.Next(200), randomcolor.Next(200), randomcolor.Next(200));
             label4.ForeColor = randomColor;
+        }
+        
+        private bool mouseDown;
+        private Point lastLocation;
+
+        private void LogIn_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDown = true;
+            lastLocation = e.Location;
+        }
+
+        private void LogIn_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseDown)
+            {
+                this.Location = new Point((this.Location.X - lastLocation.X) + e.X, (this.Location.Y - lastLocation.Y) + e.Y);
+                this.Update();
+            }
+        }
+
+        private void LogIn_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

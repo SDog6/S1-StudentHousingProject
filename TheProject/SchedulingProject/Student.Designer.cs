@@ -165,6 +165,7 @@
             this.btnAddChore.TabIndex = 4;
             this.btnAddChore.Text = "Add to chore schedule";
             this.btnAddChore.UseVisualStyleBackColor = true;
+            this.btnAddChore.Click += new System.EventHandler(this.btnAddChore_Click);
             // 
             // tbChoreDate
             // 
