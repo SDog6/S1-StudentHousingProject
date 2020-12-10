@@ -48,5 +48,10 @@ namespace SchedulingProject
             this.Hide();
             LogInForm.Show();
         }
+
+        private void btnAddChore_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

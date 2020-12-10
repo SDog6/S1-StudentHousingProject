@@ -241,9 +241,9 @@
             this.lblChores.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChores.FormattingEnabled = true;
             this.lblChores.ItemHeight = 19;
-            this.lblChores.Location = new System.Drawing.Point(45, 20);
+            this.lblChores.Location = new System.Drawing.Point(6, 25);
             this.lblChores.Name = "lblChores";
-            this.lblChores.Size = new System.Drawing.Size(375, 422);
+            this.lblChores.Size = new System.Drawing.Size(861, 441);
             this.lblChores.TabIndex = 0;
             // 
             // tabControl1
