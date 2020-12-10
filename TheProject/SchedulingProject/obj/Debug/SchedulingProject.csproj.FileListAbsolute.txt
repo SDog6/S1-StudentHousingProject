@@ -1,0 +1,12 @@
+C:\Users\Hristo\source\repos\SchedulingProject\SchedulingProject\bin\Debug\SchedulingProject.exe.config
+C:\Users\Hristo\source\repos\SchedulingProject\SchedulingProject\bin\Debug\SchedulingProject.exe
+C:\Users\Hristo\source\repos\SchedulingProject\SchedulingProject\bin\Debug\SchedulingProject.pdb
+C:\Users\Hristo\source\repos\SchedulingProject\SchedulingProject\obj\Debug\SchedulingProject.csprojAssemblyReference.cache
+C:\Users\Hristo\source\repos\SchedulingProject\SchedulingProject\obj\Debug\SchedulingProject.Student.resources
+C:\Users\Hristo\source\repos\SchedulingProject\SchedulingProject\obj\Debug\SchedulingProject.Owner.resources
+C:\Users\Hristo\source\repos\SchedulingProject\SchedulingProject\obj\Debug\SchedulingProject.Properties.Resources.resources
+C:\Users\Hristo\source\repos\SchedulingProject\SchedulingProject\obj\Debug\SchedulingProject.csproj.GenerateResource.cache
+C:\Users\Hristo\source\repos\SchedulingProject\SchedulingProject\obj\Debug\SchedulingProject.csproj.CoreCompileInputs.cache
+C:\Users\Hristo\source\repos\SchedulingProject\SchedulingProject\obj\Debug\SchedulingProject.exe
+C:\Users\Hristo\source\repos\SchedulingProject\SchedulingProject\obj\Debug\SchedulingProject.pdb
+C:\Users\Hristo\source\repos\SchedulingProject\SchedulingProject\obj\Debug\SchedulingProject.LogIn.resources

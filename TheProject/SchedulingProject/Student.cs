@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SchedulingProject
 {
-    public partial class Form1 : Form
+    public partial class Student : Form
     {
-        public Form1()
+        public Student()
         {
             InitializeComponent();
         }
@@ -42,6 +42,11 @@ namespace SchedulingProject
 
         }
 
-      
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            LogIn LogInForm = new LogIn();
+            this.Hide();
+            LogInForm.Show();
+        }
     }
 }
