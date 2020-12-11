@@ -52,8 +52,6 @@
     <Compile Include="LogIn.Designer.cs">
       <DependentUpon>LogIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="Rule.cs" />
-    <Compile Include="Rules.cs" />
     <Compile Include="Student.cs">
       <SubType>Form</SubType>
     </Compile>

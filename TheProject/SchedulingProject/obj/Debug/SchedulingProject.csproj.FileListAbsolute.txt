@@ -22,15 +22,3 @@ C:\Users\Dobri\Git\software-project\TheProject\SchedulingProject\obj\Debug\Sched
 C:\Users\Dobri\Git\software-project\TheProject\SchedulingProject\obj\Debug\SchedulingProject.csproj.CoreCompileInputs.cache
 C:\Users\Dobri\Git\software-project\TheProject\SchedulingProject\obj\Debug\SchedulingProject.exe
 C:\Users\Dobri\Git\software-project\TheProject\SchedulingProject\obj\Debug\SchedulingProject.pdb
-C:\Users\Hristo\Documents\Project\software-project\TheProject\SchedulingProject\bin\Debug\SchedulingProject.exe.config
-C:\Users\Hristo\Documents\Project\software-project\TheProject\SchedulingProject\bin\Debug\SchedulingProject.exe
-C:\Users\Hristo\Documents\Project\software-project\TheProject\SchedulingProject\bin\Debug\SchedulingProject.pdb
-C:\Users\Hristo\Documents\Project\software-project\TheProject\SchedulingProject\obj\Debug\SchedulingProject.csprojAssemblyReference.cache
-C:\Users\Hristo\Documents\Project\software-project\TheProject\SchedulingProject\obj\Debug\SchedulingProject.LogIn.resources
-C:\Users\Hristo\Documents\Project\software-project\TheProject\SchedulingProject\obj\Debug\SchedulingProject.Student.resources
-C:\Users\Hristo\Documents\Project\software-project\TheProject\SchedulingProject\obj\Debug\SchedulingProject.Owner.resources
-C:\Users\Hristo\Documents\Project\software-project\TheProject\SchedulingProject\obj\Debug\SchedulingProject.Properties.Resources.resources
-C:\Users\Hristo\Documents\Project\software-project\TheProject\SchedulingProject\obj\Debug\SchedulingProject.csproj.GenerateResource.cache
-C:\Users\Hristo\Documents\Project\software-project\TheProject\SchedulingProject\obj\Debug\SchedulingProject.csproj.CoreCompileInputs.cache
-C:\Users\Hristo\Documents\Project\software-project\TheProject\SchedulingProject\obj\Debug\SchedulingProject.exe
-C:\Users\Hristo\Documents\Project\software-project\TheProject\SchedulingProject\obj\Debug\SchedulingProject.pdb

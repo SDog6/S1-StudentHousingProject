@@ -12,11 +12,9 @@ namespace SchedulingProject
 {
     public partial class LogIn : Form
     {
-        Rules NewRulen;
         Random randomcolor;
         public LogIn()
         {
-          
             InitializeComponent();
             randomcolor = new Random();
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -29,19 +27,19 @@ namespace SchedulingProject
 
         private void btnLogIn_Click(object sender, EventArgs e)
         {
-            Student StudentForm = new Student(NewRulen);
+            Student StudentForm = new Student();
             Owner OwnerForm = new Owner();
             LogIn LogInForm = new LogIn();
 
             if (tbUserName.Text == "student" && tbPassword.Text == "student")
             {
-                
+                this.Hide();
                 StudentForm.Show();
             }
 
             else if (tbUserName.Text == "owner" && tbPassword.Text == "owner")
             {
-                
+                this.Hide();
                 OwnerForm.Show();
             }
             else
@@ -88,11 +86,6 @@ namespace SchedulingProject
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void LogIn_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
