@@ -11,10 +11,13 @@ using System.Windows.Forms;
 namespace SchedulingProject
 {
     public partial class Student : Form
-    {
-        public Student()
+    { Rules Rulesss;
+ 
+        public Student(Rules Rulesss)
         {
             InitializeComponent();
+            this.Rulesss = Rulesss;
+            
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
@@ -52,6 +55,25 @@ namespace SchedulingProject
         private void btnAddChore_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Student_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        public void UpdateRuleList()
+        {
+            lblRuleListS.Items.Clear();
+            foreach (Rule R in Rulesss.GetAllRule())
+            {
+                lblRuleListS.Items.Add(R.GetInfo());
+            }
+        }
+
+        private void btnUpdateRules_Click(object sender, EventArgs e)
+        {
+            UpdateRuleList();
         }
     }
 }

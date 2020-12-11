@@ -41,7 +41,7 @@
             this.tbChoreName = new System.Windows.Forms.TextBox();
             this.lblChores = new System.Windows.Forms.ListBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.lblRuleList = new System.Windows.Forms.ListBox();
+            this.lblRuleListS = new System.Windows.Forms.ListBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.cbComplaintsYear = new System.Windows.Forms.ComboBox();
             this.cbComplaintsMonth = new System.Windows.Forms.ComboBox();
@@ -57,6 +57,7 @@
             this.tbDiscussions = new System.Windows.Forms.TextBox();
             this.lbDiscussions = new System.Windows.Forms.ListBox();
             this.btnLogOut = new System.Windows.Forms.Button();
+            this.btnUpdateRules = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.Schedule.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -97,7 +98,6 @@
             this.Schedule.TabIndex = 0;
             this.Schedule.Text = "Schedule";
             this.Schedule.UseVisualStyleBackColor = true;
-            this.Schedule.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // button1
             // 
@@ -203,7 +203,7 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.lblRuleList);
+            this.tabPage2.Controls.Add(this.lblRuleListS);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -212,13 +212,13 @@
             this.tabPage2.Text = "Rules";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // lblRuleList
+            // lblRuleListS
             // 
-            this.lblRuleList.FormattingEnabled = true;
-            this.lblRuleList.Location = new System.Drawing.Point(7, 19);
-            this.lblRuleList.Name = "lblRuleList";
-            this.lblRuleList.Size = new System.Drawing.Size(863, 446);
-            this.lblRuleList.TabIndex = 3;
+            this.lblRuleListS.FormattingEnabled = true;
+            this.lblRuleListS.Location = new System.Drawing.Point(7, 19);
+            this.lblRuleListS.Name = "lblRuleListS";
+            this.lblRuleListS.Size = new System.Drawing.Size(863, 446);
+            this.lblRuleListS.TabIndex = 3;
             // 
             // tabPage1
             // 
@@ -375,15 +375,27 @@
             this.btnLogOut.UseVisualStyleBackColor = true;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
+            // btnUpdateRules
+            // 
+            this.btnUpdateRules.Location = new System.Drawing.Point(711, 518);
+            this.btnUpdateRules.Name = "btnUpdateRules";
+            this.btnUpdateRules.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdateRules.TabIndex = 11;
+            this.btnUpdateRules.Text = "Update";
+            this.btnUpdateRules.UseVisualStyleBackColor = true;
+            this.btnUpdateRules.Click += new System.EventHandler(this.btnUpdateRules_Click);
+            // 
             // Student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(892, 544);
+            this.Controls.Add(this.btnUpdateRules);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.tabControl1);
             this.Name = "Student";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Student_Load);
             this.tabControl1.ResumeLayout(false);
             this.Schedule.ResumeLayout(false);
             this.Schedule.PerformLayout();
@@ -413,7 +425,7 @@
         private System.Windows.Forms.TextBox tbChore;
         private System.Windows.Forms.TextBox tbChoreName;
         private System.Windows.Forms.ListBox lblChores;
-        private System.Windows.Forms.ListBox lblRuleList;
+        private System.Windows.Forms.ListBox lblRuleListS;
         private System.Windows.Forms.Button btnRemoveComplaint;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnComplaintsAdd;
@@ -427,6 +439,7 @@
         private System.Windows.Forms.Button btnDiscussionsSend;
         private System.Windows.Forms.TextBox tbDiscussions;
         private System.Windows.Forms.Button btnLogOut;
+        private System.Windows.Forms.Button btnUpdateRules;
     }
 }
 
