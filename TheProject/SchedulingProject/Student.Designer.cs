@@ -58,6 +58,8 @@
             this.lbDiscussions = new System.Windows.Forms.ListBox();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnUpdateRules = new System.Windows.Forms.Button();
+            this.btnDiscussionName = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.Schedule.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -203,6 +205,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.btnUpdateRules);
             this.tabPage2.Controls.Add(this.lblRuleListS);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -214,10 +217,12 @@
             // 
             // lblRuleListS
             // 
+            this.lblRuleListS.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRuleListS.FormattingEnabled = true;
+            this.lblRuleListS.ItemHeight = 23;
             this.lblRuleListS.Location = new System.Drawing.Point(7, 19);
             this.lblRuleListS.Name = "lblRuleListS";
-            this.lblRuleListS.Size = new System.Drawing.Size(863, 446);
+            this.lblRuleListS.Size = new System.Drawing.Size(863, 441);
             this.lblRuleListS.TabIndex = 3;
             // 
             // tabPage1
@@ -309,6 +314,7 @@
             this.btnComplaintsAdd.TabIndex = 2;
             this.btnComplaintsAdd.Text = "Add";
             this.btnComplaintsAdd.UseVisualStyleBackColor = true;
+            this.btnComplaintsAdd.Click += new System.EventHandler(this.btnComplaintsAdd_Click);
             // 
             // tbCompaints
             // 
@@ -330,6 +336,8 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.textBox1);
+            this.tabPage3.Controls.Add(this.btnDiscussionName);
             this.tabPage3.Controls.Add(this.btnDiscussionsSend);
             this.tabPage3.Controls.Add(this.tbDiscussions);
             this.tabPage3.Controls.Add(this.lbDiscussions);
@@ -351,18 +359,20 @@
             // 
             // tbDiscussions
             // 
-            this.tbDiscussions.Location = new System.Drawing.Point(7, 428);
+            this.tbDiscussions.Location = new System.Drawing.Point(91, 428);
             this.tbDiscussions.Multiline = true;
             this.tbDiscussions.Name = "tbDiscussions";
-            this.tbDiscussions.Size = new System.Drawing.Size(766, 49);
+            this.tbDiscussions.Size = new System.Drawing.Size(682, 49);
             this.tbDiscussions.TabIndex = 1;
             // 
             // lbDiscussions
             // 
+            this.lbDiscussions.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDiscussions.FormattingEnabled = true;
+            this.lbDiscussions.ItemHeight = 23;
             this.lbDiscussions.Location = new System.Drawing.Point(7, 14);
             this.lbDiscussions.Name = "lbDiscussions";
-            this.lbDiscussions.Size = new System.Drawing.Size(863, 394);
+            this.lbDiscussions.Size = new System.Drawing.Size(863, 372);
             this.lbDiscussions.TabIndex = 0;
             // 
             // btnLogOut
@@ -377,20 +387,37 @@
             // 
             // btnUpdateRules
             // 
-            this.btnUpdateRules.Location = new System.Drawing.Point(711, 518);
+            this.btnUpdateRules.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateRules.Location = new System.Drawing.Point(772, 409);
             this.btnUpdateRules.Name = "btnUpdateRules";
-            this.btnUpdateRules.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdateRules.Size = new System.Drawing.Size(89, 39);
             this.btnUpdateRules.TabIndex = 11;
-            this.btnUpdateRules.Text = "Update";
+            this.btnUpdateRules.Text = "Refresh";
             this.btnUpdateRules.UseVisualStyleBackColor = true;
             this.btnUpdateRules.Click += new System.EventHandler(this.btnUpdateRules_Click);
+            // 
+            // btnDiscussionName
+            // 
+            this.btnDiscussionName.Location = new System.Drawing.Point(10, 454);
+            this.btnDiscussionName.Name = "btnDiscussionName";
+            this.btnDiscussionName.Size = new System.Drawing.Size(75, 23);
+            this.btnDiscussionName.TabIndex = 3;
+            this.btnDiscussionName.Text = "button2";
+            this.btnDiscussionName.UseVisualStyleBackColor = true;
+            this.btnDiscussionName.Click += new System.EventHandler(this.btnDiscussionName_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(8, 428);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(77, 20);
+            this.textBox1.TabIndex = 4;
             // 
             // Student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(892, 544);
-            this.Controls.Add(this.btnUpdateRules);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.tabControl1);
             this.Name = "Student";
@@ -440,6 +467,8 @@
         private System.Windows.Forms.TextBox tbDiscussions;
         private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.Button btnUpdateRules;
+        private System.Windows.Forms.Button btnDiscussionName;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

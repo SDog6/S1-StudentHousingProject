@@ -63,6 +63,16 @@ namespace SchedulingProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _21294 {
+            get {
+                object obj = ResourceManager.GetObject("21294", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap c102b50a8f497e337bc178fda36e0610 {
             get {
                 object obj = ResourceManager.GetObject("c102b50a8f497e337bc178fda36e0610", resourceCulture);

@@ -75,5 +75,15 @@ namespace SchedulingProject
         {
             UpdateRuleList();
         }
+
+        private void btnComplaintsAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDiscussionName_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
