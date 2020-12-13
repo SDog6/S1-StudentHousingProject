@@ -41,6 +41,7 @@
             this.tbChoreName = new System.Windows.Forms.TextBox();
             this.lblChores = new System.Windows.Forms.ListBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnUpdateRules = new System.Windows.Forms.Button();
             this.lblRuleListS = new System.Windows.Forms.ListBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.cbComplaintsYear = new System.Windows.Forms.ComboBox();
@@ -53,13 +54,14 @@
             this.tbCompaints = new System.Windows.Forms.TextBox();
             this.lblComplaints = new System.Windows.Forms.ListBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tbDicussionName = new System.Windows.Forms.TextBox();
             this.btnDiscussionsSend = new System.Windows.Forms.Button();
             this.tbDiscussions = new System.Windows.Forms.TextBox();
             this.lbDiscussions = new System.Windows.Forms.ListBox();
             this.btnLogOut = new System.Windows.Forms.Button();
-            this.btnUpdateRules = new System.Windows.Forms.Button();
-            this.btnDiscussionName = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbDiscussionDate = new System.Windows.Forms.TextBox();
+            this.lblDiscussionName = new System.Windows.Forms.Label();
+            this.lblDiscussionDate = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.Schedule.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -111,6 +113,7 @@
             this.button1.TabIndex = 9;
             this.button1.Text = "Remove a scheduled chore";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label4
             // 
@@ -215,6 +218,17 @@
             this.tabPage2.Text = "Rules";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // btnUpdateRules
+            // 
+            this.btnUpdateRules.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateRules.Location = new System.Drawing.Point(772, 409);
+            this.btnUpdateRules.Name = "btnUpdateRules";
+            this.btnUpdateRules.Size = new System.Drawing.Size(89, 39);
+            this.btnUpdateRules.TabIndex = 11;
+            this.btnUpdateRules.Text = "Refresh";
+            this.btnUpdateRules.UseVisualStyleBackColor = true;
+            this.btnUpdateRules.Click += new System.EventHandler(this.btnUpdateRules_Click);
+            // 
             // lblRuleListS
             // 
             this.lblRuleListS.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -243,7 +257,6 @@
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Complaints";
             this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click_1);
             // 
             // cbComplaintsYear
             // 
@@ -262,7 +275,6 @@
             this.cbComplaintsMonth.Name = "cbComplaintsMonth";
             this.cbComplaintsMonth.Size = new System.Drawing.Size(79, 23);
             this.cbComplaintsMonth.TabIndex = 8;
-            this.cbComplaintsMonth.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // cbCompaintsDay
             // 
@@ -303,7 +315,6 @@
             this.label5.TabIndex = 3;
             this.label5.Text = "Apologies for any inconviniances. \r\nPlease tell us if you have had any bad experi" +
     "ances";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // btnComplaintsAdd
             // 
@@ -314,7 +325,6 @@
             this.btnComplaintsAdd.TabIndex = 2;
             this.btnComplaintsAdd.Text = "Add";
             this.btnComplaintsAdd.UseVisualStyleBackColor = true;
-            this.btnComplaintsAdd.Click += new System.EventHandler(this.btnComplaintsAdd_Click);
             // 
             // tbCompaints
             // 
@@ -336,8 +346,10 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.textBox1);
-            this.tabPage3.Controls.Add(this.btnDiscussionName);
+            this.tabPage3.Controls.Add(this.lblDiscussionDate);
+            this.tabPage3.Controls.Add(this.lblDiscussionName);
+            this.tabPage3.Controls.Add(this.tbDiscussionDate);
+            this.tabPage3.Controls.Add(this.tbDicussionName);
             this.tabPage3.Controls.Add(this.btnDiscussionsSend);
             this.tabPage3.Controls.Add(this.tbDiscussions);
             this.tabPage3.Controls.Add(this.lbDiscussions);
@@ -348,6 +360,13 @@
             this.tabPage3.Text = "Discussions";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // tbDicussionName
+            // 
+            this.tbDicussionName.Location = new System.Drawing.Point(88, 428);
+            this.tbDicussionName.Name = "tbDicussionName";
+            this.tbDicussionName.Size = new System.Drawing.Size(77, 20);
+            this.tbDicussionName.TabIndex = 4;
+            // 
             // btnDiscussionsSend
             // 
             this.btnDiscussionsSend.Location = new System.Drawing.Point(779, 428);
@@ -356,13 +375,14 @@
             this.btnDiscussionsSend.TabIndex = 2;
             this.btnDiscussionsSend.Text = "Send";
             this.btnDiscussionsSend.UseVisualStyleBackColor = true;
+            this.btnDiscussionsSend.Click += new System.EventHandler(this.btnDiscussionsSend_Click);
             // 
             // tbDiscussions
             // 
-            this.tbDiscussions.Location = new System.Drawing.Point(91, 428);
+            this.tbDiscussions.Location = new System.Drawing.Point(192, 428);
             this.tbDiscussions.Multiline = true;
             this.tbDiscussions.Name = "tbDiscussions";
-            this.tbDiscussions.Size = new System.Drawing.Size(682, 49);
+            this.tbDiscussions.Size = new System.Drawing.Size(581, 49);
             this.tbDiscussions.TabIndex = 1;
             // 
             // lbDiscussions
@@ -385,33 +405,30 @@
             this.btnLogOut.UseVisualStyleBackColor = true;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
-            // btnUpdateRules
+            // tbDiscussionDate
             // 
-            this.btnUpdateRules.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateRules.Location = new System.Drawing.Point(772, 409);
-            this.btnUpdateRules.Name = "btnUpdateRules";
-            this.btnUpdateRules.Size = new System.Drawing.Size(89, 39);
-            this.btnUpdateRules.TabIndex = 11;
-            this.btnUpdateRules.Text = "Refresh";
-            this.btnUpdateRules.UseVisualStyleBackColor = true;
-            this.btnUpdateRules.Click += new System.EventHandler(this.btnUpdateRules_Click);
+            this.tbDiscussionDate.Location = new System.Drawing.Point(88, 457);
+            this.tbDiscussionDate.Name = "tbDiscussionDate";
+            this.tbDiscussionDate.Size = new System.Drawing.Size(77, 20);
+            this.tbDiscussionDate.TabIndex = 5;
             // 
-            // btnDiscussionName
+            // lblDiscussionName
             // 
-            this.btnDiscussionName.Location = new System.Drawing.Point(10, 454);
-            this.btnDiscussionName.Name = "btnDiscussionName";
-            this.btnDiscussionName.Size = new System.Drawing.Size(75, 23);
-            this.btnDiscussionName.TabIndex = 3;
-            this.btnDiscussionName.Text = "button2";
-            this.btnDiscussionName.UseVisualStyleBackColor = true;
-            this.btnDiscussionName.Click += new System.EventHandler(this.btnDiscussionName_Click);
+            this.lblDiscussionName.AutoSize = true;
+            this.lblDiscussionName.Location = new System.Drawing.Point(44, 428);
+            this.lblDiscussionName.Name = "lblDiscussionName";
+            this.lblDiscussionName.Size = new System.Drawing.Size(38, 13);
+            this.lblDiscussionName.TabIndex = 6;
+            this.lblDiscussionName.Text = "Name:";
             // 
-            // textBox1
+            // lblDiscussionDate
             // 
-            this.textBox1.Location = new System.Drawing.Point(8, 428);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(77, 20);
-            this.textBox1.TabIndex = 4;
+            this.lblDiscussionDate.AutoSize = true;
+            this.lblDiscussionDate.Location = new System.Drawing.Point(44, 460);
+            this.lblDiscussionDate.Name = "lblDiscussionDate";
+            this.lblDiscussionDate.Size = new System.Drawing.Size(33, 13);
+            this.lblDiscussionDate.TabIndex = 7;
+            this.lblDiscussionDate.Text = "Date:";
             // 
             // Student
             // 
@@ -422,7 +439,6 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "Student";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Student_Load);
             this.tabControl1.ResumeLayout(false);
             this.Schedule.ResumeLayout(false);
             this.Schedule.PerformLayout();
@@ -467,8 +483,10 @@
         private System.Windows.Forms.TextBox tbDiscussions;
         private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.Button btnUpdateRules;
-        private System.Windows.Forms.Button btnDiscussionName;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbDicussionName;
+        private System.Windows.Forms.Label lblDiscussionDate;
+        private System.Windows.Forms.Label lblDiscussionName;
+        private System.Windows.Forms.TextBox tbDiscussionDate;
     }
 }
 

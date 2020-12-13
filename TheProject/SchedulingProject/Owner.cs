@@ -15,29 +15,31 @@ namespace SchedulingProject
         Rules NewRuleList;
         Tenants NewTenantArray;
         Student StudentForm;
+        Student newStudentForm;
         Random randomcolor;
-
+     
         public Owner()
         {
             InitializeComponent();
             // CLASSES
+            newStudentForm = new Student(NewRuleList);
             NewRuleList = new Rules();
             NewTenantArray = new Tenants();
             randomcolor = new Random();
-            tabControl1.Visible = false;
-            btnLogOut.Visible = false;
-
+           
 
 
             // EXTRAS
             label1.Visible = false;
             label1.ForeColor = Color.Red;
+            tabControl1.Visible = false;
+            btnLogOut.Visible = false;
 
             //TENANTS INITIATE
             NewTenantArray.ReturnTenantArray()[0] = new Tenant("Leo", (TenantSex)0, 20, 550);
-            NewTenantArray.ReturnTenantArray()[1] = new Tenant("Leo", (TenantSex)0, 20, 0);
-            NewTenantArray.ReturnTenantArray()[2] = new Tenant("Leo", (TenantSex)0, 20, 0);
-            NewTenantArray.ReturnTenantArray()[3] = new Tenant("Leo", (TenantSex)0, 20, 0);
+            NewTenantArray.ReturnTenantArray()[1] = new Tenant("", (TenantSex)0, 0, 0);
+            NewTenantArray.ReturnTenantArray()[2] = new Tenant("", (TenantSex)0, 0, 0);
+            NewTenantArray.ReturnTenantArray()[3] = new Tenant("", (TenantSex)0, 0, 0);
             lblTenant1Info.Text = NewTenantArray.ReturnTenantArray()[0].GetInfo().ToString();
             lblMoney.Text = $"Monthly revenue:{NewTenantArray.GetRevenue().ToString()}€";
             lblTenant2Info.Text = RemoveMessage;
@@ -251,8 +253,23 @@ namespace SchedulingProject
             }
             else if (tbOwnerLoginUser.Text == "student" && tbOwnerLoginPassword.Text == "student")
             {
-                StudentForm.Show();
+                StudentForm.Show(); 
             }
+        }
+
+        private void btnScheduleRefresh_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void lblOwnerLogIn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("User and password for a student login is:  student \n Username and password for owner is:  owner");
+        }
+
+        private void btnDiscussionsRefesh_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

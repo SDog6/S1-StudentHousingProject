@@ -47,6 +47,7 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.tbRulesToAdd = new System.Windows.Forms.TextBox();
             this.OwnerSchedule = new System.Windows.Forms.TabPage();
+            this.btnScheduleRefresh = new System.Windows.Forms.Button();
             this.lblChores = new System.Windows.Forms.ListBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.OwnerTenants = new System.Windows.Forms.TabPage();
@@ -79,7 +80,6 @@
             this.rbTenant3 = new System.Windows.Forms.RadioButton();
             this.rbTenant2 = new System.Windows.Forms.RadioButton();
             this.rbTenant1 = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
             this.pbOwnerLogin = new System.Windows.Forms.PictureBox();
             this.lblOwnerLogIn = new System.Windows.Forms.Label();
             this.lblOwnerLogin1 = new System.Windows.Forms.Label();
@@ -88,6 +88,7 @@
             this.lblOwnerLogin3 = new System.Windows.Forms.Label();
             this.tbOwnerLoginPassword = new System.Windows.Forms.TextBox();
             this.tbOwnerLoginUser = new System.Windows.Forms.TextBox();
+            this.btnDiscussionsRefesh = new System.Windows.Forms.Button();
             this.OwnerDiscussions.SuspendLayout();
             this.OwnerCompaints.SuspendLayout();
             this.OwnerRules.SuspendLayout();
@@ -118,6 +119,7 @@
             // 
             // OwnerDiscussions
             // 
+            this.OwnerDiscussions.Controls.Add(this.btnDiscussionsRefesh);
             this.OwnerDiscussions.Controls.Add(this.btnDiscussionsSend);
             this.OwnerDiscussions.Controls.Add(this.tbDiscussions);
             this.OwnerDiscussions.Controls.Add(this.lbDiscussions);
@@ -291,6 +293,7 @@
             // 
             // OwnerSchedule
             // 
+            this.OwnerSchedule.Controls.Add(this.btnScheduleRefresh);
             this.OwnerSchedule.Controls.Add(this.lblChores);
             this.OwnerSchedule.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OwnerSchedule.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -301,6 +304,16 @@
             this.OwnerSchedule.TabIndex = 0;
             this.OwnerSchedule.Text = "Schedule";
             this.OwnerSchedule.UseVisualStyleBackColor = true;
+            // 
+            // btnScheduleRefresh
+            // 
+            this.btnScheduleRefresh.Location = new System.Drawing.Point(757, 422);
+            this.btnScheduleRefresh.Name = "btnScheduleRefresh";
+            this.btnScheduleRefresh.Size = new System.Drawing.Size(95, 34);
+            this.btnScheduleRefresh.TabIndex = 24;
+            this.btnScheduleRefresh.Text = "Refresh";
+            this.btnScheduleRefresh.UseVisualStyleBackColor = true;
+            this.btnScheduleRefresh.Click += new System.EventHandler(this.btnScheduleRefresh_Click);
             // 
             // lblChores
             // 
@@ -628,15 +641,6 @@
             this.rbTenant1.Text = "Tenant 1";
             this.rbTenant1.UseVisualStyleBackColor = true;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(666, 516);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // pbOwnerLogin
             // 
             this.pbOwnerLogin.Image = global::SchedulingProject.Properties.Resources.c102b50a8f497e337bc178fda36e0610;
@@ -657,6 +661,7 @@
             this.lblOwnerLogIn.Size = new System.Drawing.Size(28, 13);
             this.lblOwnerLogIn.TabIndex = 22;
             this.lblOwnerLogIn.Text = "hint";
+            this.lblOwnerLogIn.Click += new System.EventHandler(this.lblOwnerLogIn_Click);
             // 
             // lblOwnerLogin1
             // 
@@ -702,6 +707,7 @@
             this.tbOwnerLoginPassword.Name = "tbOwnerLoginPassword";
             this.tbOwnerLoginPassword.Size = new System.Drawing.Size(126, 20);
             this.tbOwnerLoginPassword.TabIndex = 17;
+            this.tbOwnerLoginPassword.UseSystemPasswordChar = true;
             // 
             // tbOwnerLoginUser
             // 
@@ -709,6 +715,16 @@
             this.tbOwnerLoginUser.Name = "tbOwnerLoginUser";
             this.tbOwnerLoginUser.Size = new System.Drawing.Size(126, 20);
             this.tbOwnerLoginUser.TabIndex = 16;
+            // 
+            // btnDiscussionsRefesh
+            // 
+            this.btnDiscussionsRefesh.Location = new System.Drawing.Point(757, 362);
+            this.btnDiscussionsRefesh.Name = "btnDiscussionsRefesh";
+            this.btnDiscussionsRefesh.Size = new System.Drawing.Size(95, 34);
+            this.btnDiscussionsRefesh.TabIndex = 25;
+            this.btnDiscussionsRefesh.Text = "Refresh";
+            this.btnDiscussionsRefesh.UseVisualStyleBackColor = true;
+            this.btnDiscussionsRefesh.Click += new System.EventHandler(this.btnDiscussionsRefesh_Click);
             // 
             // Owner
             // 
@@ -724,7 +740,6 @@
             this.Controls.Add(this.tbOwnerLoginPassword);
             this.Controls.Add(this.tbOwnerLoginUser);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnLogOut);
             this.Name = "Owner";
             this.Text = "Form2";
@@ -782,7 +797,6 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage OwnerTenants;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblTenant4Info;
         private System.Windows.Forms.Label lblTenant3Info;
         private System.Windows.Forms.Label lblTenant2Info;
@@ -820,5 +834,7 @@
         private System.Windows.Forms.Label lblOwnerLogin3;
         private System.Windows.Forms.TextBox tbOwnerLoginPassword;
         private System.Windows.Forms.TextBox tbOwnerLoginUser;
+        private System.Windows.Forms.Button btnScheduleRefresh;
+        private System.Windows.Forms.Button btnDiscussionsRefesh;
     }
 }

@@ -11,56 +11,50 @@ using System.Windows.Forms;
 namespace SchedulingProject
 {
     public partial class Student : Form
-    { Rules Rulesss;
- 
+    { 
+        Rules Rulesss;
+        ScheduleList myScheduleList;
+        DiscussionsOrganizer newDiscussionList;
+        Owner OwnerForm;
+
         public Student(Rules Rulesss)
         {
             InitializeComponent();
             this.Rulesss = Rulesss;
-            
-        }
+            myScheduleList = new ScheduleList();
+            newDiscussionList = new DiscussionsOrganizer();
 
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
+            //EXTRAS
+            newDiscussionList.AddDiscussion("Leo", "13.12.2020", "Hey did you guys clean the living room?");
+            newDiscussionList.AddDiscussion("Daniel", "14.12.2020", "No, because we claned it 2 days ago. It's not durty.");
+            UpdateDiscussionList();
 
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage1_Click_1(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-            LogIn LogInForm = new LogIn();
             this.Hide();
-            LogInForm.Show();
         }
 
         private void btnAddChore_Click(object sender, EventArgs e)
         {
-
+            string name = tbChoreName.Text;
+            string chore = tbChore.Text;
+            string date = tbChoreDate.Text;
+            myScheduleList.AddSchedule(name,chore,date);
+            UpdateScheduleList();
         }
 
-        private void Student_Load(object sender, EventArgs e)
+        public void UpdateScheduleList()
         {
-
+            lblChores.Items.Clear();
+            foreach (Schedule schedule in myScheduleList.GetScheduleList())
+            {
+                lblChores.Items.Add(schedule.GetInfo());
+            }
         }
+
 
         public void UpdateRuleList()
         {
@@ -76,14 +70,29 @@ namespace SchedulingProject
             UpdateRuleList();
         }
 
-        private void btnComplaintsAdd_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            int index = lblChores.SelectedIndex;
+            myScheduleList.RemoveChore(index);
+            UpdateScheduleList();
         }
 
-        private void btnDiscussionName_Click(object sender, EventArgs e)
+        private void btnDiscussionsSend_Click(object sender, EventArgs e)
         {
+            string name = tbDicussionName.Text;
+            string date =tbDiscussionDate.Text;
+            string debate = tbDiscussions.Text;
+            newDiscussionList.AddDiscussion(name, date, debate);
+            UpdateDiscussionList();
+        }
 
+        public void UpdateDiscussionList()
+        {
+            lbDiscussions.Items.Clear();
+            foreach (Discussion D in newDiscussionList.GetAllDiscussions())
+            {
+                lbDiscussions.Items.Add(D.GetInfo());
+            }
         }
     }
 }
