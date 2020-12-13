@@ -154,6 +154,7 @@
             this.btnCompaintsViewBy.TabIndex = 12;
             this.btnCompaintsViewBy.Text = "View by date";
             this.btnCompaintsViewBy.UseVisualStyleBackColor = true;
+            this.btnCompaintsViewBy.Click += new System.EventHandler(this.btnCompaintsViewBy_Click);
             // 
             // label7
             // 

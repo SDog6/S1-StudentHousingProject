@@ -12,17 +12,34 @@ namespace SchedulingProject
 {
     public partial class Owner : Form
     {
+        Complaints GatherAllComplaints;
         public Owner()
         {
             InitializeComponent();
-            lblChores.Items.Add("suicide");
+            GatherAllComplaints = new Complaints();
+           
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-            LogIn LogInForm = new LogIn();
+            //LogIn LogInForm = new LogIn();
             this.Hide();
-            LogInForm.Show();
+            //LogInForm.Show();
+        }
+        public void UpdateComplaintList()
+        {
+
+            lblComplaints.Items.Clear();
+            foreach (Complaint C in GatherAllComplaints.GetComplaintslist())
+            {
+                lblComplaints.Items.Add(C.GetInfo());
+            }
+
+        }
+
+        private void btnCompaintsViewBy_Click(object sender, EventArgs e)
+        {
+            UpdateComplaintList();
         }
     }
 }
