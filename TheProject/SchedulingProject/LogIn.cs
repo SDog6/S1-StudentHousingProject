@@ -30,8 +30,6 @@ namespace SchedulingProject
         private void btnLogIn_Click(object sender, EventArgs e)
         {
             Student StudentForm = new Student(NewRulen);
-            Owner OwnerForm = new Owner();
-            LogIn LogInForm = new LogIn();
 
             if (tbUserName.Text == "student" && tbPassword.Text == "student")
             {
@@ -42,7 +40,7 @@ namespace SchedulingProject
             else if (tbUserName.Text == "owner" && tbPassword.Text == "owner")
             {
                 
-                OwnerForm.Show();
+               
             }
             else
             {
