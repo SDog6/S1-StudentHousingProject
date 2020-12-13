@@ -44,9 +44,6 @@
             this.btnUpdateRules = new System.Windows.Forms.Button();
             this.lblRuleListS = new System.Windows.Forms.ListBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.cbComplaintsYear = new System.Windows.Forms.ComboBox();
-            this.cbComplaintsMonth = new System.Windows.Forms.ComboBox();
-            this.cbCompaintsDay = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnRemoveComplaint = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -54,19 +51,25 @@
             this.tbCompaints = new System.Windows.Forms.TextBox();
             this.lblComplaints = new System.Windows.Forms.ListBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.lblDiscussionDate = new System.Windows.Forms.Label();
+            this.lblDiscussionName = new System.Windows.Forms.Label();
+            this.tbDiscussionDate = new System.Windows.Forms.TextBox();
             this.tbDicussionName = new System.Windows.Forms.TextBox();
             this.btnDiscussionsSend = new System.Windows.Forms.Button();
             this.tbDiscussions = new System.Windows.Forms.TextBox();
             this.lbDiscussions = new System.Windows.Forms.ListBox();
             this.btnLogOut = new System.Windows.Forms.Button();
-            this.tbDiscussionDate = new System.Windows.Forms.TextBox();
-            this.lblDiscussionName = new System.Windows.Forms.Label();
-            this.lblDiscussionDate = new System.Windows.Forms.Label();
+            this.NumComplaintsDay = new System.Windows.Forms.NumericUpDown();
+            this.NumComplaintsMonth = new System.Windows.Forms.NumericUpDown();
+            this.NumComplaintsYear = new System.Windows.Forms.NumericUpDown();
             this.tabControl1.SuspendLayout();
             this.Schedule.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NumComplaintsDay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumComplaintsMonth)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumComplaintsYear)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -132,7 +135,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(70, 297);
+            this.label3.Location = new System.Drawing.Point(70, 300);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 17);
             this.label3.TabIndex = 7;
@@ -143,18 +146,19 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(63, 208);
+            this.label2.Location = new System.Drawing.Point(63, 214);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 17);
             this.label2.TabIndex = 6;
             this.label2.Text = "Chore:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(63, 125);
+            this.label1.Location = new System.Drawing.Point(63, 131);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 17);
             this.label1.TabIndex = 5;
@@ -177,7 +181,7 @@
             this.tbChoreDate.Location = new System.Drawing.Point(140, 294);
             this.tbChoreDate.Multiline = true;
             this.tbChoreDate.Name = "tbChoreDate";
-            this.tbChoreDate.Size = new System.Drawing.Size(171, 20);
+            this.tbChoreDate.Size = new System.Drawing.Size(171, 32);
             this.tbChoreDate.TabIndex = 3;
             // 
             // tbChore
@@ -185,7 +189,7 @@
             this.tbChore.Location = new System.Drawing.Point(140, 208);
             this.tbChore.Multiline = true;
             this.tbChore.Name = "tbChore";
-            this.tbChore.Size = new System.Drawing.Size(171, 20);
+            this.tbChore.Size = new System.Drawing.Size(171, 31);
             this.tbChore.TabIndex = 2;
             // 
             // tbChoreName
@@ -193,7 +197,7 @@
             this.tbChoreName.Location = new System.Drawing.Point(140, 125);
             this.tbChoreName.Multiline = true;
             this.tbChoreName.Name = "tbChoreName";
-            this.tbChoreName.Size = new System.Drawing.Size(171, 20);
+            this.tbChoreName.Size = new System.Drawing.Size(171, 31);
             this.tbChoreName.TabIndex = 1;
             // 
             // lblChores
@@ -241,9 +245,9 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.cbComplaintsYear);
-            this.tabPage1.Controls.Add(this.cbComplaintsMonth);
-            this.tabPage1.Controls.Add(this.cbCompaintsDay);
+            this.tabPage1.Controls.Add(this.NumComplaintsMonth);
+            this.tabPage1.Controls.Add(this.NumComplaintsYear);
+            this.tabPage1.Controls.Add(this.NumComplaintsDay);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.btnRemoveComplaint);
             this.tabPage1.Controls.Add(this.label5);
@@ -257,33 +261,7 @@
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Complaints";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // cbComplaintsYear
-            // 
-            this.cbComplaintsYear.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbComplaintsYear.FormattingEnabled = true;
-            this.cbComplaintsYear.Location = new System.Drawing.Point(263, 236);
-            this.cbComplaintsYear.Name = "cbComplaintsYear";
-            this.cbComplaintsYear.Size = new System.Drawing.Size(79, 23);
-            this.cbComplaintsYear.TabIndex = 9;
-            // 
-            // cbComplaintsMonth
-            // 
-            this.cbComplaintsMonth.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbComplaintsMonth.FormattingEnabled = true;
-            this.cbComplaintsMonth.Location = new System.Drawing.Point(160, 236);
-            this.cbComplaintsMonth.Name = "cbComplaintsMonth";
-            this.cbComplaintsMonth.Size = new System.Drawing.Size(79, 23);
-            this.cbComplaintsMonth.TabIndex = 8;
-            // 
-            // cbCompaintsDay
-            // 
-            this.cbCompaintsDay.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbCompaintsDay.FormattingEnabled = true;
-            this.cbCompaintsDay.Location = new System.Drawing.Point(56, 236);
-            this.cbCompaintsDay.Name = "cbCompaintsDay";
-            this.cbCompaintsDay.Size = new System.Drawing.Size(75, 23);
-            this.cbCompaintsDay.TabIndex = 7;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // label6
             // 
@@ -304,6 +282,7 @@
             this.btnRemoveComplaint.TabIndex = 4;
             this.btnRemoveComplaint.Text = "Remove";
             this.btnRemoveComplaint.UseVisualStyleBackColor = true;
+            this.btnRemoveComplaint.Click += new System.EventHandler(this.btnRemoveComplaint_Click_1);
             // 
             // label5
             // 
@@ -325,6 +304,7 @@
             this.btnComplaintsAdd.TabIndex = 2;
             this.btnComplaintsAdd.Text = "Add";
             this.btnComplaintsAdd.UseVisualStyleBackColor = true;
+            this.btnComplaintsAdd.Click += new System.EventHandler(this.btnComplaintsAdd_Click_1);
             // 
             // tbCompaints
             // 
@@ -359,6 +339,31 @@
             this.tabPage3.TabIndex = 3;
             this.tabPage3.Text = "Discussions";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // lblDiscussionDate
+            // 
+            this.lblDiscussionDate.AutoSize = true;
+            this.lblDiscussionDate.Location = new System.Drawing.Point(44, 460);
+            this.lblDiscussionDate.Name = "lblDiscussionDate";
+            this.lblDiscussionDate.Size = new System.Drawing.Size(33, 13);
+            this.lblDiscussionDate.TabIndex = 7;
+            this.lblDiscussionDate.Text = "Date:";
+            // 
+            // lblDiscussionName
+            // 
+            this.lblDiscussionName.AutoSize = true;
+            this.lblDiscussionName.Location = new System.Drawing.Point(44, 428);
+            this.lblDiscussionName.Name = "lblDiscussionName";
+            this.lblDiscussionName.Size = new System.Drawing.Size(38, 13);
+            this.lblDiscussionName.TabIndex = 6;
+            this.lblDiscussionName.Text = "Name:";
+            // 
+            // tbDiscussionDate
+            // 
+            this.tbDiscussionDate.Location = new System.Drawing.Point(88, 457);
+            this.tbDiscussionDate.Name = "tbDiscussionDate";
+            this.tbDiscussionDate.Size = new System.Drawing.Size(77, 20);
+            this.tbDiscussionDate.TabIndex = 5;
             // 
             // tbDicussionName
             // 
@@ -405,30 +410,51 @@
             this.btnLogOut.UseVisualStyleBackColor = true;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
-            // tbDiscussionDate
+            // NumComplaintsDay
             // 
-            this.tbDiscussionDate.Location = new System.Drawing.Point(88, 457);
-            this.tbDiscussionDate.Name = "tbDiscussionDate";
-            this.tbDiscussionDate.Size = new System.Drawing.Size(77, 20);
-            this.tbDiscussionDate.TabIndex = 5;
+            this.NumComplaintsDay.Location = new System.Drawing.Point(66, 233);
+            this.NumComplaintsDay.Maximum = new decimal(new int[] {
+            31,
+            0,
+            0,
+            0});
+            this.NumComplaintsDay.Name = "NumComplaintsDay";
+            this.NumComplaintsDay.Size = new System.Drawing.Size(64, 29);
+            this.NumComplaintsDay.TabIndex = 11;
             // 
-            // lblDiscussionName
+            // NumComplaintsMonth
             // 
-            this.lblDiscussionName.AutoSize = true;
-            this.lblDiscussionName.Location = new System.Drawing.Point(44, 428);
-            this.lblDiscussionName.Name = "lblDiscussionName";
-            this.lblDiscussionName.Size = new System.Drawing.Size(38, 13);
-            this.lblDiscussionName.TabIndex = 6;
-            this.lblDiscussionName.Text = "Name:";
+            this.NumComplaintsMonth.Location = new System.Drawing.Point(179, 233);
+            this.NumComplaintsMonth.Maximum = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
+            this.NumComplaintsMonth.Name = "NumComplaintsMonth";
+            this.NumComplaintsMonth.Size = new System.Drawing.Size(64, 29);
+            this.NumComplaintsMonth.TabIndex = 14;
             // 
-            // lblDiscussionDate
+            // NumComplaintsYear
             // 
-            this.lblDiscussionDate.AutoSize = true;
-            this.lblDiscussionDate.Location = new System.Drawing.Point(44, 460);
-            this.lblDiscussionDate.Name = "lblDiscussionDate";
-            this.lblDiscussionDate.Size = new System.Drawing.Size(33, 13);
-            this.lblDiscussionDate.TabIndex = 7;
-            this.lblDiscussionDate.Text = "Date:";
+            this.NumComplaintsYear.Location = new System.Drawing.Point(276, 233);
+            this.NumComplaintsYear.Maximum = new decimal(new int[] {
+            2100,
+            0,
+            0,
+            0});
+            this.NumComplaintsYear.Minimum = new decimal(new int[] {
+            2019,
+            0,
+            0,
+            0});
+            this.NumComplaintsYear.Name = "NumComplaintsYear";
+            this.NumComplaintsYear.Size = new System.Drawing.Size(69, 29);
+            this.NumComplaintsYear.TabIndex = 13;
+            this.NumComplaintsYear.Value = new decimal(new int[] {
+            2019,
+            0,
+            0,
+            0});
             // 
             // Student
             // 
@@ -439,6 +465,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "Student";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Student_Load);
             this.tabControl1.ResumeLayout(false);
             this.Schedule.ResumeLayout(false);
             this.Schedule.PerformLayout();
@@ -447,6 +474,9 @@
             this.tabPage1.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NumComplaintsDay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumComplaintsMonth)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumComplaintsYear)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -474,9 +504,6 @@
         private System.Windows.Forms.Button btnComplaintsAdd;
         private System.Windows.Forms.TextBox tbCompaints;
         private System.Windows.Forms.ListBox lblComplaints;
-        private System.Windows.Forms.ComboBox cbComplaintsYear;
-        private System.Windows.Forms.ComboBox cbComplaintsMonth;
-        private System.Windows.Forms.ComboBox cbCompaintsDay;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ListBox lbDiscussions;
         private System.Windows.Forms.Button btnDiscussionsSend;
@@ -487,6 +514,9 @@
         private System.Windows.Forms.Label lblDiscussionDate;
         private System.Windows.Forms.Label lblDiscussionName;
         private System.Windows.Forms.TextBox tbDiscussionDate;
+        private System.Windows.Forms.NumericUpDown NumComplaintsMonth;
+        private System.Windows.Forms.NumericUpDown NumComplaintsYear;
+        private System.Windows.Forms.NumericUpDown NumComplaintsDay;
     }
 }
 

@@ -15,18 +15,21 @@ namespace SchedulingProject
         Rules NewRuleList;
         Tenants NewTenantArray;
         Student StudentForm;
-        Student newStudentForm;
         Random randomcolor;
-     
+        ScheduleList mySchedule;
+        Complaints GatherAllComplaints;
+    
         public Owner()
         {
             InitializeComponent();
             // CLASSES
-            newStudentForm = new Student(NewRuleList);
+            this.mySchedule = mySchedule;
             NewRuleList = new Rules();
             NewTenantArray = new Tenants();
             randomcolor = new Random();
-           
+            GatherAllComplaints = new Complaints();
+
+
 
 
             // EXTRAS
@@ -185,49 +188,15 @@ namespace SchedulingProject
             }
         }
 
-        private void btnLogIn_Click(object sender, EventArgs e)
+        public void UpdateComplaintList()
         {
 
-        }
+            lblComplaints.Items.Clear();
+            foreach (Complaint C in GatherAllComplaints.GetComplaintslist())
+            {
+                lblComplaints.Items.Add(C.GetInfo());
+            }
 
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbUserName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-           
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
@@ -271,5 +240,13 @@ namespace SchedulingProject
         {
            
         }
+
+        private void btnCompaintsViewBy_Click(object sender, EventArgs e)
+        {
+            UpdateComplaintList();
+        }
+
+
+   
     }
 }

@@ -16,6 +16,11 @@ namespace SchedulingProject
         ScheduleList myScheduleList;
         DiscussionsOrganizer newDiscussionList;
         Owner OwnerForm;
+        Complaints allcomplaints;
+        public Student()
+        {
+            InitializeComponent();
+        }
 
         public Student(Rules Rulesss)
         {
@@ -23,6 +28,9 @@ namespace SchedulingProject
             this.Rulesss = Rulesss;
             myScheduleList = new ScheduleList();
             newDiscussionList = new DiscussionsOrganizer();
+            allcomplaints = new Complaints();
+          
+
 
             //EXTRAS
             newDiscussionList.AddDiscussion("Leo", "13.12.2020", "Hey did you guys clean the living room?");
@@ -37,6 +45,8 @@ namespace SchedulingProject
             this.Hide();
         }
 
+        // CHORES
+
         private void btnAddChore_Click(object sender, EventArgs e)
         {
             string name = tbChoreName.Text;
@@ -45,6 +55,74 @@ namespace SchedulingProject
             myScheduleList.AddSchedule(name,chore,date);
             UpdateScheduleList();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int index = lblChores.SelectedIndex;
+            myScheduleList.RemoveChore(index);
+            UpdateScheduleList();
+        }
+
+        //DISCUSSIONS
+
+        private void btnDiscussionsSend_Click(object sender, EventArgs e)
+        {
+            string name = tbDicussionName.Text;
+            string date =tbDiscussionDate.Text;
+            string debate = tbDiscussions.Text;
+            newDiscussionList.AddDiscussion(name, date, debate);
+            UpdateDiscussionList();
+        }
+
+    
+
+        // STUDENT COMPLAINTS
+
+
+        public void UpdateComplaintList()
+        {
+
+            lblComplaints.Items.Clear();
+            foreach (Complaint C in allcomplaints.GetComplaintslist())
+            {
+                lblComplaints.Items.Add(C.GetInfo());
+            }
+
+        }
+                                            
+
+        private void btnComplaintsAdd_Click_1(object sender, EventArgs e)
+        {
+            string complaint = tbCompaints.Text;
+            int day = Convert.ToInt32(NumComplaintsDay.Value);
+            int month = Convert.ToInt32(NumComplaintsMonth.Value);
+            int year = Convert.ToInt32(NumComplaintsYear.Value);
+
+            allcomplaints.AddComplaint(day, month, year, complaint);
+
+            UpdateComplaintList();
+        }
+
+  
+
+        private void btnRemoveComplaint_Click_1(object sender, EventArgs e)
+        {
+            int selected = lblComplaints.SelectedIndex;
+
+            if (selected > -1)
+            {
+                allcomplaints.Complaintlist.RemoveAt(selected);
+                UpdateComplaintList();
+
+
+            }
+            else
+            {
+                MessageBox.Show("you haven't selected a complaint to be removed yet!");
+            }
+        }
+
+        //UPDATE LISTBOXES
 
         public void UpdateScheduleList()
         {
@@ -68,22 +146,6 @@ namespace SchedulingProject
         private void btnUpdateRules_Click(object sender, EventArgs e)
         {
             UpdateRuleList();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            int index = lblChores.SelectedIndex;
-            myScheduleList.RemoveChore(index);
-            UpdateScheduleList();
-        }
-
-        private void btnDiscussionsSend_Click(object sender, EventArgs e)
-        {
-            string name = tbDicussionName.Text;
-            string date =tbDiscussionDate.Text;
-            string debate = tbDiscussions.Text;
-            newDiscussionList.AddDiscussion(name, date, debate);
-            UpdateDiscussionList();
         }
 
         public void UpdateDiscussionList()
