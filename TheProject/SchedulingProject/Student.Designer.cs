@@ -44,6 +44,9 @@
             this.btnUpdateRules = new System.Windows.Forms.Button();
             this.lblRuleListS = new System.Windows.Forms.ListBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.NumComplaintsMonth = new System.Windows.Forms.NumericUpDown();
+            this.NumComplaintsYear = new System.Windows.Forms.NumericUpDown();
+            this.NumComplaintsDay = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.btnRemoveComplaint = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -59,17 +62,14 @@
             this.tbDiscussions = new System.Windows.Forms.TextBox();
             this.lbDiscussions = new System.Windows.Forms.ListBox();
             this.btnLogOut = new System.Windows.Forms.Button();
-            this.NumComplaintsDay = new System.Windows.Forms.NumericUpDown();
-            this.NumComplaintsMonth = new System.Windows.Forms.NumericUpDown();
-            this.NumComplaintsYear = new System.Windows.Forms.NumericUpDown();
             this.tabControl1.SuspendLayout();
             this.Schedule.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NumComplaintsDay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumComplaintsMonth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumComplaintsYear)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumComplaintsDay)).BeginInit();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -261,6 +261,52 @@
             this.tabPage1.Text = "Complaints";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // NumComplaintsMonth
+            // 
+            this.NumComplaintsMonth.Location = new System.Drawing.Point(179, 233);
+            this.NumComplaintsMonth.Maximum = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
+            this.NumComplaintsMonth.Name = "NumComplaintsMonth";
+            this.NumComplaintsMonth.Size = new System.Drawing.Size(64, 29);
+            this.NumComplaintsMonth.TabIndex = 14;
+            // 
+            // NumComplaintsYear
+            // 
+            this.NumComplaintsYear.Location = new System.Drawing.Point(276, 233);
+            this.NumComplaintsYear.Maximum = new decimal(new int[] {
+            2100,
+            0,
+            0,
+            0});
+            this.NumComplaintsYear.Minimum = new decimal(new int[] {
+            2019,
+            0,
+            0,
+            0});
+            this.NumComplaintsYear.Name = "NumComplaintsYear";
+            this.NumComplaintsYear.Size = new System.Drawing.Size(69, 29);
+            this.NumComplaintsYear.TabIndex = 13;
+            this.NumComplaintsYear.Value = new decimal(new int[] {
+            2019,
+            0,
+            0,
+            0});
+            // 
+            // NumComplaintsDay
+            // 
+            this.NumComplaintsDay.Location = new System.Drawing.Point(66, 233);
+            this.NumComplaintsDay.Maximum = new decimal(new int[] {
+            31,
+            0,
+            0,
+            0});
+            this.NumComplaintsDay.Name = "NumComplaintsDay";
+            this.NumComplaintsDay.Size = new System.Drawing.Size(64, 29);
+            this.NumComplaintsDay.TabIndex = 11;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -408,52 +454,6 @@
             this.btnLogOut.UseVisualStyleBackColor = true;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
-            // NumComplaintsDay
-            // 
-            this.NumComplaintsDay.Location = new System.Drawing.Point(66, 233);
-            this.NumComplaintsDay.Maximum = new decimal(new int[] {
-            31,
-            0,
-            0,
-            0});
-            this.NumComplaintsDay.Name = "NumComplaintsDay";
-            this.NumComplaintsDay.Size = new System.Drawing.Size(64, 29);
-            this.NumComplaintsDay.TabIndex = 11;
-            // 
-            // NumComplaintsMonth
-            // 
-            this.NumComplaintsMonth.Location = new System.Drawing.Point(179, 233);
-            this.NumComplaintsMonth.Maximum = new decimal(new int[] {
-            12,
-            0,
-            0,
-            0});
-            this.NumComplaintsMonth.Name = "NumComplaintsMonth";
-            this.NumComplaintsMonth.Size = new System.Drawing.Size(64, 29);
-            this.NumComplaintsMonth.TabIndex = 14;
-            // 
-            // NumComplaintsYear
-            // 
-            this.NumComplaintsYear.Location = new System.Drawing.Point(276, 233);
-            this.NumComplaintsYear.Maximum = new decimal(new int[] {
-            2100,
-            0,
-            0,
-            0});
-            this.NumComplaintsYear.Minimum = new decimal(new int[] {
-            2019,
-            0,
-            0,
-            0});
-            this.NumComplaintsYear.Name = "NumComplaintsYear";
-            this.NumComplaintsYear.Size = new System.Drawing.Size(69, 29);
-            this.NumComplaintsYear.TabIndex = 13;
-            this.NumComplaintsYear.Value = new decimal(new int[] {
-            2019,
-            0,
-            0,
-            0});
-            // 
             // Student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -469,11 +469,11 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NumComplaintsDay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumComplaintsMonth)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumComplaintsYear)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumComplaintsDay)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
 
         }

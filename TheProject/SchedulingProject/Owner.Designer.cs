@@ -30,8 +30,7 @@
         {
             this.btnLogOut = new System.Windows.Forms.Button();
             this.OwnerDiscussions = new System.Windows.Forms.TabPage();
-            this.btnDiscussionsSend = new System.Windows.Forms.Button();
-            this.tbDiscussions = new System.Windows.Forms.TextBox();
+            this.btnDiscussionsRefesh = new System.Windows.Forms.Button();
             this.lbDiscussions = new System.Windows.Forms.ListBox();
             this.OwnerCompaints = new System.Windows.Forms.TabPage();
             this.cbComplaintsViewMonth = new System.Windows.Forms.ComboBox();
@@ -88,7 +87,6 @@
             this.lblOwnerLogin3 = new System.Windows.Forms.Label();
             this.tbOwnerLoginPassword = new System.Windows.Forms.TextBox();
             this.tbOwnerLoginUser = new System.Windows.Forms.TextBox();
-            this.btnDiscussionsRefesh = new System.Windows.Forms.Button();
             this.OwnerDiscussions.SuspendLayout();
             this.OwnerCompaints.SuspendLayout();
             this.OwnerRules.SuspendLayout();
@@ -120,8 +118,6 @@
             // OwnerDiscussions
             // 
             this.OwnerDiscussions.Controls.Add(this.btnDiscussionsRefesh);
-            this.OwnerDiscussions.Controls.Add(this.btnDiscussionsSend);
-            this.OwnerDiscussions.Controls.Add(this.tbDiscussions);
             this.OwnerDiscussions.Controls.Add(this.lbDiscussions);
             this.OwnerDiscussions.Location = new System.Drawing.Point(4, 22);
             this.OwnerDiscussions.Name = "OwnerDiscussions";
@@ -130,29 +126,22 @@
             this.OwnerDiscussions.Text = "Discussions";
             this.OwnerDiscussions.UseVisualStyleBackColor = true;
             // 
-            // btnDiscussionsSend
+            // btnDiscussionsRefesh
             // 
-            this.btnDiscussionsSend.Location = new System.Drawing.Point(779, 428);
-            this.btnDiscussionsSend.Name = "btnDiscussionsSend";
-            this.btnDiscussionsSend.Size = new System.Drawing.Size(91, 49);
-            this.btnDiscussionsSend.TabIndex = 2;
-            this.btnDiscussionsSend.Text = "Send";
-            this.btnDiscussionsSend.UseVisualStyleBackColor = true;
-            // 
-            // tbDiscussions
-            // 
-            this.tbDiscussions.Location = new System.Drawing.Point(7, 428);
-            this.tbDiscussions.Multiline = true;
-            this.tbDiscussions.Name = "tbDiscussions";
-            this.tbDiscussions.Size = new System.Drawing.Size(766, 49);
-            this.tbDiscussions.TabIndex = 1;
+            this.btnDiscussionsRefesh.Location = new System.Drawing.Point(770, 425);
+            this.btnDiscussionsRefesh.Name = "btnDiscussionsRefesh";
+            this.btnDiscussionsRefesh.Size = new System.Drawing.Size(95, 34);
+            this.btnDiscussionsRefesh.TabIndex = 25;
+            this.btnDiscussionsRefesh.Text = "Refresh";
+            this.btnDiscussionsRefesh.UseVisualStyleBackColor = true;
+            this.btnDiscussionsRefesh.Click += new System.EventHandler(this.btnDiscussionsRefesh_Click);
             // 
             // lbDiscussions
             // 
             this.lbDiscussions.FormattingEnabled = true;
             this.lbDiscussions.Location = new System.Drawing.Point(7, 14);
             this.lbDiscussions.Name = "lbDiscussions";
-            this.lbDiscussions.Size = new System.Drawing.Size(863, 394);
+            this.lbDiscussions.Size = new System.Drawing.Size(863, 459);
             this.lbDiscussions.TabIndex = 0;
             // 
             // OwnerCompaints
@@ -716,16 +705,6 @@
             this.tbOwnerLoginUser.Size = new System.Drawing.Size(126, 20);
             this.tbOwnerLoginUser.TabIndex = 16;
             // 
-            // btnDiscussionsRefesh
-            // 
-            this.btnDiscussionsRefesh.Location = new System.Drawing.Point(757, 362);
-            this.btnDiscussionsRefesh.Name = "btnDiscussionsRefesh";
-            this.btnDiscussionsRefesh.Size = new System.Drawing.Size(95, 34);
-            this.btnDiscussionsRefesh.TabIndex = 25;
-            this.btnDiscussionsRefesh.Text = "Refresh";
-            this.btnDiscussionsRefesh.UseVisualStyleBackColor = true;
-            this.btnDiscussionsRefesh.Click += new System.EventHandler(this.btnDiscussionsRefesh_Click);
-            // 
             // Owner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -745,7 +724,6 @@
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Owner_Load);
             this.OwnerDiscussions.ResumeLayout(false);
-            this.OwnerDiscussions.PerformLayout();
             this.OwnerCompaints.ResumeLayout(false);
             this.OwnerCompaints.PerformLayout();
             this.OwnerRules.ResumeLayout(false);
@@ -777,8 +755,6 @@
         #endregion
         private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.TabPage OwnerDiscussions;
-        private System.Windows.Forms.Button btnDiscussionsSend;
-        private System.Windows.Forms.TextBox tbDiscussions;
         private System.Windows.Forms.ListBox lbDiscussions;
         private System.Windows.Forms.TabPage OwnerCompaints;
         private System.Windows.Forms.ComboBox cbComplaintsViewMonth;
