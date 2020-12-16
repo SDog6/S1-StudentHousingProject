@@ -36,7 +36,6 @@ namespace SchedulingProject
             public void RemoveTenant()
         {
             Rent = 0;
-
         }
         public string GetInfo()
         {

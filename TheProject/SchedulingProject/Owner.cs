@@ -186,6 +186,8 @@ namespace SchedulingProject
                 lblTenant4Info.Text = RemoveMessage;
                 NewTenantArray.ReturnTenantArray()[3].RemoveTenant();
             }
+            lblMoney.Text = $"Monthly revenue:{NewTenantArray.GetRevenue().ToString()}€";
+
         }
 
         public void UpdateComplaintList()

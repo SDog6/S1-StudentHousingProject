@@ -151,7 +151,6 @@
             this.label2.Size = new System.Drawing.Size(47, 17);
             this.label2.TabIndex = 6;
             this.label2.Text = "Chore:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -261,7 +260,6 @@
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Complaints";
             this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // label6
             // 
@@ -465,7 +463,6 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "Student";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Student_Load);
             this.tabControl1.ResumeLayout(false);
             this.Schedule.ResumeLayout(false);
             this.Schedule.PerformLayout();
