@@ -8,7 +8,7 @@ namespace SchedulingProject
 {
     public class Rules
     {
-        private List<Rule> NewRuleList;
+        private static List<Rule> NewRuleList;
 
         public Rules()
         {

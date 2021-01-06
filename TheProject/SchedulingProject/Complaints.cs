@@ -8,11 +8,11 @@ namespace SchedulingProject
 {
     class Complaints
     {
-        public List<Complaint> Complaintlist;
+        public static List<Complaint> Complaintlist;
 
         public Complaints()
         {
-            this.Complaintlist = new List<Complaint>();
+            Complaintlist = new List<Complaint>();
         }
 
 

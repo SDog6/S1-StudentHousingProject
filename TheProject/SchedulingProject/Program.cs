@@ -16,7 +16,7 @@ namespace SchedulingProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Owner());
+            Application.Run(new LogIn());
         }
     }
 }

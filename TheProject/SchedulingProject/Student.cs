@@ -15,37 +15,28 @@ namespace SchedulingProject
         Rules Rulesss;
         ScheduleList myScheduleList;
         DiscussionsOrganizer newDiscussionList;
-        Owner OwnerForm;
         Complaints allcomplaints;
+
         public Student()
         {
             InitializeComponent();
-        }
-
-        public Student(Rules Rulesss)
-        {
-            InitializeComponent();
-            this.Rulesss = Rulesss;
+            this.Text = "Wellcome dear tenant";
             myScheduleList = new ScheduleList();
             newDiscussionList = new DiscussionsOrganizer();
             allcomplaints = new Complaints();
-          
-
-
-            //EXTRAS
-            newDiscussionList.AddDiscussion("Leo", "13.12.2020", "Hey did you guys clean the living room?");
-            newDiscussionList.AddDiscussion("Daniel", "14.12.2020", "No, because we claned it 2 days ago. It's not durty.");
-            tbDiscussionDate.Text = "16/12/2020";
-            UpdateDiscussionList();
-
-
-
+            Rulesss = new Rules();
         }
 
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        //RULES
+        private void btnUpdateRules_Click(object sender, EventArgs e)
+        {
+            UpdateRuleList();
         }
 
         // CHORES
@@ -59,7 +50,7 @@ namespace SchedulingProject
             UpdateScheduleList();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void BtnRemoveChore_Click(object sender, EventArgs e)
         {
             int index = lblChores.SelectedIndex;
             myScheduleList.RemoveChore(index);
@@ -114,10 +105,8 @@ namespace SchedulingProject
 
             if (selected > -1)
             {
-                allcomplaints.Complaintlist.RemoveAt(selected);
+                allcomplaints.GetComplaintslist().RemoveAt(selected);
                 UpdateComplaintList();
-
-
             }
             else
             {
@@ -146,11 +135,6 @@ namespace SchedulingProject
             }
         }
 
-        private void btnUpdateRules_Click(object sender, EventArgs e)
-        {
-            UpdateRuleList();
-        }
-
         public void UpdateDiscussionList()
         {
             lbDiscussions.Items.Clear();
@@ -160,9 +144,5 @@ namespace SchedulingProject
             }
         }
 
-        private void btnStudentDiscussion_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

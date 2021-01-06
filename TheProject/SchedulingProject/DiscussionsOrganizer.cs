@@ -8,7 +8,7 @@ namespace SchedulingProject
 {
     public class DiscussionsOrganizer
     {
-        private List<Discussion> NewDiscussionList;
+        private static List<Discussion> NewDiscussionList;
 
         public DiscussionsOrganizer()
         {

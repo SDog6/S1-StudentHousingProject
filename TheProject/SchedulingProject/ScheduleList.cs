@@ -8,7 +8,7 @@ namespace SchedulingProject
 {
     public class ScheduleList
     {
-        private List<Schedule> myScheduleList;
+        private static List<Schedule> myScheduleList;
 
         public ScheduleList()
         {
@@ -22,7 +22,7 @@ namespace SchedulingProject
 
         public List<Schedule> GetScheduleList()
         {
-            return myScheduleList;
+            return myScheduleList.ToList() ;
         }
 
         public void RemoveChore(int index)

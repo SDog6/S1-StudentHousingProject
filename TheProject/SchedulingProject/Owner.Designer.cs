@@ -32,13 +32,6 @@
             this.OwnerDiscussions = new System.Windows.Forms.TabPage();
             this.btnDiscussionsRefesh = new System.Windows.Forms.Button();
             this.lbDiscussions = new System.Windows.Forms.ListBox();
-            this.OwnerCompaints = new System.Windows.Forms.TabPage();
-            this.cbComplaintsViewMonth = new System.Windows.Forms.ComboBox();
-            this.cbComplaintsViewYear = new System.Windows.Forms.ComboBox();
-            this.cbComplaintsViewDay = new System.Windows.Forms.ComboBox();
-            this.btnCompaintsViewBy = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lblComplaints = new System.Windows.Forms.ListBox();
             this.OwnerRules = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.lblRuleList = new System.Windows.Forms.ListBox();
@@ -49,6 +42,14 @@
             this.btnScheduleRefresh = new System.Windows.Forms.Button();
             this.lblChores = new System.Windows.Forms.ListBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.OwnerCompaints = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.cbComplaintsViewMonth = new System.Windows.Forms.ComboBox();
+            this.cbComplaintsViewYear = new System.Windows.Forms.ComboBox();
+            this.cbComplaintsViewDay = new System.Windows.Forms.ComboBox();
+            this.btnCompaintsViewBy = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lblComplaints = new System.Windows.Forms.ListBox();
             this.OwnerTenants = new System.Windows.Forms.TabPage();
             this.lblMoney = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -79,19 +80,11 @@
             this.rbTenant3 = new System.Windows.Forms.RadioButton();
             this.rbTenant2 = new System.Windows.Forms.RadioButton();
             this.rbTenant1 = new System.Windows.Forms.RadioButton();
-            this.pbOwnerLogin = new System.Windows.Forms.PictureBox();
-            this.lblOwnerLogIn = new System.Windows.Forms.Label();
-            this.lblOwnerLogin1 = new System.Windows.Forms.Label();
-            this.btnOwnerLogin = new System.Windows.Forms.Button();
-            this.lblOwnerLogin4 = new System.Windows.Forms.Label();
-            this.lblOwnerLogin3 = new System.Windows.Forms.Label();
-            this.tbOwnerLoginPassword = new System.Windows.Forms.TextBox();
-            this.tbOwnerLoginUser = new System.Windows.Forms.TextBox();
             this.OwnerDiscussions.SuspendLayout();
-            this.OwnerCompaints.SuspendLayout();
             this.OwnerRules.SuspendLayout();
             this.OwnerSchedule.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.OwnerCompaints.SuspendLayout();
             this.OwnerTenants.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -102,7 +95,6 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbOwnerLogin)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLogOut
@@ -113,7 +105,6 @@
             this.btnLogOut.TabIndex = 11;
             this.btnLogOut.Text = "Log Out";
             this.btnLogOut.UseVisualStyleBackColor = true;
-            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // OwnerDiscussions
             // 
@@ -128,7 +119,7 @@
             // 
             // btnDiscussionsRefesh
             // 
-            this.btnDiscussionsRefesh.Location = new System.Drawing.Point(770, 425);
+            this.btnDiscussionsRefesh.Location = new System.Drawing.Point(770, 411);
             this.btnDiscussionsRefesh.Name = "btnDiscussionsRefesh";
             this.btnDiscussionsRefesh.Size = new System.Drawing.Size(95, 34);
             this.btnDiscussionsRefesh.TabIndex = 25;
@@ -138,83 +129,13 @@
             // 
             // lbDiscussions
             // 
+            this.lbDiscussions.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDiscussions.FormattingEnabled = true;
+            this.lbDiscussions.ItemHeight = 23;
             this.lbDiscussions.Location = new System.Drawing.Point(7, 14);
             this.lbDiscussions.Name = "lbDiscussions";
-            this.lbDiscussions.Size = new System.Drawing.Size(863, 459);
+            this.lbDiscussions.Size = new System.Drawing.Size(863, 441);
             this.lbDiscussions.TabIndex = 0;
-            // 
-            // OwnerCompaints
-            // 
-            this.OwnerCompaints.Controls.Add(this.cbComplaintsViewMonth);
-            this.OwnerCompaints.Controls.Add(this.cbComplaintsViewYear);
-            this.OwnerCompaints.Controls.Add(this.cbComplaintsViewDay);
-            this.OwnerCompaints.Controls.Add(this.btnCompaintsViewBy);
-            this.OwnerCompaints.Controls.Add(this.label7);
-            this.OwnerCompaints.Controls.Add(this.lblComplaints);
-            this.OwnerCompaints.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OwnerCompaints.Location = new System.Drawing.Point(4, 22);
-            this.OwnerCompaints.Name = "OwnerCompaints";
-            this.OwnerCompaints.Size = new System.Drawing.Size(879, 488);
-            this.OwnerCompaints.TabIndex = 2;
-            this.OwnerCompaints.Text = "Complaints";
-            this.OwnerCompaints.UseVisualStyleBackColor = true;
-            // 
-            // cbComplaintsViewMonth
-            // 
-            this.cbComplaintsViewMonth.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbComplaintsViewMonth.FormattingEnabled = true;
-            this.cbComplaintsViewMonth.Location = new System.Drawing.Point(154, 80);
-            this.cbComplaintsViewMonth.Name = "cbComplaintsViewMonth";
-            this.cbComplaintsViewMonth.Size = new System.Drawing.Size(75, 23);
-            this.cbComplaintsViewMonth.TabIndex = 15;
-            // 
-            // cbComplaintsViewYear
-            // 
-            this.cbComplaintsViewYear.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbComplaintsViewYear.FormattingEnabled = true;
-            this.cbComplaintsViewYear.Location = new System.Drawing.Point(257, 80);
-            this.cbComplaintsViewYear.Name = "cbComplaintsViewYear";
-            this.cbComplaintsViewYear.Size = new System.Drawing.Size(75, 23);
-            this.cbComplaintsViewYear.TabIndex = 14;
-            // 
-            // cbComplaintsViewDay
-            // 
-            this.cbComplaintsViewDay.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbComplaintsViewDay.FormattingEnabled = true;
-            this.cbComplaintsViewDay.Location = new System.Drawing.Point(46, 80);
-            this.cbComplaintsViewDay.Name = "cbComplaintsViewDay";
-            this.cbComplaintsViewDay.Size = new System.Drawing.Size(75, 23);
-            this.cbComplaintsViewDay.TabIndex = 13;
-            // 
-            // btnCompaintsViewBy
-            // 
-            this.btnCompaintsViewBy.Location = new System.Drawing.Point(195, 121);
-            this.btnCompaintsViewBy.Name = "btnCompaintsViewBy";
-            this.btnCompaintsViewBy.Size = new System.Drawing.Size(137, 37);
-            this.btnCompaintsViewBy.TabIndex = 12;
-            this.btnCompaintsViewBy.Text = "View by date";
-            this.btnCompaintsViewBy.UseVisualStyleBackColor = true;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(40, 46);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(128, 19);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "View Sertain Dates:";
-            // 
-            // lblComplaints
-            // 
-            this.lblComplaints.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblComplaints.FormattingEnabled = true;
-            this.lblComplaints.ItemHeight = 21;
-            this.lblComplaints.Location = new System.Drawing.Point(402, 26);
-            this.lblComplaints.Name = "lblComplaints";
-            this.lblComplaints.Size = new System.Drawing.Size(459, 424);
-            this.lblComplaints.TabIndex = 0;
             // 
             // OwnerRules
             // 
@@ -313,7 +234,6 @@
             this.lblChores.Name = "lblChores";
             this.lblChores.Size = new System.Drawing.Size(861, 441);
             this.lblChores.TabIndex = 0;
-            this.lblChores.SelectedIndexChanged += new System.EventHandler(this.lblChores_SelectedIndexChanged);
             // 
             // tabControl1
             // 
@@ -327,6 +247,89 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(887, 514);
             this.tabControl1.TabIndex = 1;
+            // 
+            // OwnerCompaints
+            // 
+            this.OwnerCompaints.Controls.Add(this.button1);
+            this.OwnerCompaints.Controls.Add(this.cbComplaintsViewMonth);
+            this.OwnerCompaints.Controls.Add(this.cbComplaintsViewYear);
+            this.OwnerCompaints.Controls.Add(this.cbComplaintsViewDay);
+            this.OwnerCompaints.Controls.Add(this.btnCompaintsViewBy);
+            this.OwnerCompaints.Controls.Add(this.label7);
+            this.OwnerCompaints.Controls.Add(this.lblComplaints);
+            this.OwnerCompaints.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OwnerCompaints.Location = new System.Drawing.Point(4, 22);
+            this.OwnerCompaints.Name = "OwnerCompaints";
+            this.OwnerCompaints.Size = new System.Drawing.Size(879, 488);
+            this.OwnerCompaints.TabIndex = 2;
+            this.OwnerCompaints.Text = "Complaints";
+            this.OwnerCompaints.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(213, 203);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(119, 37);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Refresh";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // cbComplaintsViewMonth
+            // 
+            this.cbComplaintsViewMonth.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbComplaintsViewMonth.FormattingEnabled = true;
+            this.cbComplaintsViewMonth.Location = new System.Drawing.Point(154, 80);
+            this.cbComplaintsViewMonth.Name = "cbComplaintsViewMonth";
+            this.cbComplaintsViewMonth.Size = new System.Drawing.Size(75, 23);
+            this.cbComplaintsViewMonth.TabIndex = 15;
+            // 
+            // cbComplaintsViewYear
+            // 
+            this.cbComplaintsViewYear.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbComplaintsViewYear.FormattingEnabled = true;
+            this.cbComplaintsViewYear.Location = new System.Drawing.Point(257, 80);
+            this.cbComplaintsViewYear.Name = "cbComplaintsViewYear";
+            this.cbComplaintsViewYear.Size = new System.Drawing.Size(75, 23);
+            this.cbComplaintsViewYear.TabIndex = 14;
+            // 
+            // cbComplaintsViewDay
+            // 
+            this.cbComplaintsViewDay.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbComplaintsViewDay.FormattingEnabled = true;
+            this.cbComplaintsViewDay.Location = new System.Drawing.Point(46, 80);
+            this.cbComplaintsViewDay.Name = "cbComplaintsViewDay";
+            this.cbComplaintsViewDay.Size = new System.Drawing.Size(75, 23);
+            this.cbComplaintsViewDay.TabIndex = 13;
+            // 
+            // btnCompaintsViewBy
+            // 
+            this.btnCompaintsViewBy.Location = new System.Drawing.Point(195, 121);
+            this.btnCompaintsViewBy.Name = "btnCompaintsViewBy";
+            this.btnCompaintsViewBy.Size = new System.Drawing.Size(137, 37);
+            this.btnCompaintsViewBy.TabIndex = 12;
+            this.btnCompaintsViewBy.Text = "View by date";
+            this.btnCompaintsViewBy.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(40, 46);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(128, 19);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "View Sertain Dates:";
+            // 
+            // lblComplaints
+            // 
+            this.lblComplaints.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblComplaints.FormattingEnabled = true;
+            this.lblComplaints.ItemHeight = 21;
+            this.lblComplaints.Location = new System.Drawing.Point(402, 26);
+            this.lblComplaints.Name = "lblComplaints";
+            this.lblComplaints.Size = new System.Drawing.Size(459, 424);
+            this.lblComplaints.TabIndex = 0;
             // 
             // OwnerTenants
             // 
@@ -630,106 +633,22 @@
             this.rbTenant1.Text = "Tenant 1";
             this.rbTenant1.UseVisualStyleBackColor = true;
             // 
-            // pbOwnerLogin
-            // 
-            this.pbOwnerLogin.Image = global::SchedulingProject.Properties.Resources.c102b50a8f497e337bc178fda36e0610;
-            this.pbOwnerLogin.Location = new System.Drawing.Point(608, 82);
-            this.pbOwnerLogin.Name = "pbOwnerLogin";
-            this.pbOwnerLogin.Size = new System.Drawing.Size(27, 30);
-            this.pbOwnerLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbOwnerLogin.TabIndex = 23;
-            this.pbOwnerLogin.TabStop = false;
-            this.pbOwnerLogin.Click += new System.EventHandler(this.pictureBox6_Click);
-            // 
-            // lblOwnerLogIn
-            // 
-            this.lblOwnerLogIn.AutoSize = true;
-            this.lblOwnerLogIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOwnerLogIn.Location = new System.Drawing.Point(616, 427);
-            this.lblOwnerLogIn.Name = "lblOwnerLogIn";
-            this.lblOwnerLogIn.Size = new System.Drawing.Size(28, 13);
-            this.lblOwnerLogIn.TabIndex = 22;
-            this.lblOwnerLogIn.Text = "hint";
-            this.lblOwnerLogIn.Click += new System.EventHandler(this.lblOwnerLogIn_Click);
-            // 
-            // lblOwnerLogin1
-            // 
-            this.lblOwnerLogin1.AutoSize = true;
-            this.lblOwnerLogin1.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblOwnerLogin1.Location = new System.Drawing.Point(351, 132);
-            this.lblOwnerLogin1.Name = "lblOwnerLogin1";
-            this.lblOwnerLogin1.Size = new System.Drawing.Size(156, 40);
-            this.lblOwnerLogin1.TabIndex = 21;
-            this.lblOwnerLogin1.Text = "Welcome!";
-            // 
-            // btnOwnerLogin
-            // 
-            this.btnOwnerLogin.Location = new System.Drawing.Point(495, 363);
-            this.btnOwnerLogin.Name = "btnOwnerLogin";
-            this.btnOwnerLogin.Size = new System.Drawing.Size(149, 46);
-            this.btnOwnerLogin.TabIndex = 20;
-            this.btnOwnerLogin.Text = "LogIn";
-            this.btnOwnerLogin.UseVisualStyleBackColor = true;
-            this.btnOwnerLogin.Click += new System.EventHandler(this.btnOwnerLogin_Click);
-            // 
-            // lblOwnerLogin4
-            // 
-            this.lblOwnerLogin4.AutoSize = true;
-            this.lblOwnerLogin4.Location = new System.Drawing.Point(247, 380);
-            this.lblOwnerLogin4.Name = "lblOwnerLogin4";
-            this.lblOwnerLogin4.Size = new System.Drawing.Size(56, 13);
-            this.lblOwnerLogin4.TabIndex = 19;
-            this.lblOwnerLogin4.Text = "Password:";
-            // 
-            // lblOwnerLogin3
-            // 
-            this.lblOwnerLogin3.AutoSize = true;
-            this.lblOwnerLogin3.Location = new System.Drawing.Point(245, 326);
-            this.lblOwnerLogin3.Name = "lblOwnerLogin3";
-            this.lblOwnerLogin3.Size = new System.Drawing.Size(58, 13);
-            this.lblOwnerLogin3.TabIndex = 18;
-            this.lblOwnerLogin3.Text = "Username:";
-            // 
-            // tbOwnerLoginPassword
-            // 
-            this.tbOwnerLoginPassword.Location = new System.Drawing.Point(311, 377);
-            this.tbOwnerLoginPassword.Name = "tbOwnerLoginPassword";
-            this.tbOwnerLoginPassword.Size = new System.Drawing.Size(126, 20);
-            this.tbOwnerLoginPassword.TabIndex = 17;
-            this.tbOwnerLoginPassword.UseSystemPasswordChar = true;
-            // 
-            // tbOwnerLoginUser
-            // 
-            this.tbOwnerLoginUser.Location = new System.Drawing.Point(311, 323);
-            this.tbOwnerLoginUser.Name = "tbOwnerLoginUser";
-            this.tbOwnerLoginUser.Size = new System.Drawing.Size(126, 20);
-            this.tbOwnerLoginUser.TabIndex = 16;
-            // 
             // Owner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(883, 543);
-            this.Controls.Add(this.pbOwnerLogin);
-            this.Controls.Add(this.lblOwnerLogIn);
-            this.Controls.Add(this.lblOwnerLogin1);
-            this.Controls.Add(this.btnOwnerLogin);
-            this.Controls.Add(this.lblOwnerLogin4);
-            this.Controls.Add(this.lblOwnerLogin3);
-            this.Controls.Add(this.tbOwnerLoginPassword);
-            this.Controls.Add(this.tbOwnerLoginUser);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnLogOut);
             this.Name = "Owner";
             this.Text = "Form2";
-            this.Load += new System.EventHandler(this.Owner_Load);
             this.OwnerDiscussions.ResumeLayout(false);
-            this.OwnerCompaints.ResumeLayout(false);
-            this.OwnerCompaints.PerformLayout();
             this.OwnerRules.ResumeLayout(false);
             this.OwnerRules.PerformLayout();
             this.OwnerSchedule.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
+            this.OwnerCompaints.ResumeLayout(false);
+            this.OwnerCompaints.PerformLayout();
             this.OwnerTenants.ResumeLayout(false);
             this.OwnerTenants.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -746,9 +665,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbOwnerLogin)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -756,13 +673,6 @@
         private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.TabPage OwnerDiscussions;
         private System.Windows.Forms.ListBox lbDiscussions;
-        private System.Windows.Forms.TabPage OwnerCompaints;
-        private System.Windows.Forms.ComboBox cbComplaintsViewMonth;
-        private System.Windows.Forms.ComboBox cbComplaintsViewYear;
-        private System.Windows.Forms.ComboBox cbComplaintsViewDay;
-        private System.Windows.Forms.Button btnCompaintsViewBy;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ListBox lblComplaints;
         private System.Windows.Forms.TabPage OwnerRules;
         private System.Windows.Forms.ListBox lblRuleList;
         private System.Windows.Forms.Button btnRemove;
@@ -802,15 +712,15 @@
         private System.Windows.Forms.Button btnTenantRemove;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblMoney;
-        private System.Windows.Forms.PictureBox pbOwnerLogin;
-        private System.Windows.Forms.Label lblOwnerLogIn;
-        private System.Windows.Forms.Label lblOwnerLogin1;
-        private System.Windows.Forms.Button btnOwnerLogin;
-        private System.Windows.Forms.Label lblOwnerLogin4;
-        private System.Windows.Forms.Label lblOwnerLogin3;
-        private System.Windows.Forms.TextBox tbOwnerLoginPassword;
-        private System.Windows.Forms.TextBox tbOwnerLoginUser;
         private System.Windows.Forms.Button btnScheduleRefresh;
         private System.Windows.Forms.Button btnDiscussionsRefesh;
+        private System.Windows.Forms.TabPage OwnerCompaints;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox cbComplaintsViewMonth;
+        private System.Windows.Forms.ComboBox cbComplaintsViewYear;
+        private System.Windows.Forms.ComboBox cbComplaintsViewDay;
+        private System.Windows.Forms.Button btnCompaintsViewBy;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ListBox lblComplaints;
     }
 }

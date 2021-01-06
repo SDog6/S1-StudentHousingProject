@@ -30,7 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Schedule = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnRemoveChore = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -86,7 +86,7 @@
             // 
             // Schedule
             // 
-            this.Schedule.Controls.Add(this.button1);
+            this.Schedule.Controls.Add(this.BtnRemoveChore);
             this.Schedule.Controls.Add(this.label4);
             this.Schedule.Controls.Add(this.label3);
             this.Schedule.Controls.Add(this.label2);
@@ -106,17 +106,17 @@
             this.Schedule.Text = "Schedule";
             this.Schedule.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // BtnRemoveChore
             // 
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(140, 419);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(171, 46);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Remove a scheduled chore";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.BtnRemoveChore.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRemoveChore.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.BtnRemoveChore.Location = new System.Drawing.Point(140, 419);
+            this.BtnRemoveChore.Name = "BtnRemoveChore";
+            this.BtnRemoveChore.Size = new System.Drawing.Size(171, 46);
+            this.BtnRemoveChore.TabIndex = 9;
+            this.BtnRemoveChore.Text = "Remove a scheduled chore";
+            this.BtnRemoveChore.UseVisualStyleBackColor = true;
+            this.BtnRemoveChore.Click += new System.EventHandler(this.BtnRemoveChore_Click);
             // 
             // label4
             // 
@@ -224,7 +224,7 @@
             // btnUpdateRules
             // 
             this.btnUpdateRules.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateRules.Location = new System.Drawing.Point(772, 409);
+            this.btnUpdateRules.Location = new System.Drawing.Point(771, 389);
             this.btnUpdateRules.Name = "btnUpdateRules";
             this.btnUpdateRules.Size = new System.Drawing.Size(89, 39);
             this.btnUpdateRules.TabIndex = 11;
@@ -234,12 +234,12 @@
             // 
             // lblRuleListS
             // 
-            this.lblRuleListS.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRuleListS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRuleListS.FormattingEnabled = true;
-            this.lblRuleListS.ItemHeight = 23;
+            this.lblRuleListS.ItemHeight = 20;
             this.lblRuleListS.Location = new System.Drawing.Point(7, 19);
             this.lblRuleListS.Name = "lblRuleListS";
-            this.lblRuleListS.Size = new System.Drawing.Size(863, 441);
+            this.lblRuleListS.Size = new System.Drawing.Size(863, 424);
             this.lblRuleListS.TabIndex = 3;
             // 
             // tabPage1
@@ -485,7 +485,7 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnRemoveChore;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

@@ -12,31 +12,31 @@ namespace SchedulingProject
 {
     public partial class Owner : Form
     {
+        Random randomcolor;
+        Student StudentForm;
+
         Rules NewRuleList;
         Tenants NewTenantArray;
-        Student StudentForm;
-        Random randomcolor;
         ScheduleList mySchedule;
         Complaints GatherAllComplaints;
+        DiscussionsOrganizer newDiscussionList;
     
         public Owner()
         {
             InitializeComponent();
             // CLASSES
-            this.mySchedule = mySchedule;
+            this.Text = "Administration Panel";
             NewRuleList = new Rules();
             NewTenantArray = new Tenants();
             randomcolor = new Random();
             GatherAllComplaints = new Complaints();
-
-
-
+            newDiscussionList = new DiscussionsOrganizer();
+            mySchedule = new ScheduleList();
 
             // EXTRAS
             label1.Visible = false;
             label1.ForeColor = Color.Red;
-            tabControl1.Visible = false;
-            btnLogOut.Visible = false;
+          
 
             //TENANTS INITIATE
             NewTenantArray.ReturnTenantArray()[0] = new Tenant("Leo", (TenantSex)0, 20, 550);
@@ -50,43 +50,17 @@ namespace SchedulingProject
             lblTenant4Info.Text = RemoveMessage;
             SetTenantSexOptions();  
 
-           //RULES INITIATE
-            StudentForm = new Student(NewRuleList);
-            NewRuleList.AddRule("No pets are allowed to be kept by the tenants");
-            NewRuleList.AddRule("Before inviting people who do not live in the house the tenant must first contact the owner");
-            NewRuleList.AddRule("If something is broken by the tenant, he/she must pay the item in full");
-            UpdateRuleList();
-
-
         }
         string RemoveMessage = "Room not occupied";
 
 
-        private void btnLogOut_Click(object sender, EventArgs e)
-        {
-            tabControl1.Visible = false;
-            btnLogOut.Visible = false;
-            pbOwnerLogin.Visible = true;
-            lblOwnerLogIn.Visible = true;
-            lblOwnerLogin1.Visible = true;
-            lblOwnerLogin3.Visible = true;
-            lblOwnerLogin4.Visible = true;
-            tbOwnerLoginPassword.Visible = true;
-            tbOwnerLoginUser.Visible = true;
-            btnOwnerLogin.Visible = true;
-        }
-
-
-
-        // RULES TAB CODE
+        // RULES 
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
             string RuleToBeAdded = Convert.ToString(tbRulesToAdd.Text);
             NewRuleList.AddRule(RuleToBeAdded);
             UpdateRuleList();
-            StudentForm = new Student(NewRuleList);
-
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
@@ -112,16 +86,6 @@ namespace SchedulingProject
             {
                 lblRuleList.Items.Add(R.GetInfo());
             }
-        }
-
-        private void Owner_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblChores_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
 
@@ -190,6 +154,17 @@ namespace SchedulingProject
 
         }
 
+
+        //COMPLAINTS 
+ 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            UpdateComplaintList();
+        }
+        private void btnCompaintsViewBy_Click(object sender, EventArgs e)
+        {
+            UpdateComplaintList();
+        }
         public void UpdateComplaintList()
         {
 
@@ -200,55 +175,35 @@ namespace SchedulingProject
             }
 
         }
-
-        private void pictureBox6_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnOwnerLogin_Click(object sender, EventArgs e)
-        {
-            if(tbOwnerLoginUser.Text == "owner" && tbOwnerLoginPassword.Text == "owner")
-            {
-                tabControl1.Visible = true;
-                btnLogOut.Visible = true;
-                pbOwnerLogin.Visible = false;
-                lblOwnerLogIn.Visible = false;
-                lblOwnerLogin1.Visible = false;
-                lblOwnerLogin3.Visible = false;
-                lblOwnerLogin4.Visible = false;
-                tbOwnerLoginPassword.Visible = false;
-                tbOwnerLoginUser.Visible = false;
-                btnOwnerLogin.Visible = false;
-
-            }
-            else if (tbOwnerLoginUser.Text == "student" && tbOwnerLoginPassword.Text == "student")
-            {
-                StudentForm.Show(); 
-            }
-        }
-
-        private void btnScheduleRefresh_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void lblOwnerLogIn_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("User and password for a student login is:  student \n Username and password for owner is:  owner");
-        }
+        // DISCUSSIONS
 
         private void btnDiscussionsRefesh_Click(object sender, EventArgs e)
         {
-           
+            UpdateDiscussionList();
         }
-
-        private void btnCompaintsViewBy_Click(object sender, EventArgs e)
-        {
-            UpdateComplaintList();
-        }
-
-
    
+        public void UpdateDiscussionList()
+        {
+            lbDiscussions.Items.Clear();
+            foreach (Discussion D in newDiscussionList.GetAllDiscussions())
+            {
+                lbDiscussions.Items.Add(D.GetInfo());
+            }
+        }
+
+        // SCHEDULE
+
+        private void btnScheduleRefresh_Click(object sender, EventArgs e)
+        {
+            UpdateScheduleList();
+        }
+        public void UpdateScheduleList()
+        {
+            lblChores.Items.Clear();
+            foreach (Schedule schedule in mySchedule.GetScheduleList())
+            {
+                lblChores.Items.Add(schedule.GetInfo());
+            }
+        }
     }
 }

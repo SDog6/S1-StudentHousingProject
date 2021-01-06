@@ -12,25 +12,29 @@ namespace SchedulingProject
 {
     public partial class LogIn : Form
     {
-        Rules NewRulen;
+        Rules NewRulesList;
         Random randomcolor;
+        Student StudentForm;
+        Owner OwnerF;
         public LogIn()
         {
           
             InitializeComponent();
+            this.Text = "Wellcome !";
             randomcolor = new Random();
+            NewRulesList = new Rules();
+            StudentForm = new Student();
+            OwnerF = new Owner();
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
         }
 
         private void label4_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("User and password for a student login is:  Student \n Username and password for owner is:  owner");
+            MessageBox.Show("User and password for a student login is:  student \n Username and password for owner is:  owner");
         }
 
         private void btnLogIn_Click(object sender, EventArgs e)
-        {
-            Student StudentForm = new Student(NewRulen);
-
+        { 
             if (tbUserName.Text == "student" && tbPassword.Text == "student")
             {
                 
@@ -39,8 +43,7 @@ namespace SchedulingProject
 
             else if (tbUserName.Text == "owner" && tbPassword.Text == "owner")
             {
-                
-               
+                OwnerF.Show();
             }
             else
             {
@@ -50,7 +53,6 @@ namespace SchedulingProject
 
         private void label4_MouseHover(object sender, EventArgs e)
         {
-
             changeColor();
         }
 
@@ -91,6 +93,16 @@ namespace SchedulingProject
         private void LogIn_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+                OwnerF.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            StudentForm.Show();
         }
     }
 }
