@@ -13,14 +13,14 @@ namespace SchedulingProject
     public partial class Owner : Form
     {
         Random randomcolor;
-        Student StudentForm;
 
         Rules NewRuleList;
         Tenants NewTenantArray;
         ScheduleList mySchedule;
         Complaints GatherAllComplaints;
         DiscussionsOrganizer newDiscussionList;
-    
+        Student StudentForm;
+
         public Owner()
         {
             InitializeComponent();
@@ -32,26 +32,23 @@ namespace SchedulingProject
             GatherAllComplaints = new Complaints();
             newDiscussionList = new DiscussionsOrganizer();
             mySchedule = new ScheduleList();
+            StudentForm = new Student();
 
             // EXTRAS
             label1.Visible = false;
             label1.ForeColor = Color.Red;
-          
+
 
             //TENANTS INITIATE
-            NewTenantArray.ReturnTenantArray()[0] = new Tenant("Leo", (TenantSex)0, 20, 550);
-            NewTenantArray.ReturnTenantArray()[1] = new Tenant("", (TenantSex)0, 0, 0);
-            NewTenantArray.ReturnTenantArray()[2] = new Tenant("", (TenantSex)0, 0, 0);
-            NewTenantArray.ReturnTenantArray()[3] = new Tenant("", (TenantSex)0, 0, 0);
+
             lblTenant1Info.Text = NewTenantArray.ReturnTenantArray()[0].GetInfo().ToString();
             lblMoney.Text = $"Monthly revenue:{NewTenantArray.GetRevenue().ToString()}€";
-            lblTenant2Info.Text = RemoveMessage;
-            lblTenant3Info.Text = RemoveMessage;
-            lblTenant4Info.Text = RemoveMessage;
-            SetTenantSexOptions();  
+            lblTenant2Info.Text = NewTenantArray.ReturnTenantArray()[1].GetInfo().ToString();
+            lblTenant3Info.Text = NewTenantArray.ReturnTenantArray()[2].GetInfo().ToString();
+            lblTenant4Info.Text = NewTenantArray.ReturnTenantArray()[3].GetInfo().ToString();
+            SetTenantSexOptions();
 
         }
-        string RemoveMessage = "Room not occupied";
 
 
         // RULES 
@@ -77,12 +74,12 @@ namespace SchedulingProject
                 label1.Visible = true;
                 label1.Text = "Select a rule to remove*";
             }
-           
+
         }
         public void UpdateRuleList()
         {
             lblRuleList.Items.Clear();
-            foreach(Rule R in NewRuleList.GetAllRule())
+            foreach (Rule R in NewRuleList.GetAllRule())
             {
                 lblRuleList.Items.Add(R.GetInfo());
             }
@@ -99,7 +96,7 @@ namespace SchedulingProject
 
             if (rbTenant1.Checked)
             {
-                NewTenantArray.ReturnTenantArray()[0] = new Tenant (Tenantname, (TenantSex)cbTenantSex.SelectedItem, Tenantage, Rent);
+                NewTenantArray.ReturnTenantArray()[0] = new Tenant(Tenantname, (TenantSex)cbTenantSex.SelectedItem, Tenantage, Rent);
                 lblTenant1Info.Text = NewTenantArray.ReturnTenantArray()[0].GetInfo().ToString();
             }
             else if (rbTenant2.Checked)
@@ -132,22 +129,22 @@ namespace SchedulingProject
         {
             if (rbTenant1.Checked)
             {
-                lblTenant1Info.Text = RemoveMessage;
+                lblTenant1Info.Text = NewTenantArray.ReturnTenantArray()[0].GetInfo().ToString();
                 NewTenantArray.ReturnTenantArray()[0].RemoveTenant();
             }
             else if (rbTenant2.Checked)
             {
-                lblTenant2Info.Text = RemoveMessage;
+                lblTenant2Info.Text = NewTenantArray.ReturnTenantArray()[1].GetInfo().ToString();
                 NewTenantArray.ReturnTenantArray()[1].RemoveTenant();
             }
             else if (rbTenant3.Checked)
             {
-                lblTenant3Info.Text = RemoveMessage;
+                lblTenant3Info.Text = NewTenantArray.ReturnTenantArray()[2].GetInfo().ToString();
                 NewTenantArray.ReturnTenantArray()[2].RemoveTenant();
             }
             else if (rbTenant4.Checked)
             {
-                lblTenant4Info.Text = RemoveMessage;
+                lblTenant4Info.Text = NewTenantArray.ReturnTenantArray()[3].GetInfo().ToString();
                 NewTenantArray.ReturnTenantArray()[3].RemoveTenant();
             }
             lblMoney.Text = $"Monthly revenue:{NewTenantArray.GetRevenue().ToString()}€";
@@ -156,7 +153,7 @@ namespace SchedulingProject
 
 
         //COMPLAINTS 
- 
+
         private void button1_Click(object sender, EventArgs e)
         {
             UpdateComplaintList();
@@ -181,7 +178,7 @@ namespace SchedulingProject
         {
             UpdateDiscussionList();
         }
-   
+
         public void UpdateDiscussionList()
         {
             lbDiscussions.Items.Clear();
@@ -204,6 +201,11 @@ namespace SchedulingProject
             {
                 lblChores.Items.Add(schedule.GetInfo());
             }
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

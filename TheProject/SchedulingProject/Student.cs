@@ -11,11 +11,12 @@ using System.Windows.Forms;
 namespace SchedulingProject
 {
     public partial class Student : Form
-    { 
+    {
         Rules Rulesss;
         ScheduleList myScheduleList;
         DiscussionsOrganizer newDiscussionList;
         Complaints allcomplaints;
+        Tenants MyTenantNames;
 
         public Student()
         {
@@ -25,6 +26,12 @@ namespace SchedulingProject
             newDiscussionList = new DiscussionsOrganizer();
             allcomplaints = new Complaints();
             Rulesss = new Rules();
+            MyTenantNames = new Tenants();
+
+            for (int i = 0; i < 4; i++)
+            {
+                cbStudentDiscussionName.Items.Add(MyTenantNames.ReturnTenantArray()[i].GetName().ToString());
+            }
         }
 
 
@@ -37,6 +44,7 @@ namespace SchedulingProject
         private void btnUpdateRules_Click(object sender, EventArgs e)
         {
             UpdateRuleList();
+            string s = "fuck this";
         }
 
         // CHORES
@@ -46,7 +54,7 @@ namespace SchedulingProject
             string name = tbChoreName.Text;
             string chore = tbChore.Text;
             string date = tbChoreDate.Text;
-            myScheduleList.AddSchedule(name,chore,date);
+            myScheduleList.AddSchedule(name, chore, date);
             UpdateScheduleList();
         }
 
@@ -61,14 +69,14 @@ namespace SchedulingProject
 
         private void btnDiscussionsSend_Click(object sender, EventArgs e)
         {
-            string name = tbDicussionName.Text;
-            string date =tbDiscussionDate.Text;
+            string name = cbStudentDiscussionName.Text;
+            string date = tbDiscussionDate.Text;
             string debate = tbDiscussions.Text;
             newDiscussionList.AddDiscussion(name, date, debate);
             UpdateDiscussionList();
         }
 
-    
+
 
         // STUDENT COMPLAINTS
 
@@ -83,7 +91,7 @@ namespace SchedulingProject
             }
 
         }
-                                            
+
 
         private void btnComplaintsAdd_Click_1(object sender, EventArgs e)
         {
@@ -97,7 +105,7 @@ namespace SchedulingProject
             UpdateComplaintList();
         }
 
-  
+
 
         private void btnRemoveComplaint_Click_1(object sender, EventArgs e)
         {
@@ -144,5 +152,22 @@ namespace SchedulingProject
             }
         }
 
+        public void UpdateStudentName()
+        {
+            cbStudentDiscussionName.Items.Clear();
+            for (int i = 0; i < 4; i++)
+            {
+                cbStudentDiscussionName.Items.Add(MyTenantNames.ReturnTenantArray()[i].GetName().ToString());
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            UpdateStudentName();
+        }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Schedule = new System.Windows.Forms.TabPage();
             this.BtnRemoveChore = new System.Windows.Forms.Button();
@@ -57,11 +58,12 @@
             this.lblDiscussionDate = new System.Windows.Forms.Label();
             this.lblDiscussionName = new System.Windows.Forms.Label();
             this.tbDiscussionDate = new System.Windows.Forms.TextBox();
-            this.tbDicussionName = new System.Windows.Forms.TextBox();
             this.btnDiscussionsSend = new System.Windows.Forms.Button();
             this.tbDiscussions = new System.Windows.Forms.TextBox();
             this.lbDiscussions = new System.Windows.Forms.ListBox();
             this.btnLogOut = new System.Windows.Forms.Button();
+            this.cbStudentDiscussionName = new System.Windows.Forms.ComboBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tabControl1.SuspendLayout();
             this.Schedule.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -370,10 +372,10 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.cbStudentDiscussionName);
             this.tabPage3.Controls.Add(this.lblDiscussionDate);
             this.tabPage3.Controls.Add(this.lblDiscussionName);
             this.tabPage3.Controls.Add(this.tbDiscussionDate);
-            this.tabPage3.Controls.Add(this.tbDicussionName);
             this.tabPage3.Controls.Add(this.btnDiscussionsSend);
             this.tabPage3.Controls.Add(this.tbDiscussions);
             this.tabPage3.Controls.Add(this.lbDiscussions);
@@ -408,13 +410,6 @@
             this.tbDiscussionDate.Name = "tbDiscussionDate";
             this.tbDiscussionDate.Size = new System.Drawing.Size(77, 20);
             this.tbDiscussionDate.TabIndex = 5;
-            // 
-            // tbDicussionName
-            // 
-            this.tbDicussionName.Location = new System.Drawing.Point(88, 428);
-            this.tbDicussionName.Name = "tbDicussionName";
-            this.tbDicussionName.Size = new System.Drawing.Size(77, 20);
-            this.tbDicussionName.TabIndex = 4;
             // 
             // btnDiscussionsSend
             // 
@@ -453,6 +448,19 @@
             this.btnLogOut.Text = "Log Out";
             this.btnLogOut.UseVisualStyleBackColor = true;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
+            // cbStudentDiscussionName
+            // 
+            this.cbStudentDiscussionName.FormattingEnabled = true;
+            this.cbStudentDiscussionName.Location = new System.Drawing.Point(88, 425);
+            this.cbStudentDiscussionName.Name = "cbStudentDiscussionName";
+            this.cbStudentDiscussionName.Size = new System.Drawing.Size(77, 21);
+            this.cbStudentDiscussionName.TabIndex = 8;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 500;
             // 
             // Student
             // 
@@ -507,13 +515,14 @@
         private System.Windows.Forms.TextBox tbDiscussions;
         private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.Button btnUpdateRules;
-        private System.Windows.Forms.TextBox tbDicussionName;
         private System.Windows.Forms.Label lblDiscussionDate;
         private System.Windows.Forms.Label lblDiscussionName;
         private System.Windows.Forms.TextBox tbDiscussionDate;
         private System.Windows.Forms.NumericUpDown NumComplaintsMonth;
         private System.Windows.Forms.NumericUpDown NumComplaintsYear;
         private System.Windows.Forms.NumericUpDown NumComplaintsDay;
+        private System.Windows.Forms.ComboBox cbStudentDiscussionName;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

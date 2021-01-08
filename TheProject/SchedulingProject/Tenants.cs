@@ -8,11 +8,15 @@ namespace SchedulingProject
 {
     class Tenants
     {
-        private Tenant[] newTenantArray;
+        private static Tenant[] newTenantArray;
 
         public Tenants()
         {
             newTenantArray = new Tenant[4];
+            newTenantArray[0] = new Tenant("Leo", (TenantSex)0, 20, 550);
+            newTenantArray[1] = new Tenant("unoccupied", (TenantSex)0, 0, 0);
+            newTenantArray[2] = new Tenant("unoccupied", (TenantSex)0, 0, 0);
+            newTenantArray[3] = new Tenant("unoccupied", (TenantSex)0, 0, 0);
         }
         public Tenant[] ReturnTenantArray()
         {

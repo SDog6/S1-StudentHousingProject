@@ -13,18 +13,17 @@ namespace SchedulingProject
         private int age;
         private int Rent = 0;
 
-     
+
         public Tenant()
         {
 
         }
-        
+
         public Tenant(string name, TenantSex sex, int age, int Rent)
         {
             this.name = name;
             this.sex = sex;
             this.age = age;
-            this.Rent = 0;
             this.Rent = Rent;
         }
 
@@ -33,14 +32,26 @@ namespace SchedulingProject
             return Rent;
 
         }
-            public void RemoveTenant()
+
+        public string GetName()
         {
+            return this.name;
+        }
+        public void RemoveTenant()
+        {
+            this.name = "";
             Rent = 0;
         }
         public string GetInfo()
         {
-            return $"Tenant: {name}({sex}) is {age} years old \n and pays {Rent}$ rent a month ";
+            if (name == "unoccupied")
+            {
+                return "Room not occupied";
+            }
+            else
+            {
+                return $"Tenant: {name}({sex}) is {age} years old \n and pays {Rent}$ rent a month ";
+            }
         }
-
     }
 }
