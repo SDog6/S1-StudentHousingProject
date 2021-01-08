@@ -203,12 +203,12 @@
             // 
             // lblChores
             // 
-            this.lblChores.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChores.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChores.FormattingEnabled = true;
-            this.lblChores.ItemHeight = 19;
-            this.lblChores.Location = new System.Drawing.Point(445, 32);
+            this.lblChores.ItemHeight = 21;
+            this.lblChores.Location = new System.Drawing.Point(429, 32);
             this.lblChores.Name = "lblChores";
-            this.lblChores.Size = new System.Drawing.Size(375, 422);
+            this.lblChores.Size = new System.Drawing.Size(391, 403);
             this.lblChores.TabIndex = 0;
             // 
             // tabPage2

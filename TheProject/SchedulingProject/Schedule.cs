@@ -21,7 +21,7 @@ namespace SchedulingProject
 
         public string GetInfo()
         {
-            return $"Name: {name} \n Chore: {chore} \n  Date: {date}";
+            return $"{name} will be: {chore} on: {date}";
         }
     }
 }

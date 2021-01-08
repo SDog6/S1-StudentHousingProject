@@ -43,6 +43,10 @@
             this.lblChores = new System.Windows.Forms.ListBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.OwnerCompaints = new System.Windows.Forms.TabPage();
+            this.label8 = new System.Windows.Forms.Label();
+            this.NumComplaintsYear = new System.Windows.Forms.NumericUpDown();
+            this.NumComplaintsMonth = new System.Windows.Forms.NumericUpDown();
+            this.NumComplaintsDay = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
             this.btnCompaintsViewBy = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -77,15 +81,14 @@
             this.rbTenant3 = new System.Windows.Forms.RadioButton();
             this.rbTenant2 = new System.Windows.Forms.RadioButton();
             this.rbTenant1 = new System.Windows.Forms.RadioButton();
-            this.NumComplaintsDay = new System.Windows.Forms.NumericUpDown();
-            this.NumComplaintsMonth = new System.Windows.Forms.NumericUpDown();
-            this.NumComplaintsYear = new System.Windows.Forms.NumericUpDown();
-            this.label8 = new System.Windows.Forms.Label();
             this.OwnerDiscussions.SuspendLayout();
             this.OwnerRules.SuspendLayout();
             this.OwnerSchedule.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.OwnerCompaints.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NumComplaintsYear)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumComplaintsMonth)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumComplaintsDay)).BeginInit();
             this.OwnerTenants.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -96,9 +99,6 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NumComplaintsDay)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NumComplaintsMonth)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NumComplaintsYear)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLogOut
@@ -231,9 +231,9 @@
             // 
             // lblChores
             // 
-            this.lblChores.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChores.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChores.FormattingEnabled = true;
-            this.lblChores.ItemHeight = 19;
+            this.lblChores.ItemHeight = 23;
             this.lblChores.Location = new System.Drawing.Point(6, 25);
             this.lblChores.Name = "lblChores";
             this.lblChores.Size = new System.Drawing.Size(861, 441);
@@ -269,6 +269,73 @@
             this.OwnerCompaints.TabIndex = 2;
             this.OwnerCompaints.Text = "Complaints";
             this.OwnerCompaints.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label8.Location = new System.Drawing.Point(174, 46);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(89, 19);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "DD/MM/YY";
+            // 
+            // NumComplaintsYear
+            // 
+            this.NumComplaintsYear.Location = new System.Drawing.Point(278, 86);
+            this.NumComplaintsYear.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.NumComplaintsYear.Minimum = new decimal(new int[] {
+            2021,
+            0,
+            0,
+            0});
+            this.NumComplaintsYear.Name = "NumComplaintsYear";
+            this.NumComplaintsYear.Size = new System.Drawing.Size(99, 29);
+            this.NumComplaintsYear.TabIndex = 24;
+            this.NumComplaintsYear.Value = new decimal(new int[] {
+            2021,
+            0,
+            0,
+            0});
+            // 
+            // NumComplaintsMonth
+            // 
+            this.NumComplaintsMonth.Location = new System.Drawing.Point(149, 86);
+            this.NumComplaintsMonth.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.NumComplaintsMonth.Name = "NumComplaintsMonth";
+            this.NumComplaintsMonth.Size = new System.Drawing.Size(99, 29);
+            this.NumComplaintsMonth.TabIndex = 23;
+            this.NumComplaintsMonth.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // NumComplaintsDay
+            // 
+            this.NumComplaintsDay.Location = new System.Drawing.Point(26, 86);
+            this.NumComplaintsDay.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.NumComplaintsDay.Name = "NumComplaintsDay";
+            this.NumComplaintsDay.Size = new System.Drawing.Size(98, 29);
+            this.NumComplaintsDay.TabIndex = 22;
+            this.NumComplaintsDay.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // button1
             // 
@@ -612,73 +679,6 @@
             this.rbTenant1.Text = "Tenant 1";
             this.rbTenant1.UseVisualStyleBackColor = true;
             // 
-            // NumComplaintsDay
-            // 
-            this.NumComplaintsDay.Location = new System.Drawing.Point(26, 86);
-            this.NumComplaintsDay.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.NumComplaintsDay.Name = "NumComplaintsDay";
-            this.NumComplaintsDay.Size = new System.Drawing.Size(98, 29);
-            this.NumComplaintsDay.TabIndex = 22;
-            this.NumComplaintsDay.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // NumComplaintsMonth
-            // 
-            this.NumComplaintsMonth.Location = new System.Drawing.Point(149, 86);
-            this.NumComplaintsMonth.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.NumComplaintsMonth.Name = "NumComplaintsMonth";
-            this.NumComplaintsMonth.Size = new System.Drawing.Size(99, 29);
-            this.NumComplaintsMonth.TabIndex = 23;
-            this.NumComplaintsMonth.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // NumComplaintsYear
-            // 
-            this.NumComplaintsYear.Location = new System.Drawing.Point(278, 86);
-            this.NumComplaintsYear.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.NumComplaintsYear.Minimum = new decimal(new int[] {
-            2021,
-            0,
-            0,
-            0});
-            this.NumComplaintsYear.Name = "NumComplaintsYear";
-            this.NumComplaintsYear.Size = new System.Drawing.Size(99, 29);
-            this.NumComplaintsYear.TabIndex = 24;
-            this.NumComplaintsYear.Value = new decimal(new int[] {
-            2021,
-            0,
-            0,
-            0});
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label8.Location = new System.Drawing.Point(174, 46);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(89, 19);
-            this.label8.TabIndex = 25;
-            this.label8.Text = "DD/MM/YY";
-            // 
             // Owner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -695,6 +695,9 @@
             this.tabControl1.ResumeLayout(false);
             this.OwnerCompaints.ResumeLayout(false);
             this.OwnerCompaints.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NumComplaintsYear)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumComplaintsMonth)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumComplaintsDay)).EndInit();
             this.OwnerTenants.ResumeLayout(false);
             this.OwnerTenants.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -711,9 +714,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NumComplaintsDay)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NumComplaintsMonth)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NumComplaintsYear)).EndInit();
             this.ResumeLayout(false);
 
         }
