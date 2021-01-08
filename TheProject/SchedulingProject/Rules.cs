@@ -13,6 +13,9 @@ namespace SchedulingProject
         public Rules()
         {
             NewRuleList = new List<Rule>();
+            NewRuleList.Add(new Rule("1. No pets allowed inside the building"));
+            NewRuleList.Add(new Rule("2. You cannot invite somebody else to live with you in your room"));
+            NewRuleList.Add(new Rule("3. Parties are only allowed if discussed with with other tenants"));
         }
 
         public void AddRule(string newrule)

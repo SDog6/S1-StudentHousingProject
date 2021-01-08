@@ -32,6 +32,8 @@ namespace SchedulingProject
             {
                 cbStudentDiscussionName.Items.Add(MyTenantNames.ReturnTenantArray()[i].GetName().ToString());
             }
+
+            UpdateAll();
         }
 
 
@@ -168,6 +170,14 @@ namespace SchedulingProject
         private void timer1_Tick(object sender, EventArgs e)
         {
             UpdateStudentName();
+        }
+
+        public void UpdateAll()
+        {
+            UpdateRuleList();
+            UpdateDiscussionList();
+            UpdateScheduleList();
+            UpdateComplaintList();
         }
     }
 }

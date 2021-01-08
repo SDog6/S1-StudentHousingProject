@@ -40,13 +40,14 @@ namespace SchedulingProject
 
 
             //TENANTS INITIATE
-
-            lblTenant1Info.Text = NewTenantArray.ReturnTenantArray()[0].GetInfo().ToString();
             lblMoney.Text = $"Monthly revenue:{NewTenantArray.GetRevenue().ToString()}€";
+            lblTenant1Info.Text = NewTenantArray.ReturnTenantArray()[0].GetInfo().ToString();
             lblTenant2Info.Text = NewTenantArray.ReturnTenantArray()[1].GetInfo().ToString();
             lblTenant3Info.Text = NewTenantArray.ReturnTenantArray()[2].GetInfo().ToString();
             lblTenant4Info.Text = NewTenantArray.ReturnTenantArray()[3].GetInfo().ToString();
             SetTenantSexOptions();
+
+            UpdateAll();
 
         }
 
@@ -206,6 +207,13 @@ namespace SchedulingProject
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+        public void UpdateAll()
+        {
+            UpdateScheduleList();
+            UpdateDiscussionList();
+            UpdateRuleList();
+            UpdateComplaintList();
         }
     }
 }

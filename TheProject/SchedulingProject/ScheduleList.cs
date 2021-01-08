@@ -13,6 +13,7 @@ namespace SchedulingProject
         public ScheduleList()
         {
             myScheduleList = new List<Schedule>();
+            myScheduleList.Add(new Schedule("Leo", "cleaning the kitchen", "1.8.2021"));
         }
 
         public void AddSchedule(string name, string chore, string date)

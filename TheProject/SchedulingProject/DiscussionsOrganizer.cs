@@ -13,6 +13,8 @@ namespace SchedulingProject
         public DiscussionsOrganizer()
         {
             NewDiscussionList = new List<Discussion>();
+            NewDiscussionList.Add(new Discussion("Nick", "1.1.2021", "Guys did you clean the kitchen after last night's party"));
+            NewDiscussionList.Add(new Discussion("Leo", "1.1.2021", "Yep just got done with it"));
         }
         public void AddDiscussion(string name,string date,string debate)
         {
