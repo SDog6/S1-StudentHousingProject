@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.OwnerDiscussions = new System.Windows.Forms.TabPage();
-            this.btnDiscussionsRefesh = new System.Windows.Forms.Button();
             this.lbDiscussions = new System.Windows.Forms.ListBox();
             this.OwnerRules = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,7 +39,6 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.tbRulesToAdd = new System.Windows.Forms.TextBox();
             this.OwnerSchedule = new System.Windows.Forms.TabPage();
-            this.btnScheduleRefresh = new System.Windows.Forms.Button();
             this.lblChores = new System.Windows.Forms.ListBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.OwnerCompaints = new System.Windows.Forms.TabPage();
@@ -81,6 +80,7 @@
             this.rbTenant3 = new System.Windows.Forms.RadioButton();
             this.rbTenant2 = new System.Windows.Forms.RadioButton();
             this.rbTenant1 = new System.Windows.Forms.RadioButton();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.OwnerDiscussions.SuspendLayout();
             this.OwnerRules.SuspendLayout();
             this.OwnerSchedule.SuspendLayout();
@@ -109,10 +109,10 @@
             this.btnLogOut.TabIndex = 11;
             this.btnLogOut.Text = "Log Out";
             this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click_1);
             // 
             // OwnerDiscussions
             // 
-            this.OwnerDiscussions.Controls.Add(this.btnDiscussionsRefesh);
             this.OwnerDiscussions.Controls.Add(this.lbDiscussions);
             this.OwnerDiscussions.Location = new System.Drawing.Point(4, 22);
             this.OwnerDiscussions.Name = "OwnerDiscussions";
@@ -120,16 +120,6 @@
             this.OwnerDiscussions.TabIndex = 3;
             this.OwnerDiscussions.Text = "Discussions";
             this.OwnerDiscussions.UseVisualStyleBackColor = true;
-            // 
-            // btnDiscussionsRefesh
-            // 
-            this.btnDiscussionsRefesh.Location = new System.Drawing.Point(770, 411);
-            this.btnDiscussionsRefesh.Name = "btnDiscussionsRefesh";
-            this.btnDiscussionsRefesh.Size = new System.Drawing.Size(95, 34);
-            this.btnDiscussionsRefesh.TabIndex = 25;
-            this.btnDiscussionsRefesh.Text = "Refresh";
-            this.btnDiscussionsRefesh.UseVisualStyleBackColor = true;
-            this.btnDiscussionsRefesh.Click += new System.EventHandler(this.btnDiscussionsRefesh_Click);
             // 
             // lbDiscussions
             // 
@@ -140,6 +130,7 @@
             this.lbDiscussions.Name = "lbDiscussions";
             this.lbDiscussions.Size = new System.Drawing.Size(863, 441);
             this.lbDiscussions.TabIndex = 0;
+            this.lbDiscussions.SelectedIndexChanged += new System.EventHandler(this.lbDiscussions_SelectedIndexChanged);
             // 
             // OwnerRules
             // 
@@ -207,7 +198,6 @@
             // 
             // OwnerSchedule
             // 
-            this.OwnerSchedule.Controls.Add(this.btnScheduleRefresh);
             this.OwnerSchedule.Controls.Add(this.lblChores);
             this.OwnerSchedule.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OwnerSchedule.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -218,16 +208,6 @@
             this.OwnerSchedule.TabIndex = 0;
             this.OwnerSchedule.Text = "Schedule";
             this.OwnerSchedule.UseVisualStyleBackColor = true;
-            // 
-            // btnScheduleRefresh
-            // 
-            this.btnScheduleRefresh.Location = new System.Drawing.Point(757, 422);
-            this.btnScheduleRefresh.Name = "btnScheduleRefresh";
-            this.btnScheduleRefresh.Size = new System.Drawing.Size(95, 34);
-            this.btnScheduleRefresh.TabIndex = 24;
-            this.btnScheduleRefresh.Text = "Refresh";
-            this.btnScheduleRefresh.UseVisualStyleBackColor = true;
-            this.btnScheduleRefresh.Click += new System.EventHandler(this.btnScheduleRefresh_Click);
             // 
             // lblChores
             // 
@@ -339,11 +319,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(221, 418);
+            this.button1.Location = new System.Drawing.Point(202, 188);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(175, 32);
             this.button1.TabIndex = 21;
-            this.button1.Text = "Refresh";
+            this.button1.Text = "View all complaints";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -679,6 +659,12 @@
             this.rbTenant1.Text = "Tenant 1";
             this.rbTenant1.UseVisualStyleBackColor = true;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 500;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Owner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -761,8 +747,6 @@
         private System.Windows.Forms.Button btnTenantRemove;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblMoney;
-        private System.Windows.Forms.Button btnScheduleRefresh;
-        private System.Windows.Forms.Button btnDiscussionsRefesh;
         private System.Windows.Forms.TabPage OwnerCompaints;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnCompaintsViewBy;
@@ -772,5 +756,6 @@
         private System.Windows.Forms.NumericUpDown NumComplaintsMonth;
         private System.Windows.Forms.NumericUpDown NumComplaintsDay;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Timer timer1;
     }
 }

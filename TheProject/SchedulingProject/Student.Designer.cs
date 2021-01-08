@@ -42,7 +42,6 @@
             this.tbChoreName = new System.Windows.Forms.TextBox();
             this.lblChores = new System.Windows.Forms.ListBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.btnUpdateRules = new System.Windows.Forms.Button();
             this.lblRuleListS = new System.Windows.Forms.ListBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.NumComplaintsMonth = new System.Windows.Forms.NumericUpDown();
@@ -61,7 +60,7 @@
             this.tbDiscussions = new System.Windows.Forms.TextBox();
             this.lbDiscussions = new System.Windows.Forms.ListBox();
             this.btnLogOut = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.tabControl1.SuspendLayout();
             this.Schedule.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -211,7 +210,6 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.btnUpdateRules);
             this.tabPage2.Controls.Add(this.lblRuleListS);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -220,17 +218,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Rules";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // btnUpdateRules
-            // 
-            this.btnUpdateRules.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateRules.Location = new System.Drawing.Point(771, 389);
-            this.btnUpdateRules.Name = "btnUpdateRules";
-            this.btnUpdateRules.Size = new System.Drawing.Size(89, 39);
-            this.btnUpdateRules.TabIndex = 11;
-            this.btnUpdateRules.Text = "Refresh";
-            this.btnUpdateRules.UseVisualStyleBackColor = true;
-            this.btnUpdateRules.Click += new System.EventHandler(this.btnUpdateRules_Click);
             // 
             // lblRuleListS
             // 
@@ -459,10 +446,11 @@
             this.btnLogOut.UseVisualStyleBackColor = true;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
-            // timer1
+            // timer2
             // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 500;
+            this.timer2.Enabled = true;
+            this.timer2.Interval = 500;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick_1);
             // 
             // Student
             // 
@@ -505,7 +493,6 @@
         private System.Windows.Forms.TextBox tbChore;
         private System.Windows.Forms.TextBox tbChoreName;
         private System.Windows.Forms.ListBox lblChores;
-        private System.Windows.Forms.ListBox lblRuleListS;
         private System.Windows.Forms.Button btnRemoveComplaint;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnComplaintsAdd;
@@ -516,13 +503,13 @@
         private System.Windows.Forms.Button btnDiscussionsSend;
         private System.Windows.Forms.TextBox tbDiscussions;
         private System.Windows.Forms.Button btnLogOut;
-        private System.Windows.Forms.Button btnUpdateRules;
         private System.Windows.Forms.Label lblDiscussionName;
         private System.Windows.Forms.NumericUpDown NumComplaintsMonth;
         private System.Windows.Forms.NumericUpDown NumComplaintsYear;
         private System.Windows.Forms.NumericUpDown NumComplaintsDay;
         private System.Windows.Forms.ComboBox cbStudentDiscussionName;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.ListBox lblRuleListS;
     }
 }
 

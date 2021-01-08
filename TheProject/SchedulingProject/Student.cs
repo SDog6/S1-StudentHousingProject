@@ -29,6 +29,7 @@ namespace SchedulingProject
             Rulesss = new Rules();
             MyTenantNames = new Tenants();
 
+
             for (int i = 0; i < 4; i++)
             {
                 cbStudentDiscussionName.Items.Add(MyTenantNames.ReturnTenantArray()[i].GetName().ToString());
@@ -41,13 +42,6 @@ namespace SchedulingProject
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             this.Hide();
-        }
-
-        //RULES
-        private void btnUpdateRules_Click(object sender, EventArgs e)
-        {
-            UpdateRuleList();
-            string s = "fuck this";
         }
 
         // CHORES
@@ -167,7 +161,7 @@ namespace SchedulingProject
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            UpdateStudentName();
+            
         }
 
         public void UpdateAll()
@@ -176,6 +170,17 @@ namespace SchedulingProject
             UpdateDiscussionList();
             UpdateScheduleList();
             UpdateComplaintList();
+            UpdateStudentName();
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            UpdateAll();
+        }
+
+        private void timer2_Tick_1(object sender, EventArgs e)
+        {
+            UpdateAll();
         }
     }
 }

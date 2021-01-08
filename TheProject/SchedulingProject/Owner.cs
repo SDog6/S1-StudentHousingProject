@@ -175,11 +175,6 @@ namespace SchedulingProject
         }
         // DISCUSSIONS
 
-        private void btnDiscussionsRefesh_Click(object sender, EventArgs e)
-        {
-            UpdateDiscussionList();
-        }
-
         public void UpdateDiscussionList()
         {
             lbDiscussions.Items.Clear();
@@ -191,10 +186,6 @@ namespace SchedulingProject
 
         // SCHEDULE
 
-        private void btnScheduleRefresh_Click(object sender, EventArgs e)
-        {
-            UpdateScheduleList();
-        }
         public void UpdateScheduleList()
         {
             lblChores.Items.Clear();
@@ -229,6 +220,20 @@ namespace SchedulingProject
 
             GatherAllComplaints.FilterList(day, month, year);
 
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            UpdateAll();
+        }
+
+        private void lbDiscussions_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogOut_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }
