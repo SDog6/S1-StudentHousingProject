@@ -215,5 +215,20 @@ namespace SchedulingProject
             UpdateRuleList();
             UpdateComplaintList();
         }
+
+        private void btnCompaintsViewBy_Click_1(object sender, EventArgs e)
+        {
+            int day = Convert.ToInt32(NumComplaintsDay.Value);
+            int month = Convert.ToInt32(NumComplaintsMonth.Value);
+            int year = Convert.ToInt32(NumComplaintsYear.Value);
+            lblComplaints.Items.Clear();
+            foreach (Complaint c in GatherAllComplaints.FilterList(day, month, year))
+            {
+                lblComplaints.Items.Add(c.GetInfo());
+            }
+
+            GatherAllComplaints.FilterList(day, month, year);
+
+        }
     }
 }

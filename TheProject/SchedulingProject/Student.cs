@@ -112,16 +112,13 @@ namespace SchedulingProject
         private void btnRemoveComplaint_Click_1(object sender, EventArgs e)
         {
             int selected = lblComplaints.SelectedIndex;
+            allcomplaints.RemoveFromlist(selected);
 
-            if (selected > -1)
-            {
-                allcomplaints.GetComplaintslist().RemoveAt(selected);
-                UpdateComplaintList();
-            }
-            else
+            if (selected == -1)
             {
                 MessageBox.Show("you haven't selected a complaint to be removed yet!");
             }
+            UpdateComplaintList();
         }
 
         //UPDATE LISTBOXES

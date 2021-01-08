@@ -55,6 +55,7 @@
             this.tbCompaints = new System.Windows.Forms.TextBox();
             this.lblComplaints = new System.Windows.Forms.ListBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.cbStudentDiscussionName = new System.Windows.Forms.ComboBox();
             this.lblDiscussionDate = new System.Windows.Forms.Label();
             this.lblDiscussionName = new System.Windows.Forms.Label();
             this.tbDiscussionDate = new System.Windows.Forms.TextBox();
@@ -62,7 +63,6 @@
             this.tbDiscussions = new System.Windows.Forms.TextBox();
             this.lbDiscussions = new System.Windows.Forms.ListBox();
             this.btnLogOut = new System.Windows.Forms.Button();
-            this.cbStudentDiscussionName = new System.Windows.Forms.ComboBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tabControl1.SuspendLayout();
             this.Schedule.SuspendLayout();
@@ -265,26 +265,36 @@
             // 
             // NumComplaintsMonth
             // 
-            this.NumComplaintsMonth.Location = new System.Drawing.Point(179, 233);
+            this.NumComplaintsMonth.Location = new System.Drawing.Point(174, 233);
             this.NumComplaintsMonth.Maximum = new decimal(new int[] {
             12,
+            0,
+            0,
+            0});
+            this.NumComplaintsMonth.Minimum = new decimal(new int[] {
+            1,
             0,
             0,
             0});
             this.NumComplaintsMonth.Name = "NumComplaintsMonth";
             this.NumComplaintsMonth.Size = new System.Drawing.Size(64, 29);
             this.NumComplaintsMonth.TabIndex = 14;
+            this.NumComplaintsMonth.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // NumComplaintsYear
             // 
-            this.NumComplaintsYear.Location = new System.Drawing.Point(276, 233);
+            this.NumComplaintsYear.Location = new System.Drawing.Point(273, 233);
             this.NumComplaintsYear.Maximum = new decimal(new int[] {
-            2100,
+            100000,
             0,
             0,
             0});
             this.NumComplaintsYear.Minimum = new decimal(new int[] {
-            2019,
+            2021,
             0,
             0,
             0});
@@ -292,7 +302,7 @@
             this.NumComplaintsYear.Size = new System.Drawing.Size(69, 29);
             this.NumComplaintsYear.TabIndex = 13;
             this.NumComplaintsYear.Value = new decimal(new int[] {
-            2019,
+            2021,
             0,
             0,
             0});
@@ -305,9 +315,19 @@
             0,
             0,
             0});
+            this.NumComplaintsDay.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.NumComplaintsDay.Name = "NumComplaintsDay";
             this.NumComplaintsDay.Size = new System.Drawing.Size(64, 29);
             this.NumComplaintsDay.TabIndex = 11;
+            this.NumComplaintsDay.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label6
             // 
@@ -333,10 +353,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(53, 26);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(273, 30);
+            this.label5.Size = new System.Drawing.Size(303, 34);
             this.label5.TabIndex = 3;
             this.label5.Text = "Apologies for any inconviniances. \r\nPlease tell us if you have had any bad experi" +
     "ances";
@@ -385,6 +405,14 @@
             this.tabPage3.TabIndex = 3;
             this.tabPage3.Text = "Discussions";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // cbStudentDiscussionName
+            // 
+            this.cbStudentDiscussionName.FormattingEnabled = true;
+            this.cbStudentDiscussionName.Location = new System.Drawing.Point(88, 425);
+            this.cbStudentDiscussionName.Name = "cbStudentDiscussionName";
+            this.cbStudentDiscussionName.Size = new System.Drawing.Size(77, 21);
+            this.cbStudentDiscussionName.TabIndex = 8;
             // 
             // lblDiscussionDate
             // 
@@ -448,14 +476,6 @@
             this.btnLogOut.Text = "Log Out";
             this.btnLogOut.UseVisualStyleBackColor = true;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
-            // 
-            // cbStudentDiscussionName
-            // 
-            this.cbStudentDiscussionName.FormattingEnabled = true;
-            this.cbStudentDiscussionName.Location = new System.Drawing.Point(88, 425);
-            this.cbStudentDiscussionName.Name = "cbStudentDiscussionName";
-            this.cbStudentDiscussionName.Size = new System.Drawing.Size(77, 21);
-            this.cbStudentDiscussionName.TabIndex = 8;
             // 
             // timer1
             // 

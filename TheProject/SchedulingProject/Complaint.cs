@@ -25,7 +25,20 @@ namespace SchedulingProject
             this.CYear = CYear;
 
         }
+        public Complaint(int Cday, int CMonth, int CYear)
+        {
 
+
+            this.Cday = Cday;
+            this.CMonth = CMonth;
+            this.CYear = CYear;
+
+        }
+
+        public int CDay { get { return this.Cday; } }
+        public int Cmonth { get { return this.CMonth; } }
+
+        public int Cyear { get { return this.CYear; } }
 
         public string GetComplaint()
         {

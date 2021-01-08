@@ -28,6 +28,36 @@ namespace SchedulingProject
             return Complaintlist.ToList();
 
         }
+        public bool RemoveFromlist(int Selected)
+        {
+            if (Selected > -1)
+            {
+                Complaintlist.RemoveAt(Selected);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+   
+        public Complaint[] FilterList(int day, int month, int year)
+        {
+            List<Complaint> temp = new List<Complaint>();
+            foreach (Complaint item in Complaintlist)
+            {
+                if (item.CDay == day && item.Cmonth == month && item.Cyear == year)
+                {
+                    temp.Add(item);
+                }
+            }
+            return temp.ToArray();
+        }
+
+        
 
     }
+
 }
+
