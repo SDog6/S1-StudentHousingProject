@@ -17,6 +17,7 @@ namespace SchedulingProject
         DiscussionsOrganizer newDiscussionList;
         Complaints allcomplaints;
         Tenants MyTenantNames;
+        DateTime date = DateTime.Now;
 
         public Student()
         {
@@ -72,7 +73,7 @@ namespace SchedulingProject
         private void btnDiscussionsSend_Click(object sender, EventArgs e)
         {
             string name = cbStudentDiscussionName.Text;
-            string date = tbDiscussionDate.Text;
+            string date = this.date.ToString("f");
             string debate = tbDiscussions.Text;
             newDiscussionList.AddDiscussion(name, date, debate);
             UpdateDiscussionList();

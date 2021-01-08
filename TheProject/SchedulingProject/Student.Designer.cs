@@ -56,9 +56,7 @@
             this.lblComplaints = new System.Windows.Forms.ListBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.cbStudentDiscussionName = new System.Windows.Forms.ComboBox();
-            this.lblDiscussionDate = new System.Windows.Forms.Label();
             this.lblDiscussionName = new System.Windows.Forms.Label();
-            this.tbDiscussionDate = new System.Windows.Forms.TextBox();
             this.btnDiscussionsSend = new System.Windows.Forms.Button();
             this.tbDiscussions = new System.Windows.Forms.TextBox();
             this.lbDiscussions = new System.Windows.Forms.ListBox();
@@ -393,9 +391,7 @@
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.cbStudentDiscussionName);
-            this.tabPage3.Controls.Add(this.lblDiscussionDate);
             this.tabPage3.Controls.Add(this.lblDiscussionName);
-            this.tabPage3.Controls.Add(this.tbDiscussionDate);
             this.tabPage3.Controls.Add(this.btnDiscussionsSend);
             this.tabPage3.Controls.Add(this.tbDiscussions);
             this.tabPage3.Controls.Add(this.lbDiscussions);
@@ -409,35 +405,20 @@
             // cbStudentDiscussionName
             // 
             this.cbStudentDiscussionName.FormattingEnabled = true;
-            this.cbStudentDiscussionName.Location = new System.Drawing.Point(88, 425);
+            this.cbStudentDiscussionName.Location = new System.Drawing.Point(109, 428);
             this.cbStudentDiscussionName.Name = "cbStudentDiscussionName";
             this.cbStudentDiscussionName.Size = new System.Drawing.Size(77, 21);
             this.cbStudentDiscussionName.TabIndex = 8;
             // 
-            // lblDiscussionDate
-            // 
-            this.lblDiscussionDate.AutoSize = true;
-            this.lblDiscussionDate.Location = new System.Drawing.Point(44, 460);
-            this.lblDiscussionDate.Name = "lblDiscussionDate";
-            this.lblDiscussionDate.Size = new System.Drawing.Size(33, 13);
-            this.lblDiscussionDate.TabIndex = 7;
-            this.lblDiscussionDate.Text = "Date:";
-            // 
             // lblDiscussionName
             // 
             this.lblDiscussionName.AutoSize = true;
-            this.lblDiscussionName.Location = new System.Drawing.Point(44, 428);
+            this.lblDiscussionName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiscussionName.Location = new System.Drawing.Point(59, 428);
             this.lblDiscussionName.Name = "lblDiscussionName";
-            this.lblDiscussionName.Size = new System.Drawing.Size(38, 13);
+            this.lblDiscussionName.Size = new System.Drawing.Size(44, 15);
             this.lblDiscussionName.TabIndex = 6;
             this.lblDiscussionName.Text = "Name:";
-            // 
-            // tbDiscussionDate
-            // 
-            this.tbDiscussionDate.Location = new System.Drawing.Point(88, 457);
-            this.tbDiscussionDate.Name = "tbDiscussionDate";
-            this.tbDiscussionDate.Size = new System.Drawing.Size(77, 20);
-            this.tbDiscussionDate.TabIndex = 5;
             // 
             // btnDiscussionsSend
             // 
@@ -451,6 +432,7 @@
             // 
             // tbDiscussions
             // 
+            this.tbDiscussions.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbDiscussions.Location = new System.Drawing.Point(192, 428);
             this.tbDiscussions.Multiline = true;
             this.tbDiscussions.Name = "tbDiscussions";
@@ -535,9 +517,7 @@
         private System.Windows.Forms.TextBox tbDiscussions;
         private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.Button btnUpdateRules;
-        private System.Windows.Forms.Label lblDiscussionDate;
         private System.Windows.Forms.Label lblDiscussionName;
-        private System.Windows.Forms.TextBox tbDiscussionDate;
         private System.Windows.Forms.NumericUpDown NumComplaintsMonth;
         private System.Windows.Forms.NumericUpDown NumComplaintsYear;
         private System.Windows.Forms.NumericUpDown NumComplaintsDay;
