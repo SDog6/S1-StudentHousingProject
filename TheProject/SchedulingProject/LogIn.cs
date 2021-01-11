@@ -40,12 +40,14 @@ namespace SchedulingProject
                 
                 StudentForm.Show();
                 OwnerF.Hide();
+                this.Hide();
             }
 
             else if (tbUserName.Text == "owner" && tbPassword.Text == "owner")
             {
                 OwnerF.Show();
                 StudentForm.Hide();
+                this.Hide();
             }
             else
             {
