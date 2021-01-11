@@ -133,7 +133,6 @@
             this.lbDiscussions.Name = "lbDiscussions";
             this.lbDiscussions.Size = new System.Drawing.Size(863, 441);
             this.lbDiscussions.TabIndex = 0;
-            this.lbDiscussions.SelectedIndexChanged += new System.EventHandler(this.lbDiscussions_SelectedIndexChanged);
             // 
             // OwnerRules
             // 

@@ -39,7 +39,7 @@ namespace SchedulingProject
         }
         public void RemoveTenant()
         {
-            this.name = "";
+            this.name = "unoccupied";
             Rent = 0;
         }
         public string GetInfo()

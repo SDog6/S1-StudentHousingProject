@@ -32,6 +32,7 @@ namespace SchedulingProject
 
             for (int i = 0; i < 4; i++)
             {
+               
                 cbStudentDiscussionName.Items.Add(MyTenantNames.ReturnTenantArray()[i].GetName().ToString());
             }
 
@@ -51,7 +52,17 @@ namespace SchedulingProject
             string name = tbChoreName.Text;
             string chore = tbChore.Text;
             string date = tbChoreDate.Text;
-            myScheduleList.AddSchedule(name, chore, date);
+            if (tbChoreName.Text != "" && tbChore.Text != "" && tbChoreDate.Text != "")
+            {
+                myScheduleList.AddSchedule(name, chore, date);
+                tbChoreName.Text = "";
+                tbChore.Text = "";
+                tbChoreDate.Text = "";
+            }
+            else
+            {
+                MessageBox.Show("Please correctly fill out the schedule form");
+            }
             UpdateScheduleList();
         }
 
@@ -69,8 +80,16 @@ namespace SchedulingProject
             string name = cbStudentDiscussionName.Text;
             string date = this.date.ToString("f");
             string debate = tbDiscussions.Text;
-            newDiscussionList.AddDiscussion(name, date, debate);
-            UpdateDiscussionList();
+            if(tbDiscussions.Text != "")
+            {
+                newDiscussionList.AddDiscussion(name, date, debate);
+                UpdateDiscussionList();
+                tbDiscussions.Text = "";
+            }
+            else
+            {
+                MessageBox.Show("Please write something first");
+            }
         }
 
 
@@ -97,14 +116,21 @@ namespace SchedulingProject
             int month = Convert.ToInt32(NumComplaintsMonth.Value);
             int year = Convert.ToInt32(NumComplaintsYear.Value);
             string status = "Pending";
-            allcomplaints.AddComplaint(day, month, year, complaint, status);
-
+            if (tbCompaints.Text != "")
+            {
+                allcomplaints.AddComplaint(day, month, year, complaint, status);
+                tbCompaints.Text = "";
+            }
+            else
+            {
+                MessageBox.Show("Please complain sir/madam");
+            }
             UpdateComplaintList();
         }
 
 
 
-     
+
 
         //UPDATE LISTBOXES
 
@@ -143,15 +169,6 @@ namespace SchedulingProject
             {
                 cbStudentDiscussionName.Items.Add(MyTenantNames.ReturnTenantArray()[i].GetName().ToString());
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            
         }
 
         public void UpdateAll()

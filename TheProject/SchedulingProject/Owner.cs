@@ -13,13 +13,11 @@ namespace SchedulingProject
     public partial class Owner : Form
     {
         Random randomcolor;
-
         Rules NewRuleList;
         Tenants NewTenantArray;
         ScheduleList mySchedule;
         Complaints GatherAllComplaints;
         DiscussionsOrganizer newDiscussionList;
-        Student StudentForm;
 
         public Owner()
         {
@@ -32,12 +30,10 @@ namespace SchedulingProject
             GatherAllComplaints = new Complaints();
             newDiscussionList = new DiscussionsOrganizer();
             mySchedule = new ScheduleList();
-            StudentForm = new Student();
 
-            // EXTRAS
+            //Rules warning label
             label1.Visible = false;
-            label1.ForeColor = Color.Red;
-
+       
 
             //TENANTS INITIATE
             lblMoney.Text = $"Monthly revenue:{NewTenantArray.GetRevenue().ToString()}€";
@@ -57,7 +53,15 @@ namespace SchedulingProject
         private void btnAdd_Click(object sender, EventArgs e)
         {
             string RuleToBeAdded = Convert.ToString(tbRulesToAdd.Text);
-            NewRuleList.AddRule(RuleToBeAdded);
+            if (tbRulesToAdd.Text != "")
+            {
+                NewRuleList.AddRule(RuleToBeAdded);
+                tbRulesToAdd.Text = "";
+            }
+            else
+            {
+                MessageBox.Show("Please write a rule");
+            }
             UpdateRuleList();
         }
 
@@ -91,32 +95,45 @@ namespace SchedulingProject
 
         private void btnAddTenant_Click(object sender, EventArgs e)
         {
-            string Tenantname = tbTenantName.Text;
-            int Tenantage = Convert.ToInt32(tbTenantAge.Text);
-            int Rent = Convert.ToInt32(tbTenantRent.Text);
+            if (tbTenantName.Text != "" && tbTenantAge.Text != "" && tbTenantRent.Text != "")
+            {
+                string Tenantname = tbTenantName.Text;
+                int Tenantage = Convert.ToInt32(tbTenantAge.Text);
+                int Rent = Convert.ToInt32(tbTenantRent.Text);
 
-            if (rbTenant1.Checked)
-            {
-                NewTenantArray.ReturnTenantArray()[0] = new Tenant(Tenantname, (TenantSex)cbTenantSex.SelectedItem, Tenantage, Rent);
-                lblTenant1Info.Text = NewTenantArray.ReturnTenantArray()[0].GetInfo().ToString();
-            }
-            else if (rbTenant2.Checked)
-            {
-                NewTenantArray.ReturnTenantArray()[1] = new Tenant(Tenantname, (TenantSex)cbTenantSex.SelectedItem, Tenantage, Rent);
-                lblTenant2Info.Text = NewTenantArray.ReturnTenantArray()[1].GetInfo().ToString();
-            }
-            else if (rbTenant3.Checked)
-            {
-                NewTenantArray.ReturnTenantArray()[2] = new Tenant(Tenantname, (TenantSex)cbTenantSex.SelectedItem, Tenantage, Rent);
-                lblTenant3Info.Text = NewTenantArray.ReturnTenantArray()[2].GetInfo().ToString();
-            }
-            else if (rbTenant4.Checked)
-            {
-                NewTenantArray.ReturnTenantArray()[3] = new Tenant(Tenantname, (TenantSex)cbTenantSex.SelectedItem, Tenantage, Rent);
-                lblTenant4Info.Text = NewTenantArray.ReturnTenantArray()[3].GetInfo().ToString();
-            }
-            lblMoney.Text = $"Monthly revenue:{NewTenantArray.GetRevenue().ToString()}€";
+                if (rbTenant1.Checked)
+                {
+                    NewTenantArray.ReturnTenantArray()[0] = new Tenant(Tenantname, (TenantSex)cbTenantSex.SelectedItem, Tenantage, Rent);
+                    lblTenant1Info.Text = NewTenantArray.ReturnTenantArray()[0].GetInfo().ToString();
+                }
+                else if (rbTenant2.Checked)
+                {
+                    NewTenantArray.ReturnTenantArray()[1] = new Tenant(Tenantname, (TenantSex)cbTenantSex.SelectedItem, Tenantage, Rent);
+                    lblTenant2Info.Text = NewTenantArray.ReturnTenantArray()[1].GetInfo().ToString();
+                }
+                else if (rbTenant3.Checked)
+                {
+                    NewTenantArray.ReturnTenantArray()[2] = new Tenant(Tenantname, (TenantSex)cbTenantSex.SelectedItem, Tenantage, Rent);
+                    lblTenant3Info.Text = NewTenantArray.ReturnTenantArray()[2].GetInfo().ToString();
+                }
+                else if (rbTenant4.Checked)
+                {
+                    NewTenantArray.ReturnTenantArray()[3] = new Tenant(Tenantname, (TenantSex)cbTenantSex.SelectedItem, Tenantage, Rent);
+                    lblTenant4Info.Text = NewTenantArray.ReturnTenantArray()[3].GetInfo().ToString();
+                }
+                else
+                {
 
+                }
+                tbTenantName.Text = "";
+                tbTenantAge.Text = "";
+                tbTenantRent.Text = "";
+                lblMoney.Text = $"Monthly revenue:{NewTenantArray.GetRevenue().ToString()}€";
+            }
+            else
+            {
+                MessageBox.Show("Please fill out the tenants details");
+            }
         }
 
         public void SetTenantSexOptions()
@@ -130,23 +147,23 @@ namespace SchedulingProject
         {
             if (rbTenant1.Checked)
             {
-                lblTenant1Info.Text = NewTenantArray.ReturnTenantArray()[0].GetInfo().ToString();
                 NewTenantArray.ReturnTenantArray()[0].RemoveTenant();
+                lblTenant1Info.Text = NewTenantArray.ReturnTenantArray()[0].GetInfo().ToString();
             }
             else if (rbTenant2.Checked)
             {
-                lblTenant2Info.Text = NewTenantArray.ReturnTenantArray()[1].GetInfo().ToString();
                 NewTenantArray.ReturnTenantArray()[1].RemoveTenant();
+                lblTenant2Info.Text = NewTenantArray.ReturnTenantArray()[1].GetInfo().ToString();
             }
             else if (rbTenant3.Checked)
             {
-                lblTenant3Info.Text = NewTenantArray.ReturnTenantArray()[2].GetInfo().ToString();
                 NewTenantArray.ReturnTenantArray()[2].RemoveTenant();
+                lblTenant3Info.Text = NewTenantArray.ReturnTenantArray()[2].GetInfo().ToString();
             }
             else if (rbTenant4.Checked)
             {
-                lblTenant4Info.Text = NewTenantArray.ReturnTenantArray()[3].GetInfo().ToString();
                 NewTenantArray.ReturnTenantArray()[3].RemoveTenant();
+                lblTenant4Info.Text = NewTenantArray.ReturnTenantArray()[3].GetInfo().ToString();
             }
             lblMoney.Text = $"Monthly revenue:{NewTenantArray.GetRevenue().ToString()}€";
 
@@ -195,11 +212,6 @@ namespace SchedulingProject
                 lblChores.Items.Add(schedule.GetInfo());
             }
         }
-
-        private void btnLogOut_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
         public void UpdateAll()
         {
             UpdateScheduleList();
@@ -228,15 +240,7 @@ namespace SchedulingProject
             UpdateAll();
         }
 
-        private void lbDiscussions_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnLogOut_Click_1(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
+     
         // button to change the status of the complaint from pending to Complete
         private void btnDone_Click(object sender, EventArgs e)
         {
@@ -266,6 +270,11 @@ namespace SchedulingProject
         private void timer2_Tick(object sender, EventArgs e)
         {
             UpdateComplaintList();
+        }
+
+        private void btnLogOut_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

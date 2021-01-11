@@ -28,7 +28,10 @@ namespace SchedulingProject
 
         public void RemoveChore(int index)
         {
-            myScheduleList.RemoveAt(index);
+            if(index > -1)
+            {
+                myScheduleList.RemoveAt(index);
+            }
         }
     }
 }
