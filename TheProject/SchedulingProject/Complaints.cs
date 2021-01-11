@@ -13,15 +13,15 @@ namespace SchedulingProject
         public Complaints()
         {
             Complaintlist = new List<Complaint>();
-            Complaintlist.Add(new Complaint("The shower head sometimes breaks", 5, 1, 2021));
+            Complaintlist.Add(new Complaint("The shower head sometimes breaks", 5, 1, 2021, "Pending"));
         }
 
 
-        public void AddComplaint(int Day, int Month, int Year, string complaint)
+        public void AddComplaint(int Day, int Month, int Year, string complaint, string Status)
         {
 
-            // Complaintlist.Add(new Complaint(complaint, Year, Month, Day ));
-            Complaintlist.Add(new Complaint(complaint, Day, Month, Year));
+            
+            Complaintlist.Add(new Complaint(complaint, Day, Month, Year, Status));
         }
         public List<Complaint> GetComplaintslist()
         {

@@ -157,6 +157,7 @@ namespace SchedulingProject
 
         private void button1_Click(object sender, EventArgs e)
         {
+            timer2.Start();
             UpdateComplaintList();
         }
         private void btnCompaintsViewBy_Click(object sender, EventArgs e)
@@ -204,11 +205,12 @@ namespace SchedulingProject
             UpdateScheduleList();
             UpdateDiscussionList();
             UpdateRuleList();
-            UpdateComplaintList();
+           // UpdateComplaintList();
         }
 
         private void btnCompaintsViewBy_Click_1(object sender, EventArgs e)
         {
+            timer2.Stop();
             int day = Convert.ToInt32(NumComplaintsDay.Value);
             int month = Convert.ToInt32(NumComplaintsMonth.Value);
             int year = Convert.ToInt32(NumComplaintsYear.Value);
@@ -234,6 +236,36 @@ namespace SchedulingProject
         private void btnLogOut_Click_1(object sender, EventArgs e)
         {
             this.Hide();
+        }
+        // button to change the status of the complaint from pending to Complete
+        private void btnDone_Click(object sender, EventArgs e)
+        {
+             string status = "Done";
+           
+                if (lblComplaints.SelectedItem == null)
+                {
+                    MessageBox.Show("Please select the complaint that you want to change the status of!");
+                }
+            foreach (Complaint item in GatherAllComplaints.GetComplaintslist())
+            {
+
+                if (lblComplaints.SelectedItem == null)
+                {
+                    
+                }
+                else if (lblComplaints.SelectedItem.ToString() == item.GetInfo())
+                {
+                    item.Cstatus = status;
+                    lblComplaints.Items.Add(item.GetInfo());
+                    UpdateComplaintList();
+                }
+            }
+        }
+
+        // Timer for the complaint tab so you can view complaint by day without reseting or stopping the timer for the entire application 
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            UpdateComplaintList();
         }
     }
 }

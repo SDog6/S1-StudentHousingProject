@@ -48,7 +48,6 @@
             this.NumComplaintsYear = new System.Windows.Forms.NumericUpDown();
             this.NumComplaintsDay = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnRemoveComplaint = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.btnComplaintsAdd = new System.Windows.Forms.Button();
             this.tbCompaints = new System.Windows.Forms.TextBox();
@@ -235,7 +234,6 @@
             this.tabPage1.Controls.Add(this.NumComplaintsYear);
             this.tabPage1.Controls.Add(this.NumComplaintsDay);
             this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.btnRemoveComplaint);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.btnComplaintsAdd);
             this.tabPage1.Controls.Add(this.tbCompaints);
@@ -324,36 +322,25 @@
             this.label6.TabIndex = 6;
             this.label6.Text = "Date:";
             // 
-            // btnRemoveComplaint
-            // 
-            this.btnRemoveComplaint.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoveComplaint.Location = new System.Drawing.Point(242, 292);
-            this.btnRemoveComplaint.Name = "btnRemoveComplaint";
-            this.btnRemoveComplaint.Size = new System.Drawing.Size(100, 56);
-            this.btnRemoveComplaint.TabIndex = 4;
-            this.btnRemoveComplaint.Text = "Remove";
-            this.btnRemoveComplaint.UseVisualStyleBackColor = true;
-            this.btnRemoveComplaint.Click += new System.EventHandler(this.btnRemoveComplaint_Click_1);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(53, 26);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(303, 34);
+            this.label5.Size = new System.Drawing.Size(314, 34);
             this.label5.TabIndex = 3;
-            this.label5.Text = "Apologies for any inconviniances. \r\nPlease tell us if you have had any bad experi" +
-    "ances";
+            this.label5.Text = "Apologies for any inconvenience. \r\nPlease fill out the form bellow to submit a Co" +
+    "mplaint";
             // 
             // btnComplaintsAdd
             // 
             this.btnComplaintsAdd.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComplaintsAdd.Location = new System.Drawing.Point(56, 292);
+            this.btnComplaintsAdd.Location = new System.Drawing.Point(86, 310);
             this.btnComplaintsAdd.Name = "btnComplaintsAdd";
-            this.btnComplaintsAdd.Size = new System.Drawing.Size(100, 56);
+            this.btnComplaintsAdd.Size = new System.Drawing.Size(206, 56);
             this.btnComplaintsAdd.TabIndex = 2;
-            this.btnComplaintsAdd.Text = "Add";
+            this.btnComplaintsAdd.Text = "Submit Complaint";
             this.btnComplaintsAdd.UseVisualStyleBackColor = true;
             this.btnComplaintsAdd.Click += new System.EventHandler(this.btnComplaintsAdd_Click_1);
             // 
@@ -449,7 +436,7 @@
             // timer2
             // 
             this.timer2.Enabled = true;
-            this.timer2.Interval = 500;
+            this.timer2.Interval = 5000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick_1);
             // 
             // Student
@@ -493,7 +480,6 @@
         private System.Windows.Forms.TextBox tbChore;
         private System.Windows.Forms.TextBox tbChoreName;
         private System.Windows.Forms.ListBox lblChores;
-        private System.Windows.Forms.Button btnRemoveComplaint;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnComplaintsAdd;
         private System.Windows.Forms.TextBox tbCompaints;

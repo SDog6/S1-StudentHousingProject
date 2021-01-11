@@ -42,6 +42,8 @@
             this.lblChores = new System.Windows.Forms.ListBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.OwnerCompaints = new System.Windows.Forms.TabPage();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btnDone = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.NumComplaintsYear = new System.Windows.Forms.NumericUpDown();
             this.NumComplaintsMonth = new System.Windows.Forms.NumericUpDown();
@@ -81,6 +83,7 @@
             this.rbTenant2 = new System.Windows.Forms.RadioButton();
             this.rbTenant1 = new System.Windows.Forms.RadioButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.OwnerDiscussions.SuspendLayout();
             this.OwnerRules.SuspendLayout();
             this.OwnerSchedule.SuspendLayout();
@@ -234,6 +237,8 @@
             // 
             // OwnerCompaints
             // 
+            this.OwnerCompaints.Controls.Add(this.label9);
+            this.OwnerCompaints.Controls.Add(this.btnDone);
             this.OwnerCompaints.Controls.Add(this.label8);
             this.OwnerCompaints.Controls.Add(this.NumComplaintsYear);
             this.OwnerCompaints.Controls.Add(this.NumComplaintsMonth);
@@ -249,6 +254,28 @@
             this.OwnerCompaints.TabIndex = 2;
             this.OwnerCompaints.Text = "Complaints";
             this.OwnerCompaints.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(6, 375);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(225, 30);
+            this.label9.TabIndex = 27;
+            this.label9.Text = "Select the completed complaint in the listbox,\r\nand press the button to change st" +
+    "atus ";
+            // 
+            // btnDone
+            // 
+            this.btnDone.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDone.Location = new System.Drawing.Point(44, 427);
+            this.btnDone.Name = "btnDone";
+            this.btnDone.Size = new System.Drawing.Size(98, 43);
+            this.btnDone.TabIndex = 26;
+            this.btnDone.Text = "Mark complaint as Done";
+            this.btnDone.UseVisualStyleBackColor = true;
+            this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
             // 
             // label8
             // 
@@ -662,8 +689,14 @@
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 500;
+            this.timer1.Interval = 5000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // timer2
+            // 
+            this.timer2.Enabled = true;
+            this.timer2.Interval = 5000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // Owner
             // 
@@ -757,5 +790,8 @@
         private System.Windows.Forms.NumericUpDown NumComplaintsDay;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnDone;
+        private System.Windows.Forms.Timer timer2;
     }
 }

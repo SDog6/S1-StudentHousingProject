@@ -12,18 +12,24 @@ namespace SchedulingProject
         private int Cday;
         private int CMonth;
         private int CYear;
+        private string CStatus;
 
 
+        public int CDay { get { return this.Cday; } }
+        public int Cmonth { get { return this.CMonth; } }
 
+        public int Cyear { get { return this.CYear; } }
 
-        public Complaint(string complaint, int Cday, int CMonth, int CYear)
+        public string Cstatus { get { return this.CStatus; } set { this.CStatus = value; } }
+
+        public Complaint(string complaint, int Cday, int CMonth, int CYear, string CStatus)
         {
 
             this.complaint = complaint;
             this.Cday = Cday;
             this.CMonth = CMonth;
             this.CYear = CYear;
-
+            this.CStatus = CStatus;
         }
         public Complaint(int Cday, int CMonth, int CYear)
         {
@@ -35,10 +41,6 @@ namespace SchedulingProject
 
         }
 
-        public int CDay { get { return this.Cday; } }
-        public int Cmonth { get { return this.CMonth; } }
-
-        public int Cyear { get { return this.CYear; } }
 
         public string GetComplaint()
         {
@@ -51,7 +53,7 @@ namespace SchedulingProject
 
         public string GetInfo()
         {
-            return $"{GetDate()}\t{complaint}";
+            return $"{GetDate()}\t{complaint} ~: {CStatus}";
 
         }
 

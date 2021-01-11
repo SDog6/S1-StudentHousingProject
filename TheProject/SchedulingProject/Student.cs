@@ -96,25 +96,15 @@ namespace SchedulingProject
             int day = Convert.ToInt32(NumComplaintsDay.Value);
             int month = Convert.ToInt32(NumComplaintsMonth.Value);
             int year = Convert.ToInt32(NumComplaintsYear.Value);
-
-            allcomplaints.AddComplaint(day, month, year, complaint);
+            string status = "Pending";
+            allcomplaints.AddComplaint(day, month, year, complaint, status);
 
             UpdateComplaintList();
         }
 
 
 
-        private void btnRemoveComplaint_Click_1(object sender, EventArgs e)
-        {
-            int selected = lblComplaints.SelectedIndex;
-            allcomplaints.RemoveFromlist(selected);
-
-            if (selected == -1)
-            {
-                MessageBox.Show("you haven't selected a complaint to be removed yet!");
-            }
-            UpdateComplaintList();
-        }
+     
 
         //UPDATE LISTBOXES
 
