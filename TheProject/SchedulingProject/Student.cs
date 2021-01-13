@@ -49,26 +49,46 @@ namespace SchedulingProject
 
         private void btnAddChore_Click(object sender, EventArgs e)
         {
+           
             string name = tbChoreName.Text;
             string chore = tbChore.Text;
             string date = tbChoreDate.Text;
-            if (tbChoreName.Text == "" && tbChore.Text != "" && tbChoreDate.Text != "")
+            if (lblChores.SelectedIndex > -1)
             {
-                myScheduleList.AddSchedule(chore, date);
-                tbChore.Text = "";
-                tbChoreDate.Text = "";
-            }
-            else if (tbChoreName.Text != "" && tbChore.Text != "" && tbChoreDate.Text != "")
-            {
-                myScheduleList.AddSchedule(name, chore, date);
+                string S = lblChores.SelectedItem.ToString();
+                Schedule temp = null;
+                foreach (Schedule s in myScheduleList.GetScheduleList())
+                {
+                    if(s.GetInfo() == S)
+                    {
+                        temp = s;
+                    }
+                }
+
+                temp.Name = name;
                 tbChoreName.Text = "";
-                tbChore.Text = "";
-                tbChoreDate.Text = "";
             }
             else
             {
-                MessageBox.Show("Please correctly fill out the schedule form");
+                if (tbChoreName.Text == "" && tbChore.Text != "" && tbChoreDate.Text != "")
+                {
+                    myScheduleList.AddSchedule(chore, date);
+                    tbChore.Text = "";
+                    tbChoreDate.Text = "";
+                }
+                else if (tbChoreName.Text != "" && tbChore.Text != "" && tbChoreDate.Text != "")
+                {
+                    myScheduleList.AddSchedule(name, chore, date);
+                    tbChoreName.Text = "";
+                    tbChore.Text = "";
+                    tbChoreDate.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("Please correctly fill out the schedule form");
+                }
             }
+         
             UpdateScheduleList();
         }
 
@@ -79,6 +99,29 @@ namespace SchedulingProject
             UpdateScheduleList();
         }
 
+        private void btnAssign_Click(object sender, EventArgs e)
+        {
+            if (lblChores.SelectedIndex > -1)
+            {
+                Schedule temp = null;
+                string s = lblChores.SelectedItem.ToString();
+                foreach (Schedule S in myScheduleList.GetScheduleList())
+                {
+                    if (S.GetInfo() == s)
+                    {
+                        temp = S;
+                    }
+                }
+                temp.Name = MyTenantNames.GetRandomTenant();
+
+                UpdateAll();
+            }
+            else
+            {
+                MessageBox.Show("Please select a chore.");
+            }
+
+        }
         //DISCUSSIONS
 
         private void btnDiscussionsSend_Click(object sender, EventArgs e)
@@ -218,28 +261,6 @@ namespace SchedulingProject
             mouseDown = false;
         }
 
-        private void btnAssign_Click(object sender, EventArgs e)
-        {
-            if(lblChores.SelectedIndex > -1)
-            {
-                Schedule temp = null;
-                string s = lblChores.SelectedItem.ToString();
-                foreach (Schedule S in myScheduleList.GetScheduleList())
-                {
-                    if (S.GetInfo() == s)
-                    {
-                        temp = S;
-                    }
-                }
-                temp.Name = MyTenantNames.GetRandomTenant();
-
-                UpdateAll();
-            }
-            else
-            {
-                MessageBox.Show("Please select a chore.");
-            }
-    
-        }
+      
     }
 }

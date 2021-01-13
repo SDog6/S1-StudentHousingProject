@@ -120,3 +120,15 @@ C:\Users\Hristo\Downloads\software-project13.01\software-project-master\TheProje
 C:\Users\Hristo\Downloads\software-project13.01\software-project-master\TheProject\SchedulingProject\obj\Debug\SchedulingProject.csproj.CoreCompileInputs.cache
 C:\Users\Hristo\Downloads\software-project13.01\software-project-master\TheProject\SchedulingProject\obj\Debug\SchedulingProject.exe
 C:\Users\Hristo\Downloads\software-project13.01\software-project-master\TheProject\SchedulingProject\obj\Debug\SchedulingProject.pdb
+C:\Users\Hristo\Documents\Fuck you git\software-project\TheProject\SchedulingProject\bin\Debug\SchedulingProject.exe.config
+C:\Users\Hristo\Documents\Fuck you git\software-project\TheProject\SchedulingProject\bin\Debug\SchedulingProject.exe
+C:\Users\Hristo\Documents\Fuck you git\software-project\TheProject\SchedulingProject\bin\Debug\SchedulingProject.pdb
+C:\Users\Hristo\Documents\Fuck you git\software-project\TheProject\SchedulingProject\obj\Debug\SchedulingProject.csprojAssemblyReference.cache
+C:\Users\Hristo\Documents\Fuck you git\software-project\TheProject\SchedulingProject\obj\Debug\SchedulingProject.LogIn.resources
+C:\Users\Hristo\Documents\Fuck you git\software-project\TheProject\SchedulingProject\obj\Debug\SchedulingProject.Student.resources
+C:\Users\Hristo\Documents\Fuck you git\software-project\TheProject\SchedulingProject\obj\Debug\SchedulingProject.Owner.resources
+C:\Users\Hristo\Documents\Fuck you git\software-project\TheProject\SchedulingProject\obj\Debug\SchedulingProject.Properties.Resources.resources
+C:\Users\Hristo\Documents\Fuck you git\software-project\TheProject\SchedulingProject\obj\Debug\SchedulingProject.csproj.GenerateResource.cache
+C:\Users\Hristo\Documents\Fuck you git\software-project\TheProject\SchedulingProject\obj\Debug\SchedulingProject.csproj.CoreCompileInputs.cache
+C:\Users\Hristo\Documents\Fuck you git\software-project\TheProject\SchedulingProject\obj\Debug\SchedulingProject.exe
+C:\Users\Hristo\Documents\Fuck you git\software-project\TheProject\SchedulingProject\obj\Debug\SchedulingProject.pdb

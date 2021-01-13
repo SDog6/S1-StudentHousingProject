@@ -31,15 +31,17 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Schedule = new System.Windows.Forms.TabPage();
+            this.btnAssign = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tbChoreName = new System.Windows.Forms.TextBox();
             this.BtnRemoveChore = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnAddChore = new System.Windows.Forms.Button();
             this.tbChoreDate = new System.Windows.Forms.TextBox();
             this.tbChore = new System.Windows.Forms.TextBox();
-            this.tbChoreName = new System.Windows.Forms.TextBox();
             this.lblChores = new System.Windows.Forms.ListBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.lblRuleListS = new System.Windows.Forms.ListBox();
@@ -60,17 +62,15 @@
             this.lbDiscussions = new System.Windows.Forms.ListBox();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnAssign = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.Schedule.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NumComplaintsMonth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumComplaintsYear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumComplaintsDay)).BeginInit();
             this.tabPage3.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -108,6 +108,50 @@
             this.Schedule.TabIndex = 0;
             this.Schedule.Text = "Schedule";
             this.Schedule.UseVisualStyleBackColor = true;
+            // 
+            // btnAssign
+            // 
+            this.btnAssign.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAssign.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnAssign.Location = new System.Drawing.Point(322, 342);
+            this.btnAssign.Name = "btnAssign";
+            this.btnAssign.Size = new System.Drawing.Size(101, 46);
+            this.btnAssign.TabIndex = 11;
+            this.btnAssign.Text = "Assign chore on random";
+            this.btnAssign.UseVisualStyleBackColor = true;
+            this.btnAssign.Click += new System.EventHandler(this.btnAssign_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.tbChoreName);
+            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(43, 262);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(317, 63);
+            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Not required";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label1.Location = new System.Drawing.Point(27, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 17);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Name:";
+            // 
+            // tbChoreName
+            // 
+            this.tbChoreName.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbChoreName.Location = new System.Drawing.Point(97, 19);
+            this.tbChoreName.Multiline = true;
+            this.tbChoreName.Name = "tbChoreName";
+            this.tbChoreName.Size = new System.Drawing.Size(171, 31);
+            this.tbChoreName.TabIndex = 1;
             // 
             // BtnRemoveChore
             // 
@@ -155,17 +199,6 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Chore:";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(27, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 17);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Name:";
-            // 
             // btnAddChore
             // 
             this.btnAddChore.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -174,7 +207,7 @@
             this.btnAddChore.Name = "btnAddChore";
             this.btnAddChore.Size = new System.Drawing.Size(171, 46);
             this.btnAddChore.TabIndex = 4;
-            this.btnAddChore.Text = "Add to chore schedule";
+            this.btnAddChore.Text = "Add/Update schedule";
             this.btnAddChore.UseVisualStyleBackColor = true;
             this.btnAddChore.Click += new System.EventHandler(this.btnAddChore_Click);
             // 
@@ -193,15 +226,6 @@
             this.tbChore.Name = "tbChore";
             this.tbChore.Size = new System.Drawing.Size(171, 31);
             this.tbChore.TabIndex = 2;
-            // 
-            // tbChoreName
-            // 
-            this.tbChoreName.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbChoreName.Location = new System.Drawing.Point(97, 19);
-            this.tbChoreName.Multiline = true;
-            this.tbChoreName.Name = "tbChoreName";
-            this.tbChoreName.Size = new System.Drawing.Size(171, 31);
-            this.tbChoreName.TabIndex = 1;
             // 
             // lblChores
             // 
@@ -445,30 +469,6 @@
             this.timer2.Interval = 5000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick_1);
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.tbChoreName);
-            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(43, 262);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(317, 63);
-            this.groupBox1.TabIndex = 10;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Not required";
-            // 
-            // btnAssign
-            // 
-            this.btnAssign.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAssign.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAssign.Location = new System.Drawing.Point(322, 342);
-            this.btnAssign.Name = "btnAssign";
-            this.btnAssign.Size = new System.Drawing.Size(101, 46);
-            this.btnAssign.TabIndex = 11;
-            this.btnAssign.Text = "Assign chore on random";
-            this.btnAssign.UseVisualStyleBackColor = true;
-            this.btnAssign.Click += new System.EventHandler(this.btnAssign_Click);
-            // 
             // Student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -485,6 +485,8 @@
             this.tabControl1.ResumeLayout(false);
             this.Schedule.ResumeLayout(false);
             this.Schedule.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -493,8 +495,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.NumComplaintsDay)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
