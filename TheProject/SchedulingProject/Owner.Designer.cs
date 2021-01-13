@@ -371,9 +371,9 @@
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(40, 46);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(128, 19);
+            this.label7.Size = new System.Drawing.Size(130, 19);
             this.label7.TabIndex = 11;
-            this.label7.Text = "View Sertain Dates:";
+            this.label7.Text = "View Certain Dates:";
             // 
             // lblComplaints
             // 

@@ -31,7 +31,7 @@ namespace SchedulingProject
         {
             if(name == "")
             {
-                return $"{chore} needs doing on the {date} [NEEDS ASSIGNING!]";
+                return $"{chore} needs doing on the {date} [!]";
             }
             else
             {
