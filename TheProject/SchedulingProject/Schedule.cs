@@ -12,6 +12,14 @@ namespace SchedulingProject
         private string chore;
         private string date;
 
+        public string Name { set {this.name = value;} get { return this.name; } }
+
+        public Schedule(string chore,string date)
+        {
+            this.name = "";
+            this.chore = chore;
+            this.date = date;
+        }
         public Schedule(string name, string chore, string date)
         {
             this.name = name;
@@ -21,7 +29,14 @@ namespace SchedulingProject
 
         public string GetInfo()
         {
-            return $"{name} will be: {chore} on: {date}";
+            if(name == "")
+            {
+                return $"{chore} needs doing on the {date} [NEEDS ASSIGNING!]";
+            }
+            else
+            {
+                return $"{name} will be: {chore} on: {date}";
+            }
         }
     }
 }

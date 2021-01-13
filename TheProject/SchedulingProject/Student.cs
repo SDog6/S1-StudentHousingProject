@@ -52,7 +52,13 @@ namespace SchedulingProject
             string name = tbChoreName.Text;
             string chore = tbChore.Text;
             string date = tbChoreDate.Text;
-            if (tbChoreName.Text != "" && tbChore.Text != "" && tbChoreDate.Text != "")
+            if (tbChoreName.Text == "" && tbChore.Text != "" && tbChoreDate.Text != "")
+            {
+                myScheduleList.AddSchedule(chore, date);
+                tbChore.Text = "";
+                tbChoreDate.Text = "";
+            }
+            else if (tbChoreName.Text != "" && tbChore.Text != "" && tbChoreDate.Text != "")
             {
                 myScheduleList.AddSchedule(name, chore, date);
                 tbChoreName.Text = "";
@@ -188,6 +194,52 @@ namespace SchedulingProject
         private void timer2_Tick_1(object sender, EventArgs e)
         {
             UpdateAll();
+        }
+        // Form Movement
+        private bool mouseDown;
+        private Point lastLocation;
+        private void Student_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDown = true;
+            lastLocation = e.Location;
+        }
+
+        private void Student_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseDown)
+            {
+                this.Location = new Point((this.Location.X - lastLocation.X) + e.X, (this.Location.Y - lastLocation.Y) + e.Y);
+                this.Update();
+            }
+        }
+
+        private void Student_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
+        }
+
+        private void btnAssign_Click(object sender, EventArgs e)
+        {
+            if(lblChores.SelectedIndex > -1)
+            {
+                Schedule temp = null;
+                string s = lblChores.SelectedItem.ToString();
+                foreach (Schedule S in myScheduleList.GetScheduleList())
+                {
+                    if (S.GetInfo() == s)
+                    {
+                        temp = S;
+                    }
+                }
+                temp.Name = MyTenantNames.GetRandomTenant();
+
+                UpdateAll();
+            }
+            else
+            {
+                MessageBox.Show("Please select a chore.");
+            }
+    
         }
     }
 }

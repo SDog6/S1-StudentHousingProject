@@ -63,7 +63,7 @@ namespace SchedulingProject
             Color randomColor = Color.FromArgb(randomcolor.Next(200), randomcolor.Next(200), randomcolor.Next(200));
             label4.ForeColor = randomColor;
         }
-        
+        // Form Movement
         private bool mouseDown;
         private Point lastLocation;
 
@@ -86,15 +86,10 @@ namespace SchedulingProject
         {
             mouseDown = false;
         }
-
+        // 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void LogIn_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -106,5 +101,11 @@ namespace SchedulingProject
         {
             StudentForm.Show();
         }
+
+        private void LabelClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        
     }
 }

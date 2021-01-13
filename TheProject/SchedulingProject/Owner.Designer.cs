@@ -117,9 +117,9 @@
             // OwnerDiscussions
             // 
             this.OwnerDiscussions.Controls.Add(this.lbDiscussions);
-            this.OwnerDiscussions.Location = new System.Drawing.Point(4, 22);
+            this.OwnerDiscussions.Location = new System.Drawing.Point(4, 48);
             this.OwnerDiscussions.Name = "OwnerDiscussions";
-            this.OwnerDiscussions.Size = new System.Drawing.Size(879, 488);
+            this.OwnerDiscussions.Size = new System.Drawing.Size(872, 456);
             this.OwnerDiscussions.TabIndex = 3;
             this.OwnerDiscussions.Text = "Discussions";
             this.OwnerDiscussions.UseVisualStyleBackColor = true;
@@ -141,10 +141,10 @@
             this.OwnerRules.Controls.Add(this.btnRemove);
             this.OwnerRules.Controls.Add(this.btnAdd);
             this.OwnerRules.Controls.Add(this.tbRulesToAdd);
-            this.OwnerRules.Location = new System.Drawing.Point(4, 22);
+            this.OwnerRules.Location = new System.Drawing.Point(4, 48);
             this.OwnerRules.Name = "OwnerRules";
             this.OwnerRules.Padding = new System.Windows.Forms.Padding(3);
-            this.OwnerRules.Size = new System.Drawing.Size(879, 488);
+            this.OwnerRules.Size = new System.Drawing.Size(872, 456);
             this.OwnerRules.TabIndex = 1;
             this.OwnerRules.Text = "Rules";
             this.OwnerRules.UseVisualStyleBackColor = true;
@@ -153,7 +153,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(250, 171);
+            this.label1.Location = new System.Drawing.Point(388, 169);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 15);
             this.label1.TabIndex = 4;
@@ -164,16 +164,16 @@
             this.lblRuleList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRuleList.FormattingEnabled = true;
             this.lblRuleList.ItemHeight = 20;
-            this.lblRuleList.Location = new System.Drawing.Point(7, 214);
+            this.lblRuleList.Location = new System.Drawing.Point(3, 208);
             this.lblRuleList.Name = "lblRuleList";
             this.lblRuleList.Size = new System.Drawing.Size(863, 244);
             this.lblRuleList.TabIndex = 3;
             // 
             // btnRemove
             // 
-            this.btnRemove.Location = new System.Drawing.Point(253, 128);
+            this.btnRemove.Location = new System.Drawing.Point(504, 128);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(118, 40);
+            this.btnRemove.Size = new System.Drawing.Size(151, 40);
             this.btnRemove.TabIndex = 2;
             this.btnRemove.Text = "Remove a rule";
             this.btnRemove.UseVisualStyleBackColor = true;
@@ -181,9 +181,9 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(48, 128);
+            this.btnAdd.Location = new System.Drawing.Point(86, 128);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(118, 40);
+            this.btnAdd.Size = new System.Drawing.Size(134, 40);
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Add a rule";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -201,12 +201,12 @@
             // OwnerSchedule
             // 
             this.OwnerSchedule.Controls.Add(this.lblChores);
-            this.OwnerSchedule.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OwnerSchedule.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OwnerSchedule.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.OwnerSchedule.Location = new System.Drawing.Point(4, 22);
+            this.OwnerSchedule.Location = new System.Drawing.Point(4, 48);
             this.OwnerSchedule.Name = "OwnerSchedule";
             this.OwnerSchedule.Padding = new System.Windows.Forms.Padding(3);
-            this.OwnerSchedule.Size = new System.Drawing.Size(879, 488);
+            this.OwnerSchedule.Size = new System.Drawing.Size(872, 456);
             this.OwnerSchedule.TabIndex = 0;
             this.OwnerSchedule.Text = "Schedule";
             this.OwnerSchedule.UseVisualStyleBackColor = true;
@@ -216,7 +216,7 @@
             this.lblChores.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChores.FormattingEnabled = true;
             this.lblChores.ItemHeight = 23;
-            this.lblChores.Location = new System.Drawing.Point(6, 25);
+            this.lblChores.Location = new System.Drawing.Point(6, 6);
             this.lblChores.Name = "lblChores";
             this.lblChores.Size = new System.Drawing.Size(861, 441);
             this.lblChores.TabIndex = 0;
@@ -228,10 +228,12 @@
             this.tabControl1.Controls.Add(this.OwnerCompaints);
             this.tabControl1.Controls.Add(this.OwnerDiscussions);
             this.tabControl1.Controls.Add(this.OwnerTenants);
-            this.tabControl1.Location = new System.Drawing.Point(2, -4);
+            this.tabControl1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Location = new System.Drawing.Point(2, 2);
             this.tabControl1.Name = "tabControl1";
+            this.tabControl1.Padding = new System.Drawing.Point(12, 12);
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(887, 514);
+            this.tabControl1.Size = new System.Drawing.Size(880, 508);
             this.tabControl1.TabIndex = 1;
             // 
             // OwnerCompaints
@@ -247,9 +249,9 @@
             this.OwnerCompaints.Controls.Add(this.label7);
             this.OwnerCompaints.Controls.Add(this.lblComplaints);
             this.OwnerCompaints.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OwnerCompaints.Location = new System.Drawing.Point(4, 22);
+            this.OwnerCompaints.Location = new System.Drawing.Point(4, 48);
             this.OwnerCompaints.Name = "OwnerCompaints";
-            this.OwnerCompaints.Size = new System.Drawing.Size(879, 488);
+            this.OwnerCompaints.Size = new System.Drawing.Size(872, 456);
             this.OwnerCompaints.TabIndex = 2;
             this.OwnerCompaints.Text = "Complaints";
             this.OwnerCompaints.UseVisualStyleBackColor = true;
@@ -258,7 +260,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(6, 375);
+            this.label9.Location = new System.Drawing.Point(103, 262);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(225, 30);
             this.label9.TabIndex = 27;
@@ -268,7 +270,7 @@
             // btnDone
             // 
             this.btnDone.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDone.Location = new System.Drawing.Point(44, 427);
+            this.btnDone.Location = new System.Drawing.Point(150, 313);
             this.btnDone.Name = "btnDone";
             this.btnDone.Size = new System.Drawing.Size(98, 43);
             this.btnDone.TabIndex = 26;
@@ -392,9 +394,9 @@
             this.OwnerTenants.Controls.Add(this.panel3);
             this.OwnerTenants.Controls.Add(this.panel2);
             this.OwnerTenants.Controls.Add(this.panel1);
-            this.OwnerTenants.Location = new System.Drawing.Point(4, 22);
+            this.OwnerTenants.Location = new System.Drawing.Point(4, 48);
             this.OwnerTenants.Name = "OwnerTenants";
-            this.OwnerTenants.Size = new System.Drawing.Size(879, 488);
+            this.OwnerTenants.Size = new System.Drawing.Size(872, 456);
             this.OwnerTenants.TabIndex = 4;
             this.OwnerTenants.Text = "Tenants";
             this.OwnerTenants.UseVisualStyleBackColor = true;
@@ -558,9 +560,9 @@
             // 
             // btnTenantRemove
             // 
-            this.btnTenantRemove.Location = new System.Drawing.Point(266, 231);
+            this.btnTenantRemove.Location = new System.Drawing.Point(287, 245);
             this.btnTenantRemove.Name = "btnTenantRemove";
-            this.btnTenantRemove.Size = new System.Drawing.Size(55, 44);
+            this.btnTenantRemove.Size = new System.Drawing.Size(97, 44);
             this.btnTenantRemove.TabIndex = 17;
             this.btnTenantRemove.Text = "Remove";
             this.btnTenantRemove.UseVisualStyleBackColor = true;
@@ -569,44 +571,48 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(218, 107);
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(204, 131);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(26, 13);
+            this.label5.Size = new System.Drawing.Size(40, 20);
             this.label5.TabIndex = 16;
             this.label5.Text = "Age";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(214, 154);
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(200, 186);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(30, 13);
+            this.label4.Size = new System.Drawing.Size(42, 20);
             this.label4.TabIndex = 15;
             this.label4.Text = "Rent";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(218, 67);
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(211, 76);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(25, 13);
+            this.label3.Size = new System.Drawing.Size(33, 20);
             this.label3.TabIndex = 14;
             this.label3.Text = "Sex";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(203, 19);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(193, 17);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(53, 20);
             this.label2.TabIndex = 13;
             this.label2.Text = "Name";
             // 
             // btnAddTenant
             // 
-            this.btnAddTenant.Location = new System.Drawing.Point(125, 231);
+            this.btnAddTenant.Location = new System.Drawing.Point(65, 245);
             this.btnAddTenant.Name = "btnAddTenant";
-            this.btnAddTenant.Size = new System.Drawing.Size(121, 44);
+            this.btnAddTenant.Size = new System.Drawing.Size(181, 44);
             this.btnAddTenant.TabIndex = 8;
             this.btnAddTenant.Text = "Add/Modify Tenant";
             this.btnAddTenant.UseVisualStyleBackColor = true;
@@ -614,39 +620,39 @@
             // 
             // tbTenantRent
             // 
-            this.tbTenantRent.Location = new System.Drawing.Point(146, 170);
+            this.tbTenantRent.Location = new System.Drawing.Point(146, 212);
             this.tbTenantRent.Name = "tbTenantRent";
-            this.tbTenantRent.Size = new System.Drawing.Size(100, 20);
+            this.tbTenantRent.Size = new System.Drawing.Size(100, 27);
             this.tbTenantRent.TabIndex = 7;
             // 
             // cbTenantSex
             // 
             this.cbTenantSex.FormattingEnabled = true;
-            this.cbTenantSex.Location = new System.Drawing.Point(177, 83);
+            this.cbTenantSex.Location = new System.Drawing.Point(177, 99);
             this.cbTenantSex.Name = "cbTenantSex";
-            this.cbTenantSex.Size = new System.Drawing.Size(69, 21);
+            this.cbTenantSex.Size = new System.Drawing.Size(69, 29);
             this.cbTenantSex.TabIndex = 6;
             // 
             // tbTenantAge
             // 
-            this.tbTenantAge.Location = new System.Drawing.Point(206, 128);
+            this.tbTenantAge.Location = new System.Drawing.Point(203, 154);
             this.tbTenantAge.Name = "tbTenantAge";
-            this.tbTenantAge.Size = new System.Drawing.Size(40, 20);
+            this.tbTenantAge.Size = new System.Drawing.Size(40, 27);
             this.tbTenantAge.TabIndex = 5;
             // 
             // tbTenantName
             // 
-            this.tbTenantName.Location = new System.Drawing.Point(146, 35);
+            this.tbTenantName.Location = new System.Drawing.Point(146, 40);
             this.tbTenantName.Name = "tbTenantName";
-            this.tbTenantName.Size = new System.Drawing.Size(100, 20);
+            this.tbTenantName.Size = new System.Drawing.Size(100, 27);
             this.tbTenantName.TabIndex = 4;
             // 
             // rbTenant4
             // 
             this.rbTenant4.AutoSize = true;
-            this.rbTenant4.Location = new System.Drawing.Point(287, 173);
+            this.rbTenant4.Location = new System.Drawing.Point(287, 212);
             this.rbTenant4.Name = "rbTenant4";
-            this.rbTenant4.Size = new System.Drawing.Size(68, 17);
+            this.rbTenant4.Size = new System.Drawing.Size(97, 25);
             this.rbTenant4.TabIndex = 3;
             this.rbTenant4.TabStop = true;
             this.rbTenant4.Text = "Tenant 4";
@@ -655,9 +661,9 @@
             // rbTenant3
             // 
             this.rbTenant3.AutoSize = true;
-            this.rbTenant3.Location = new System.Drawing.Point(287, 128);
+            this.rbTenant3.Location = new System.Drawing.Point(287, 156);
             this.rbTenant3.Name = "rbTenant3";
-            this.rbTenant3.Size = new System.Drawing.Size(68, 17);
+            this.rbTenant3.Size = new System.Drawing.Size(97, 25);
             this.rbTenant3.TabIndex = 2;
             this.rbTenant3.TabStop = true;
             this.rbTenant3.Text = "Tenant 3";
@@ -666,9 +672,9 @@
             // rbTenant2
             // 
             this.rbTenant2.AutoSize = true;
-            this.rbTenant2.Location = new System.Drawing.Point(287, 79);
+            this.rbTenant2.Location = new System.Drawing.Point(287, 93);
             this.rbTenant2.Name = "rbTenant2";
-            this.rbTenant2.Size = new System.Drawing.Size(68, 17);
+            this.rbTenant2.Size = new System.Drawing.Size(97, 25);
             this.rbTenant2.TabIndex = 1;
             this.rbTenant2.TabStop = true;
             this.rbTenant2.Text = "Tenant 2";
@@ -677,9 +683,9 @@
             // rbTenant1
             // 
             this.rbTenant1.AutoSize = true;
-            this.rbTenant1.Location = new System.Drawing.Point(287, 38);
+            this.rbTenant1.Location = new System.Drawing.Point(287, 41);
             this.rbTenant1.Name = "rbTenant1";
-            this.rbTenant1.Size = new System.Drawing.Size(68, 17);
+            this.rbTenant1.Size = new System.Drawing.Size(97, 25);
             this.rbTenant1.TabIndex = 0;
             this.rbTenant1.TabStop = true;
             this.rbTenant1.Text = "Tenant 1";
@@ -704,8 +710,12 @@
             this.ClientSize = new System.Drawing.Size(883, 543);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnLogOut);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Owner";
             this.Text = "Form2";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Owner_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Owner_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Owner_MouseUp);
             this.OwnerDiscussions.ResumeLayout(false);
             this.OwnerRules.ResumeLayout(false);
             this.OwnerRules.PerformLayout();

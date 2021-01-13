@@ -23,6 +23,18 @@ namespace SchedulingProject
             return newTenantArray;
         }
 
+        public string GetRandomTenant()
+        {
+            Random rng = new Random();
+            int thankyounext = rng.Next(4);
+            string name = newTenantArray[thankyounext].GetName();
+            while (name == "unoccupied")
+            {
+                thankyounext = rng.Next(4);
+                name = newTenantArray[thankyounext].GetName();
+            }
+            return name;
+        }
         public int GetRevenue()
         {
             int amount;

@@ -37,6 +37,7 @@ namespace SchedulingProject
         {
             return this.name;
         }
+       
         public void RemoveTenant()
         {
             this.name = "unoccupied";
