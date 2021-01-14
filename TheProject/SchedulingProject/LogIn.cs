@@ -20,7 +20,7 @@ namespace SchedulingProject
         {
           
             InitializeComponent();
-            this.Text = "Wellcome !";
+            this.Text = "Welcome !";
             randomcolor = new Random();
             NewRulesList = new Rules();
             StudentForm = new Student();

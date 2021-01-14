@@ -42,7 +42,7 @@ namespace SchedulingProject
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            
         }
 
         // CHORES
@@ -52,7 +52,7 @@ namespace SchedulingProject
            
             string name = tbChoreName.Text;
             string chore = tbChore.Text;
-            string date = tbChoreDate.Text;
+            string date = dtPicker.Value.ToString("dd/MM/yyyy");
             if (lblChores.SelectedIndex > -1)
             {
                 string S = lblChores.SelectedItem.ToString();
@@ -70,18 +70,16 @@ namespace SchedulingProject
             }
             else
             {
-                if (tbChoreName.Text == "" && tbChore.Text != "" && tbChoreDate.Text != "")
+                if (tbChoreName.Text == "" && tbChore.Text != "" && date != "")
                 {
                     myScheduleList.AddSchedule(chore, date);
                     tbChore.Text = "";
-                    tbChoreDate.Text = "";
                 }
-                else if (tbChoreName.Text != "" && tbChore.Text != "" && tbChoreDate.Text != "")
+                else if (tbChoreName.Text != "" && tbChore.Text != "" && date != "")
                 {
                     myScheduleList.AddSchedule(name, chore, date);
                     tbChoreName.Text = "";
                     tbChore.Text = "";
-                    tbChoreDate.Text = "";
                 }
                 else
                 {
@@ -127,7 +125,7 @@ namespace SchedulingProject
         private void btnDiscussionsSend_Click(object sender, EventArgs e)
         {
             string name = cbStudentDiscussionName.Text;
-            string date = this.date.ToString("f");
+            string date = this.date.ToString("dd/MM/yy");
             string debate = tbDiscussions.Text;
             if(tbDiscussions.Text != "")
             {
@@ -261,6 +259,9 @@ namespace SchedulingProject
             mouseDown = false;
         }
 
-      
+        private void LbClose_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

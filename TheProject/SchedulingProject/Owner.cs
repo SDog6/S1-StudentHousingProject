@@ -299,5 +299,10 @@ namespace SchedulingProject
         {
             mouseDown = false;
         }
+
+        private void LbClose_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

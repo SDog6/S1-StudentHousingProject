@@ -132,3 +132,15 @@ C:\Users\Hristo\Documents\Fuck you git\software-project\TheProject\SchedulingPro
 C:\Users\Hristo\Documents\Fuck you git\software-project\TheProject\SchedulingProject\obj\Debug\SchedulingProject.csproj.CoreCompileInputs.cache
 C:\Users\Hristo\Documents\Fuck you git\software-project\TheProject\SchedulingProject\obj\Debug\SchedulingProject.exe
 C:\Users\Hristo\Documents\Fuck you git\software-project\TheProject\SchedulingProject\obj\Debug\SchedulingProject.pdb
+C:\Users\Hristo\Desktop\New folder (3)\software-project\software-project\TheProject\SchedulingProject\bin\Debug\SchedulingProject.exe.config
+C:\Users\Hristo\Desktop\New folder (3)\software-project\software-project\TheProject\SchedulingProject\bin\Debug\SchedulingProject.exe
+C:\Users\Hristo\Desktop\New folder (3)\software-project\software-project\TheProject\SchedulingProject\bin\Debug\SchedulingProject.pdb
+C:\Users\Hristo\Desktop\New folder (3)\software-project\software-project\TheProject\SchedulingProject\obj\Debug\SchedulingProject.csprojAssemblyReference.cache
+C:\Users\Hristo\Desktop\New folder (3)\software-project\software-project\TheProject\SchedulingProject\obj\Debug\SchedulingProject.LogIn.resources
+C:\Users\Hristo\Desktop\New folder (3)\software-project\software-project\TheProject\SchedulingProject\obj\Debug\SchedulingProject.Student.resources
+C:\Users\Hristo\Desktop\New folder (3)\software-project\software-project\TheProject\SchedulingProject\obj\Debug\SchedulingProject.Owner.resources
+C:\Users\Hristo\Desktop\New folder (3)\software-project\software-project\TheProject\SchedulingProject\obj\Debug\SchedulingProject.Properties.Resources.resources
+C:\Users\Hristo\Desktop\New folder (3)\software-project\software-project\TheProject\SchedulingProject\obj\Debug\SchedulingProject.csproj.GenerateResource.cache
+C:\Users\Hristo\Desktop\New folder (3)\software-project\software-project\TheProject\SchedulingProject\obj\Debug\SchedulingProject.csproj.CoreCompileInputs.cache
+C:\Users\Hristo\Desktop\New folder (3)\software-project\software-project\TheProject\SchedulingProject\obj\Debug\SchedulingProject.exe
+C:\Users\Hristo\Desktop\New folder (3)\software-project\software-project\TheProject\SchedulingProject\obj\Debug\SchedulingProject.pdb
