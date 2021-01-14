@@ -31,13 +31,14 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Schedule = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.dtPicker = new System.Windows.Forms.DateTimePicker();
             this.btnAssign = new System.Windows.Forms.Button();
+            this.BtnRemoveChore = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tbChoreName = new System.Windows.Forms.TextBox();
-            this.BtnRemoveChore = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAddChore = new System.Windows.Forms.Button();
@@ -62,9 +63,9 @@
             this.lbDiscussions = new System.Windows.Forms.ListBox();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.lbClose = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tabControl1.SuspendLayout();
             this.Schedule.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -72,7 +73,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.NumComplaintsYear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumComplaintsDay)).BeginInit();
             this.tabPage3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -112,6 +112,29 @@
             this.Schedule.Text = "Schedule";
             this.Schedule.UseVisualStyleBackColor = true;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(19, 6);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(341, 86);
+            this.groupBox2.TabIndex = 13;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Info";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label4.Location = new System.Drawing.Point(21, 19);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(304, 54);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Please enter the name of the person\r\nyou wish to assign a chore to and a date\r\non" +
+    " which that chore is to be done.";
+            // 
             // dtPicker
             // 
             this.dtPicker.CalendarFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -132,6 +155,18 @@
             this.btnAssign.Text = "Assign chore on random";
             this.btnAssign.UseVisualStyleBackColor = true;
             this.btnAssign.Click += new System.EventHandler(this.btnAssign_Click);
+            // 
+            // BtnRemoveChore
+            // 
+            this.BtnRemoveChore.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRemoveChore.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.BtnRemoveChore.Location = new System.Drawing.Point(191, 275);
+            this.BtnRemoveChore.Name = "BtnRemoveChore";
+            this.BtnRemoveChore.Size = new System.Drawing.Size(169, 46);
+            this.BtnRemoveChore.TabIndex = 9;
+            this.BtnRemoveChore.Text = "Remove a scheduled chore";
+            this.BtnRemoveChore.UseVisualStyleBackColor = true;
+            this.BtnRemoveChore.Click += new System.EventHandler(this.BtnRemoveChore_Click);
             // 
             // groupBox1
             // 
@@ -164,30 +199,6 @@
             this.tbChoreName.Name = "tbChoreName";
             this.tbChoreName.Size = new System.Drawing.Size(176, 31);
             this.tbChoreName.TabIndex = 1;
-            // 
-            // BtnRemoveChore
-            // 
-            this.BtnRemoveChore.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnRemoveChore.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnRemoveChore.Location = new System.Drawing.Point(191, 275);
-            this.BtnRemoveChore.Name = "BtnRemoveChore";
-            this.BtnRemoveChore.Size = new System.Drawing.Size(169, 46);
-            this.BtnRemoveChore.TabIndex = 9;
-            this.BtnRemoveChore.Text = "Remove a scheduled chore";
-            this.BtnRemoveChore.UseVisualStyleBackColor = true;
-            this.BtnRemoveChore.Click += new System.EventHandler(this.BtnRemoveChore_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label4.Location = new System.Drawing.Point(21, 19);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(304, 54);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Please enter the name of the person\r\nyou wish to assign a chore to and a date\r\non" +
-    " which that chore is to be done.";
             // 
             // label3
             // 
@@ -392,12 +403,12 @@
             // 
             // lblComplaints
             // 
-            this.lblComplaints.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblComplaints.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblComplaints.FormattingEnabled = true;
-            this.lblComplaints.ItemHeight = 21;
-            this.lblComplaints.Location = new System.Drawing.Point(381, 5);
+            this.lblComplaints.ItemHeight = 17;
+            this.lblComplaints.Location = new System.Drawing.Point(362, 5);
             this.lblComplaints.Name = "lblComplaints";
-            this.lblComplaints.Size = new System.Drawing.Size(382, 382);
+            this.lblComplaints.Size = new System.Drawing.Size(401, 378);
             this.lblComplaints.TabIndex = 0;
             // 
             // tabPage3
@@ -480,17 +491,6 @@
             this.lbClose.Text = "x";
             this.lbClose.Click += new System.EventHandler(this.LbClose_Click);
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(19, 6);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(341, 86);
-            this.groupBox2.TabIndex = 13;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Info";
-            // 
             // Student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -508,6 +508,8 @@
             this.tabControl1.ResumeLayout(false);
             this.Schedule.ResumeLayout(false);
             this.Schedule.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -518,8 +520,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.NumComplaintsDay)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
