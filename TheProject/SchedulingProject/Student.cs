@@ -36,6 +36,8 @@ namespace SchedulingProject
                 cbStudentDiscussionName.Items.Add(MyTenantNames.ReturnTenantArray()[i].GetName().ToString());
             }
 
+            cbStudentDiscussionName.SelectedIndex = 0;
+
             UpdateAll();
         }
 
@@ -127,7 +129,11 @@ namespace SchedulingProject
             string name = cbStudentDiscussionName.Text;
             string date = this.date.ToString("dd/MM/yy");
             string debate = tbDiscussions.Text;
-            if(tbDiscussions.Text != "")
+            if (name == "unoccupied")
+            {
+                MessageBox.Show("Please select a valid name");
+            }
+            else if(tbDiscussions.Text != "")
             {
                 newDiscussionList.AddDiscussion(name, date, debate);
                 UpdateDiscussionList();
