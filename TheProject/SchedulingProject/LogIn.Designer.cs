@@ -34,12 +34,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnLogIn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.labelClose = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelClose = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -110,49 +107,25 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Welcome";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(449, 306);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(28, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "hint";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            this.label4.MouseHover += new System.EventHandler(this.label4_MouseHover);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(267, 328);
             this.panel1.TabIndex = 10;
             // 
-            // button1
+            // pictureBox1
             // 
-            this.button1.Location = new System.Drawing.Point(139, 304);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(128, 21);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "OwnerQuickAccess";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(5, 305);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(128, 20);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "StudentQuickAccess";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.pictureBox1.Image = global::SchedulingProject.Properties.Resources.Logo4;
+            this.pictureBox1.Location = new System.Drawing.Point(2, 49);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(265, 252);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
             // 
             // labelClose
             // 
@@ -167,16 +140,6 @@
             this.labelClose.Text = "x";
             this.labelClose.Click += new System.EventHandler(this.LabelClose_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SchedulingProject.Properties.Resources.Logo4;
-            this.pictureBox1.Location = new System.Drawing.Point(2, 49);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(265, 252);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
-            // 
             // LogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -184,7 +147,6 @@
             this.ClientSize = new System.Drawing.Size(489, 328);
             this.Controls.Add(this.labelClose);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnLogIn);
             this.Controls.Add(this.label2);
@@ -212,11 +174,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnLogIn;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label labelClose;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
     }
 }

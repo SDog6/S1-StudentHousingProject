@@ -13,7 +13,6 @@ namespace SchedulingProject
     public partial class LogIn : Form
     {
         Rules NewRulesList;
-        Random randomcolor;
         Student StudentForm;
         Owner OwnerF;
         public LogIn()
@@ -21,16 +20,10 @@ namespace SchedulingProject
           
             InitializeComponent();
             this.Text = "Welcome !";
-            randomcolor = new Random();
             NewRulesList = new Rules();
             StudentForm = new Student();
             OwnerF = new Owner();
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("User and password for a student login is:  student \n Username and password for owner is:  owner");
         }
 
         private void btnLogIn_Click(object sender, EventArgs e)
@@ -53,16 +46,6 @@ namespace SchedulingProject
             }
         }
 
-        private void label4_MouseHover(object sender, EventArgs e)
-        {
-            changeColor();
-        }
-
-        private void changeColor()
-        {
-            Color randomColor = Color.FromArgb(randomcolor.Next(200), randomcolor.Next(200), randomcolor.Next(200));
-            label4.ForeColor = randomColor;
-        }
         // Form Movement
         private bool mouseDown;
         private Point lastLocation;
@@ -86,22 +69,6 @@ namespace SchedulingProject
         {
             mouseDown = false;
         }
-        // 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-                OwnerF.Show();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            StudentForm.Show();
-        }
-
         private void LabelClose_Click(object sender, EventArgs e)
         {
             this.Close();

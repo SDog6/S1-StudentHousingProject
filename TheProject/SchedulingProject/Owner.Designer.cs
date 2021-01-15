@@ -41,15 +41,17 @@
             this.lblChores = new System.Windows.Forms.ListBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.OwnerCompaints = new System.Windows.Forms.TabPage();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
             this.btnDone = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.NumComplaintsYear = new System.Windows.Forms.NumericUpDown();
-            this.NumComplaintsMonth = new System.Windows.Forms.NumericUpDown();
-            this.NumComplaintsDay = new System.Windows.Forms.NumericUpDown();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnCompaintsViewBy = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnCompaintsViewBy = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.NumComplaintsDay = new System.Windows.Forms.NumericUpDown();
+            this.NumComplaintsMonth = new System.Windows.Forms.NumericUpDown();
             this.lblComplaints = new System.Windows.Forms.ListBox();
             this.OwnerTenants = new System.Windows.Forms.TabPage();
             this.rbTenant4 = new System.Windows.Forms.RadioButton();
@@ -90,9 +92,11 @@
             this.OwnerSchedule.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.OwnerCompaints.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NumComplaintsYear)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NumComplaintsMonth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumComplaintsDay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumComplaintsMonth)).BeginInit();
             this.OwnerTenants.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -147,11 +151,13 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(351, 271);
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(625, 372);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 15);
             this.label1.TabIndex = 4;
             this.label1.Text = "label1";
+            this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // lblRuleList
             // 
@@ -160,14 +166,15 @@
             this.lblRuleList.ItemHeight = 21;
             this.lblRuleList.Location = new System.Drawing.Point(10, 6);
             this.lblRuleList.Name = "lblRuleList";
-            this.lblRuleList.Size = new System.Drawing.Size(754, 235);
+            this.lblRuleList.Size = new System.Drawing.Size(754, 277);
             this.lblRuleList.TabIndex = 3;
             // 
             // btnRemove
             // 
-            this.btnRemove.Location = new System.Drawing.Point(553, 253);
+            this.btnRemove.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemove.Location = new System.Drawing.Point(619, 337);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(211, 47);
+            this.btnRemove.Size = new System.Drawing.Size(148, 32);
             this.btnRemove.TabIndex = 2;
             this.btnRemove.Text = "Remove a rule";
             this.btnRemove.UseVisualStyleBackColor = true;
@@ -175,9 +182,10 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(8, 253);
+            this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Location = new System.Drawing.Point(619, 299);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(209, 47);
+            this.btnAdd.Size = new System.Drawing.Size(148, 32);
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Add a rule";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -186,10 +194,10 @@
             // tbRulesToAdd
             // 
             this.tbRulesToAdd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbRulesToAdd.Location = new System.Drawing.Point(8, 306);
+            this.tbRulesToAdd.Location = new System.Drawing.Point(10, 289);
             this.tbRulesToAdd.Multiline = true;
             this.tbRulesToAdd.Name = "tbRulesToAdd";
-            this.tbRulesToAdd.Size = new System.Drawing.Size(756, 76);
+            this.tbRulesToAdd.Size = new System.Drawing.Size(600, 98);
             this.tbRulesToAdd.TabIndex = 0;
             // 
             // OwnerSchedule
@@ -227,22 +235,15 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 4);
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
-            this.tabControl1.Padding = new System.Drawing.Point(12, 12);
+            this.tabControl1.Padding = new System.Drawing.Point(15, 12);
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(778, 447);
             this.tabControl1.TabIndex = 1;
             // 
             // OwnerCompaints
             // 
-            this.OwnerCompaints.Controls.Add(this.label9);
-            this.OwnerCompaints.Controls.Add(this.btnDone);
-            this.OwnerCompaints.Controls.Add(this.label8);
-            this.OwnerCompaints.Controls.Add(this.NumComplaintsYear);
-            this.OwnerCompaints.Controls.Add(this.NumComplaintsMonth);
-            this.OwnerCompaints.Controls.Add(this.NumComplaintsDay);
-            this.OwnerCompaints.Controls.Add(this.button1);
-            this.OwnerCompaints.Controls.Add(this.btnCompaintsViewBy);
-            this.OwnerCompaints.Controls.Add(this.label7);
+            this.OwnerCompaints.Controls.Add(this.groupBox4);
+            this.OwnerCompaints.Controls.Add(this.groupBox3);
             this.OwnerCompaints.Controls.Add(this.lblComplaints);
             this.OwnerCompaints.Font = new System.Drawing.Font("Century Gothic", 15.75F);
             this.OwnerCompaints.Location = new System.Drawing.Point(4, 48);
@@ -252,42 +253,58 @@
             this.OwnerCompaints.Text = "Complaints";
             this.OwnerCompaints.UseVisualStyleBackColor = true;
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.label9);
+            this.groupBox4.Controls.Add(this.btnDone);
+            this.groupBox4.Location = new System.Drawing.Point(8, 242);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(335, 141);
+            this.groupBox4.TabIndex = 29;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Complete";
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(76, 261);
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(20, 39);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(246, 30);
+            this.label9.Size = new System.Drawing.Size(305, 32);
             this.label9.TabIndex = 27;
             this.label9.Text = "Select the completed complaint in the listbox,\r\nand press the button to change st" +
     "atus ";
             // 
             // btnDone
             // 
-            this.btnDone.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDone.Location = new System.Drawing.Point(149, 294);
+            this.btnDone.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDone.Location = new System.Drawing.Point(112, 83);
             this.btnDone.Name = "btnDone";
-            this.btnDone.Size = new System.Drawing.Size(98, 43);
+            this.btnDone.Size = new System.Drawing.Size(126, 43);
             this.btnDone.TabIndex = 26;
             this.btnDone.Text = "Mark complaint as Done";
             this.btnDone.UseVisualStyleBackColor = true;
             this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
             // 
-            // label8
+            // groupBox3
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label8.Location = new System.Drawing.Point(224, 69);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(89, 20);
-            this.label8.TabIndex = 25;
-            this.label8.Text = "DD/MM/YY";
+            this.groupBox3.Controls.Add(this.NumComplaintsYear);
+            this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Controls.Add(this.btnCompaintsViewBy);
+            this.groupBox3.Controls.Add(this.label8);
+            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.NumComplaintsDay);
+            this.groupBox3.Controls.Add(this.NumComplaintsMonth);
+            this.groupBox3.Location = new System.Drawing.Point(8, 5);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(335, 231);
+            this.groupBox3.TabIndex = 28;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Search";
             // 
             // NumComplaintsYear
             // 
-            this.NumComplaintsYear.Location = new System.Drawing.Point(244, 107);
+            this.NumComplaintsYear.Location = new System.Drawing.Point(226, 74);
             this.NumComplaintsYear.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -307,26 +324,52 @@
             0,
             0});
             // 
-            // NumComplaintsMonth
+            // label7
             // 
-            this.NumComplaintsMonth.Location = new System.Drawing.Point(139, 107);
-            this.NumComplaintsMonth.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.NumComplaintsMonth.Name = "NumComplaintsMonth";
-            this.NumComplaintsMonth.Size = new System.Drawing.Size(99, 33);
-            this.NumComplaintsMonth.TabIndex = 23;
-            this.NumComplaintsMonth.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(54, 36);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(155, 20);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "View Certain Dates:";
+            // 
+            // btnCompaintsViewBy
+            // 
+            this.btnCompaintsViewBy.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCompaintsViewBy.Location = new System.Drawing.Point(84, 170);
+            this.btnCompaintsViewBy.Name = "btnCompaintsViewBy";
+            this.btnCompaintsViewBy.Size = new System.Drawing.Size(190, 46);
+            this.btnCompaintsViewBy.TabIndex = 12;
+            this.btnCompaintsViewBy.Text = "View by date";
+            this.btnCompaintsViewBy.UseVisualStyleBackColor = true;
+            this.btnCompaintsViewBy.Click += new System.EventHandler(this.btnCompaintsViewBy_Click_1);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label8.Location = new System.Drawing.Point(215, 36);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(89, 20);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "DD/MM/YY";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(84, 118);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(190, 46);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "View all complaints";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // NumComplaintsDay
             // 
-            this.NumComplaintsDay.Location = new System.Drawing.Point(35, 107);
+            this.NumComplaintsDay.Location = new System.Drawing.Point(17, 74);
             this.NumComplaintsDay.Minimum = new decimal(new int[] {
             1,
             0,
@@ -341,41 +384,26 @@
             0,
             0});
             // 
-            // button1
+            // NumComplaintsMonth
             // 
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(102, 151);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(190, 46);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "View all complaints";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnCompaintsViewBy
-            // 
-            this.btnCompaintsViewBy.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCompaintsViewBy.Location = new System.Drawing.Point(102, 203);
-            this.btnCompaintsViewBy.Name = "btnCompaintsViewBy";
-            this.btnCompaintsViewBy.Size = new System.Drawing.Size(190, 46);
-            this.btnCompaintsViewBy.TabIndex = 12;
-            this.btnCompaintsViewBy.Text = "View by date";
-            this.btnCompaintsViewBy.UseVisualStyleBackColor = true;
-            this.btnCompaintsViewBy.Click += new System.EventHandler(this.btnCompaintsViewBy_Click_1);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(63, 69);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(155, 20);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "View Certain Dates:";
+            this.NumComplaintsMonth.Location = new System.Drawing.Point(121, 74);
+            this.NumComplaintsMonth.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.NumComplaintsMonth.Name = "NumComplaintsMonth";
+            this.NumComplaintsMonth.Size = new System.Drawing.Size(99, 33);
+            this.NumComplaintsMonth.TabIndex = 23;
+            this.NumComplaintsMonth.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // lblComplaints
             // 
-            this.lblComplaints.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblComplaints.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblComplaints.FormattingEnabled = true;
             this.lblComplaints.ItemHeight = 17;
             this.lblComplaints.Location = new System.Drawing.Point(349, 5);
@@ -407,7 +435,7 @@
             // 
             this.rbTenant4.AutoSize = true;
             this.rbTenant4.Font = new System.Drawing.Font("Century Gothic", 14.25F);
-            this.rbTenant4.Location = new System.Drawing.Point(618, 347);
+            this.rbTenant4.Location = new System.Drawing.Point(619, 352);
             this.rbTenant4.Name = "rbTenant4";
             this.rbTenant4.Size = new System.Drawing.Size(108, 26);
             this.rbTenant4.TabIndex = 3;
@@ -428,7 +456,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 14.25F);
             this.groupBox2.Location = new System.Drawing.Point(358, 55);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(192, 275);
+            this.groupBox2.Size = new System.Drawing.Size(192, 281);
             this.groupBox2.TabIndex = 24;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Configuration";
@@ -657,7 +685,7 @@
             // 
             this.rbTenant3.AutoSize = true;
             this.rbTenant3.Font = new System.Drawing.Font("Century Gothic", 14.25F);
-            this.rbTenant3.Location = new System.Drawing.Point(432, 347);
+            this.rbTenant3.Location = new System.Drawing.Point(433, 352);
             this.rbTenant3.Name = "rbTenant3";
             this.rbTenant3.Size = new System.Drawing.Size(108, 26);
             this.rbTenant3.TabIndex = 2;
@@ -679,7 +707,7 @@
             // 
             this.rbTenant1.AutoSize = true;
             this.rbTenant1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbTenant1.Location = new System.Drawing.Point(36, 347);
+            this.rbTenant1.Location = new System.Drawing.Point(37, 352);
             this.rbTenant1.Name = "rbTenant1";
             this.rbTenant1.Size = new System.Drawing.Size(108, 26);
             this.rbTenant1.TabIndex = 0;
@@ -702,7 +730,7 @@
             // 
             this.rbTenant2.AutoSize = true;
             this.rbTenant2.Font = new System.Drawing.Font("Century Gothic", 14.25F);
-            this.rbTenant2.Location = new System.Drawing.Point(222, 347);
+            this.rbTenant2.Location = new System.Drawing.Point(223, 352);
             this.rbTenant2.Name = "rbTenant2";
             this.rbTenant2.Size = new System.Drawing.Size(108, 26);
             this.rbTenant2.TabIndex = 1;
@@ -727,7 +755,7 @@
             this.lbClose.AutoSize = true;
             this.lbClose.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbClose.ForeColor = System.Drawing.Color.White;
-            this.lbClose.Location = new System.Drawing.Point(739, -7);
+            this.lbClose.Location = new System.Drawing.Point(742, -5);
             this.lbClose.Name = "lbClose";
             this.lbClose.Size = new System.Drawing.Size(32, 39);
             this.lbClose.TabIndex = 12;
@@ -754,10 +782,13 @@
             this.OwnerSchedule.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.OwnerCompaints.ResumeLayout(false);
-            this.OwnerCompaints.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NumComplaintsYear)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NumComplaintsMonth)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumComplaintsDay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumComplaintsMonth)).EndInit();
             this.OwnerTenants.ResumeLayout(false);
             this.OwnerTenants.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -837,5 +868,7 @@
         private System.Windows.Forms.Button btnCompaintsViewBy;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ListBox lblComplaints;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox groupBox3;
     }
 }

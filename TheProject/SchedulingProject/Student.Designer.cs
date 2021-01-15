@@ -83,11 +83,11 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tabControl1.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.tabControl1.Location = new System.Drawing.Point(0, 6);
+            this.tabControl1.Location = new System.Drawing.Point(0, 4);
             this.tabControl1.Name = "tabControl1";
-            this.tabControl1.Padding = new System.Drawing.Point(12, 12);
+            this.tabControl1.Padding = new System.Drawing.Point(15, 12);
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(778, 445);
+            this.tabControl1.Size = new System.Drawing.Size(778, 447);
             this.tabControl1.TabIndex = 0;
             // 
             // Schedule
@@ -107,7 +107,7 @@
             this.Schedule.Location = new System.Drawing.Point(4, 47);
             this.Schedule.Name = "Schedule";
             this.Schedule.Padding = new System.Windows.Forms.Padding(3);
-            this.Schedule.Size = new System.Drawing.Size(770, 394);
+            this.Schedule.Size = new System.Drawing.Size(770, 396);
             this.Schedule.TabIndex = 0;
             this.Schedule.Text = "Schedule";
             this.Schedule.UseVisualStyleBackColor = true;
@@ -139,9 +139,9 @@
             // 
             this.dtPicker.CalendarFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtPicker.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtPicker.Location = new System.Drawing.Point(136, 144);
+            this.dtPicker.Location = new System.Drawing.Point(83, 147);
             this.dtPicker.Name = "dtPicker";
-            this.dtPicker.Size = new System.Drawing.Size(176, 26);
+            this.dtPicker.Size = new System.Drawing.Size(277, 26);
             this.dtPicker.TabIndex = 12;
             // 
             // btnAssign
@@ -152,7 +152,7 @@
             this.btnAssign.Name = "btnAssign";
             this.btnAssign.Size = new System.Drawing.Size(341, 46);
             this.btnAssign.TabIndex = 11;
-            this.btnAssign.Text = "Assign chore on random";
+            this.btnAssign.Text = "Assign chore to random tenant";
             this.btnAssign.UseVisualStyleBackColor = true;
             this.btnAssign.Click += new System.EventHandler(this.btnAssign_Click);
             // 
@@ -193,7 +193,7 @@
             // 
             // tbChoreName
             // 
-            this.tbChoreName.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbChoreName.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.tbChoreName.Location = new System.Drawing.Point(92, 19);
             this.tbChoreName.Multiline = true;
             this.tbChoreName.Name = "tbChoreName";
@@ -205,7 +205,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(80, 149);
+            this.label3.Location = new System.Drawing.Point(28, 147);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 20);
             this.label3.TabIndex = 7;
@@ -216,7 +216,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(71, 107);
+            this.label2.Location = new System.Drawing.Point(70, 110);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 20);
             this.label2.TabIndex = 6;
@@ -236,21 +236,21 @@
             // 
             // tbChore
             // 
-            this.tbChore.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbChore.Location = new System.Drawing.Point(136, 107);
+            this.tbChore.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.tbChore.Location = new System.Drawing.Point(135, 106);
             this.tbChore.Multiline = true;
             this.tbChore.Name = "tbChore";
-            this.tbChore.Size = new System.Drawing.Size(176, 22);
+            this.tbChore.Size = new System.Drawing.Size(176, 31);
             this.tbChore.TabIndex = 2;
             // 
             // lblChores
             // 
-            this.lblChores.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChores.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChores.FormattingEnabled = true;
-            this.lblChores.ItemHeight = 21;
+            this.lblChores.ItemHeight = 20;
             this.lblChores.Location = new System.Drawing.Point(378, 6);
             this.lblChores.Name = "lblChores";
-            this.lblChores.Size = new System.Drawing.Size(386, 382);
+            this.lblChores.Size = new System.Drawing.Size(386, 364);
             this.lblChores.TabIndex = 0;
             // 
             // tabPage2
@@ -260,7 +260,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 47);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(770, 394);
+            this.tabPage2.Size = new System.Drawing.Size(770, 396);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Rules";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -288,7 +288,7 @@
             this.tabPage1.Font = new System.Drawing.Font("Century Gothic", 15.75F);
             this.tabPage1.Location = new System.Drawing.Point(4, 47);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(770, 394);
+            this.tabPage1.Size = new System.Drawing.Size(770, 396);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Complaints";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -395,6 +395,7 @@
             // 
             // tbCompaints
             // 
+            this.tbCompaints.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.tbCompaints.Location = new System.Drawing.Point(35, 88);
             this.tbCompaints.Multiline = true;
             this.tbCompaints.Name = "tbCompaints";
@@ -403,7 +404,7 @@
             // 
             // lblComplaints
             // 
-            this.lblComplaints.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblComplaints.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblComplaints.FormattingEnabled = true;
             this.lblComplaints.ItemHeight = 17;
             this.lblComplaints.Location = new System.Drawing.Point(362, 5);
@@ -421,24 +422,25 @@
             this.tabPage3.Font = new System.Drawing.Font("Century Gothic", 15.75F);
             this.tabPage3.Location = new System.Drawing.Point(4, 47);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(770, 394);
+            this.tabPage3.Size = new System.Drawing.Size(770, 396);
             this.tabPage3.TabIndex = 3;
             this.tabPage3.Text = "Discussions";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // cbStudentDiscussionName
             // 
+            this.cbStudentDiscussionName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbStudentDiscussionName.FormattingEnabled = true;
-            this.cbStudentDiscussionName.Location = new System.Drawing.Point(99, 392);
+            this.cbStudentDiscussionName.Location = new System.Drawing.Point(12, 344);
             this.cbStudentDiscussionName.Name = "cbStudentDiscussionName";
-            this.cbStudentDiscussionName.Size = new System.Drawing.Size(146, 32);
+            this.cbStudentDiscussionName.Size = new System.Drawing.Size(145, 29);
             this.cbStudentDiscussionName.TabIndex = 8;
             // 
             // lblDiscussionName
             // 
             this.lblDiscussionName.AutoSize = true;
             this.lblDiscussionName.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiscussionName.Location = new System.Drawing.Point(13, 392);
+            this.lblDiscussionName.Location = new System.Drawing.Point(8, 317);
             this.lblDiscussionName.Name = "lblDiscussionName";
             this.lblDiscussionName.Size = new System.Drawing.Size(80, 24);
             this.lblDiscussionName.TabIndex = 6;
@@ -446,9 +448,9 @@
             // 
             // btnDiscussionsSend
             // 
-            this.btnDiscussionsSend.Location = new System.Drawing.Point(759, 392);
+            this.btnDiscussionsSend.Location = new System.Drawing.Point(671, 307);
             this.btnDiscussionsSend.Name = "btnDiscussionsSend";
-            this.btnDiscussionsSend.Size = new System.Drawing.Size(91, 66);
+            this.btnDiscussionsSend.Size = new System.Drawing.Size(96, 79);
             this.btnDiscussionsSend.TabIndex = 2;
             this.btnDiscussionsSend.Text = "Send";
             this.btnDiscussionsSend.UseVisualStyleBackColor = true;
@@ -456,11 +458,11 @@
             // 
             // tbDiscussions
             // 
-            this.tbDiscussions.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbDiscussions.Location = new System.Drawing.Point(251, 392);
+            this.tbDiscussions.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDiscussions.Location = new System.Drawing.Point(163, 307);
             this.tbDiscussions.Multiline = true;
             this.tbDiscussions.Name = "tbDiscussions";
-            this.tbDiscussions.Size = new System.Drawing.Size(502, 66);
+            this.tbDiscussions.Size = new System.Drawing.Size(502, 79);
             this.tbDiscussions.TabIndex = 1;
             // 
             // lbDiscussions
@@ -470,7 +472,7 @@
             this.lbDiscussions.ItemHeight = 21;
             this.lbDiscussions.Location = new System.Drawing.Point(3, 3);
             this.lbDiscussions.Name = "lbDiscussions";
-            this.lbDiscussions.Size = new System.Drawing.Size(764, 382);
+            this.lbDiscussions.Size = new System.Drawing.Size(764, 298);
             this.lbDiscussions.TabIndex = 0;
             // 
             // timer2

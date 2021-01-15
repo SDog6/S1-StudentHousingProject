@@ -304,5 +304,10 @@ namespace SchedulingProject
         {
             this.Hide();
         }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
