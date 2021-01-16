@@ -12,6 +12,7 @@ namespace SchedulingProject
         private TenantSex sex;
         private int age;
         private int Rent = 0;
+        public static string emptyroom = "unoccupied";
 
 
         public Tenant()
@@ -40,12 +41,12 @@ namespace SchedulingProject
        
         public void RemoveTenant()
         {
-            this.name = "unoccupied";
+            this.name = Tenant.emptyroom;
             Rent = 0;
         }
         public string GetInfo()
         {
-            if (name == "unoccupied")
+            if (name == Tenant.emptyroom)
             {
                 return "Room not occupied";
             }

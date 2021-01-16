@@ -129,7 +129,7 @@ namespace SchedulingProject
             string name = cbStudentDiscussionName.Text;
             string date = this.date.ToString("dd/MM/yy");
             string debate = tbDiscussions.Text;
-            if (name == "unoccupied")
+            if (name == Tenant.emptyroom)
             {
                 MessageBox.Show("Please select a valid name");
             }

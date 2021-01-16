@@ -14,9 +14,9 @@ namespace SchedulingProject
         {
             newTenantArray = new Tenant[4];
             newTenantArray[0] = new Tenant("Leo", (TenantSex)0, 20, 550);
-            newTenantArray[1] = new Tenant("unoccupied", (TenantSex)0, 0, 0);
-            newTenantArray[2] = new Tenant("unoccupied", (TenantSex)0, 0, 0);
-            newTenantArray[3] = new Tenant("unoccupied", (TenantSex)0, 0, 0);
+            newTenantArray[1] = new Tenant(Tenant.emptyroom, (TenantSex)0, 0, 0);
+            newTenantArray[2] = new Tenant(Tenant.emptyroom, (TenantSex)0, 0, 0);
+            newTenantArray[3] = new Tenant(Tenant.emptyroom, (TenantSex)0, 0, 0);
         }
         public Tenant[] ReturnTenantArray()
         {
@@ -28,7 +28,7 @@ namespace SchedulingProject
             Random rng = new Random();
             int thankyounext = rng.Next(4);
             string name = newTenantArray[thankyounext].GetName();
-            while (name == "unoccupied")
+            while (name == Tenant.emptyroom)
             {
                 thankyounext = rng.Next(4);
                 name = newTenantArray[thankyounext].GetName();
