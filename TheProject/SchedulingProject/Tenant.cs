@@ -14,12 +14,6 @@ namespace SchedulingProject
         private int Rent = 0;
         public static string emptyroom = "unoccupied";
 
-
-        public Tenant()
-        {
-
-        }
-
         public Tenant(string name, TenantSex sex, int age, int Rent)
         {
             this.name = name;
